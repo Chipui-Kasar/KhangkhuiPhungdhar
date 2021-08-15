@@ -8,7 +8,13 @@ function GalleryPictures() {
       <div className="row">
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
-            <img src="" width="100%" height="225" id="shuwusha" />
+            <img
+              alt="No Image found"
+              src=""
+              width="100%"
+              height="225"
+              id="shuwusha"
+            />
             <div className="card-body">
               <p className="card-text">
                 Night View of Ukhrul Town From Khangkhui Shuwusha
@@ -39,6 +45,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
+              alt="No Image found"
               src="./images/IMG_20171231_112357.jpg"
               width="100%"
               height="225"
@@ -72,6 +79,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
+              alt="No Image found"
               src="./images/IMG_20171231_115945.jpg"
               width="100%"
               height="225"
@@ -104,7 +112,13 @@ function GalleryPictures() {
 
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
-            <img src="./images/bys1.JPG" width="100%" height="225" id="bys1" />
+            <img
+              alt="No Image found"
+              src="./images/bys1.JPG"
+              width="100%"
+              height="225"
+              id="bys1"
+            />
             <div className="card-body">
               <p className="card-text">
                 BYS Picnic at Harva Khangai on 03/01/2015
@@ -134,7 +148,13 @@ function GalleryPictures() {
 
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
-            <img src="./images/bys2.JPG" width="100%" height="225" id="bys2" />
+            <img
+              alt="No Image found"
+              src="./images/bys2.JPG"
+              width="100%"
+              height="225"
+              id="bys2"
+            />
             <div className="card-body">
               <p className="card-text">BYS Picnic</p>
               <div className="d-flex justify-content-between align-items-center">
@@ -162,7 +182,13 @@ function GalleryPictures() {
 
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
-            <img src="./images/bys3.jpg" width="100%" height="225" id="bys3" />
+            <img
+              alt="No Image found"
+              src="./images/bys3.jpg"
+              width="100%"
+              height="225"
+              id="bys3"
+            />
             <div className="card-body">
               <p className="card-text">BYS Group Photo</p>
               <div className="d-flex justify-content-between align-items-center">

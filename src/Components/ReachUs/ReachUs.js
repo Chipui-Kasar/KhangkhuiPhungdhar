@@ -74,6 +74,7 @@ function ReachUs() {
                   href="https://www.instagram.com/chipui_ks/"
                   target="_blank"
                   className="text-white"
+                  rel="noreferrer"
                 >
                   <i className="fa fa-instagram text-danger"></i> Follow on
                   Instagram

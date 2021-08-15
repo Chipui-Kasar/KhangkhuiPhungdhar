@@ -62,7 +62,6 @@ function HomeAboutPlaces() {
               alt="Khangkhui Phungdhar"
               height="500"
               focusable="false"
-              role="img"
               aria-label="Placeholder: 500x500"
             />
           </div>
@@ -102,7 +101,6 @@ function HomeAboutPlaces() {
               height="500"
               alt="Harva Khangai"
               focusable="false"
-              role="img"
               aria-label="Placeholder: 500x500"
             />
           </div>
@@ -137,7 +135,6 @@ function HomeAboutPlaces() {
               width="500"
               height="500"
               focusable="false"
-              role="img"
               aria-label="Placeholder: 500x500"
             />
           </div>

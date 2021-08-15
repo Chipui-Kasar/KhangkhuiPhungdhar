@@ -36,7 +36,6 @@ function HomeBanner() {
               src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/116599134_2964280263826441_1308995543305041698_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=wxDamgiQEJQAX9R4mWI&_nc_ht=scontent.fgau1-2.fna&oh=9be33ead969b86a08a1c1446ca95c82b&oe=613CBDD1"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
-              role="img"
             />
 
             <div className="container">
@@ -66,7 +65,6 @@ function HomeBanner() {
               src="https://khangkhuikhunou.netlify.app/images/IMG_20171231_112357.jpg"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
-              role="img"
             />
 
             <div className="container">
@@ -99,7 +97,6 @@ function HomeBanner() {
               alt="harva khangai"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
-              role="img"
             />
 
             <div className="container">

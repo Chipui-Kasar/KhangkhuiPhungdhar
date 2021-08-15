@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 
 function GalleryVideos() {
   const [video, setVideo] = useState([]);
-  const [spinner, setSpinner] = useState(true);
+  // const [spinner, setSpinner] = useState(true);
   //AIzaSyCVGBklLLNd-0tTrFJQIxo4Uw6zro9dQ9k
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 1000);
+    // setTimeout(() => setSpinner(false), 1000);
     const PlaylistSummary = require("youtube-playlist-summary");
     const config = {
       GOOGLE_API_KEY: "AIzaSyCVGBklLLNd-0tTrFJQIxo4Uw6zro9dQ9k", // require
