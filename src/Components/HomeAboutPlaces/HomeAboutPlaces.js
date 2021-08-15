@@ -52,7 +52,7 @@ function HomeAboutPlaces() {
               <br />
             </p>
           </div>
-          <div className="col-lg-5 place-image  pb-5 " data-aos="flip-left">
+          <div className="col-lg-5 place-image   " data-aos="flip-left">
             <img
               src="https://cdn.cdnparenting.com/articles/2018/08/602444213-H.jpg"
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
@@ -89,7 +89,7 @@ function HomeAboutPlaces() {
             </p>
           </div>
           <div
-            className="col-lg-5 place-image pb-5 mb-lg-5 mb-sm-3"
+            className="col-lg-5 place-image mb-lg-5 mb-sm-3"
             data-aos="zoom-in"
           >
             <img
@@ -125,7 +125,7 @@ function HomeAboutPlaces() {
               Khangkhui
             </p>
           </div>
-          <div className="col-lg-5 place-image pb-5">
+          <div className="col-lg-5 place-image ">
             <img
               src="https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Category_Header_Image_Mountain_All_Mountain_1.jpg"
               alt="Khorim"
@@ -138,7 +138,6 @@ function HomeAboutPlaces() {
           </div>
         </div>
       </div>
-      <hr className="featurette-divider" />
     </>
   );
 }

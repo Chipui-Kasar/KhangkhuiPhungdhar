@@ -1,4 +1,6 @@
-/* .marketing {
-  background-image: url("../../images/home.svg");
+.marketing {
+  padding: 4rem 0;
+  background-image: url("../../images/home.jpg");
   background-attachment: fixed;
-} */
+  background-repeat: no-repeat;
+}
