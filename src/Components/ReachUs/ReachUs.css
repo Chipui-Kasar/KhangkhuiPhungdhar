@@ -1,4 +1,8 @@
 footer {
+  background-image: url("../../images/footer.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }

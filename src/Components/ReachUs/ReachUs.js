@@ -7,7 +7,7 @@ function ReachUs() {
   };
   return (
     <div>
-      <footer className="container-fluid bg-dark">
+      <footer className="container-fluid">
         <h2 className="text-white pl-5">Reach Us</h2>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 form-group text-center">
@@ -112,8 +112,6 @@ function ReachUs() {
             </ul>
           </div>
         </div>
-
-        <hr className="featurette-divider" />
 
         <p className="text-white text-center">
           Copyright &copy; All rights reserved @2021 &middot;
