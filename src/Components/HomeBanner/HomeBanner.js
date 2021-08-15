@@ -9,10 +9,12 @@ function HomeBanner() {
           News & Updates
         </div>
 
-        <div id="latestnews" className="col-md-9 col-12 pt-2">
-          <marquee behavior="scroll" scrollamount="10">
-            ** We have re-define our site & New Blog Page has been Added **
-          </marquee>
+        <div id="latestnews" className="col-md-9 col-12 pt-1">
+          <div className="marquee">
+            <p>
+              ** We have re-define our site & New Blog Page has been Added **
+            </p>
+          </div>
         </div>
       </div>
 
