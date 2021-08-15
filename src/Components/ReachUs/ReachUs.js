@@ -1,5 +1,6 @@
 import React from "react";
 import "./ReachUs.css";
+
 function ReachUs() {
   const donateClick = () => {
     alert("This is in a beta, Thanks for trying");
@@ -7,9 +8,6 @@ function ReachUs() {
   return (
     <div>
       <footer className="container-fluid bg-dark">
-        <p className="float-right text-white">
-          <a href="#">⬆ Back to top </a>
-        </p>
         <h2 className="text-white pl-5">Reach Us</h2>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 form-group text-center">

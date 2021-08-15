@@ -34,7 +34,6 @@ function HomeBanner() {
               height="100%"
               alt="Khangkhui Village"
               src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/116599134_2964280263826441_1308995543305041698_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=wxDamgiQEJQAX9R4mWI&_nc_ht=scontent.fgau1-2.fna&oh=9be33ead969b86a08a1c1446ca95c82b&oe=613CBDD1"
-              preserveAspectRatio="xMidYMid slice"
               focusable="false"
             />
 
@@ -63,7 +62,6 @@ function HomeBanner() {
               height="100%"
               alt="Harva Khangai"
               src="https://khangkhuikhunou.netlify.app/images/IMG_20171231_112357.jpg"
-              preserveAspectRatio="xMidYMid slice"
               focusable="false"
             />
 
@@ -95,7 +93,6 @@ function HomeBanner() {
               height="100%"
               src="https://lh3.googleusercontent.com/QfGWlQ53Gk6aTKn9l7bi_-EzNoyNqUau7rW0f6n3UGsQ_EA57uZv-hq6bY7amTIKHUdPQUnjZB_15QSQ=w1080-h608-p-no-v0"
               alt="harva khangai"
-              preserveAspectRatio="xMidYMid slice"
               focusable="false"
             />
 

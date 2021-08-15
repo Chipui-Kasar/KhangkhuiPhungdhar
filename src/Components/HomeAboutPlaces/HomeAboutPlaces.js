@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./HomeAboutPlaces.css";
+
 import AOS from "aos";
 function HomeAboutPlaces() {
   useEffect(() => {
@@ -26,9 +27,6 @@ function HomeAboutPlaces() {
 
   return (
     <>
-      <p className="float-right text-white">
-        <a href="#">⬆ Back to top </a>
-      </p>
       <hr className="featurette-divider" id="aboutkhangkhui" />
 
       <div className="container">
