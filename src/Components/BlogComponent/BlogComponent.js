@@ -93,7 +93,7 @@ function BlogComponent() {
               <div className="blog-post">
                 <h2 className="blog-post-title">Adventure</h2>
                 <p className="blog-post-meta">
-                  December 14, 2020 by <a href="">Chris</a>
+                  December 14, 2020 by <a href="#">Chris</a>
                 </p>
 
                 <p>
