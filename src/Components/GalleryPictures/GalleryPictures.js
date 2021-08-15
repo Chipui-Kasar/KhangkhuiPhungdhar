@@ -8,13 +8,7 @@ function GalleryPictures() {
       <div className="row">
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
-            <img
-              alt="Khangkhui khunou"
-              src=""
-              width="100%"
-              height="225"
-              id="shuwusha"
-            />
+            <img alt="" src="" width="100%" height="225" id="shuwusha" />
             <div className="card-body">
               <p className="card-text">
                 Night View of Ukhrul Town From Khangkhui Shuwusha
@@ -45,7 +39,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
-              alt="Khangkhui khunou"
+              alt=""
               src="./images/IMG_20171231_112357.jpg"
               width="100%"
               height="225"
@@ -79,7 +73,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
-              alt="Khangkhui khunou"
+              alt=""
               src="./images/IMG_20171231_115945.jpg"
               width="100%"
               height="225"
@@ -113,7 +107,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
-              alt="Khangkhui khunou"
+              alt=""
               src="./images/bys1.JPG"
               width="100%"
               height="225"
@@ -149,7 +143,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
-              alt="Khangkhui khunou"
+              alt=""
               src="./images/bys2.JPG"
               width="100%"
               height="225"
@@ -183,7 +177,7 @@ function GalleryPictures() {
         <div className="col-md-4">
           <div className="card mb-4 shadow-sm">
             <img
-              alt="Khangkhui khunou"
+              alt=""
               src="./images/bys3.jpg"
               width="100%"
               height="225"
