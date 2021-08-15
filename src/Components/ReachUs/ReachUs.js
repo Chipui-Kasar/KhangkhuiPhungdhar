@@ -112,9 +112,6 @@ function ReachUs() {
             </ul>
           </div>
         </div>
-        <p className="float-right text-white">
-          <a href="#">⬆ Back to top </a>
-        </p>
 
         <hr className="featurette-divider" />
 
