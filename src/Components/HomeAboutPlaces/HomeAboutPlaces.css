@@ -1,0 +1,16 @@
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette-heading {
+  font-size: calc(1.5em + 1.5vw);
+  font-weight: bold;
+
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+.content {
+  text-align: justify;
+}
+.place-image {
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+.title {
+  font-size: calc(0.5rem + 3vw);
+  font-weight: 600 !important;
+}
+.video-align {
+  margin: auto;
+}

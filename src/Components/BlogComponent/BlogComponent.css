@@ -1,0 +1,56 @@
+.card {
+  background-color: transparent;
+}
+.card-text {
+  font-size: calc(8px + 1vw);
+}
+.image-right {
+  object-fit: cover;
+  padding: 1rem;
+}
+.display-4 {
+  font-size: calc(1em + 3vw);
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: calc(1.5em + 2vw);
+  }
+}
+.blog-container h1 {
+  font-size: calc(0.8em + 2.2vw);
+}
+.blog-container h4 {
+  font-size: calc(0.6em + 1.2vw);
+}
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  color: rgb(177, 174, 174);
+  margin-bottom: 0.25rem;
+  font-size: calc(0.9em + 1.3vw);
+}
+.description {
+  font-size: calc(0.6em + 0.9vw);
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+.lead {
+  font-size: calc(0.7em + 1.2vw);
+}
+.lead a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.lead a:hover {
+  background-color: rgb(146, 223, 215);
+  color: rgb(0, 0, 0) !important;
+  transition: all 0.3s;
+}
+.quicklink a {
+  font-style: italic;
+  color: rgb(87, 175, 36) !important;
+}

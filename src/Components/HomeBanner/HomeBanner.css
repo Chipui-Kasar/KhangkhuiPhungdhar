@@ -1,0 +1,91 @@
+.news {
+  display: flex;
+  flex-wrap: wrap;
+}
+#leftnews {
+  background: green;
+  border: 2px solid mediumspringgreen;
+  color: white;
+
+  animation: changecolor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changecolor {
+  50% {
+    background-image: linear-gradient(to left, black, rgb(228, 63, 63));
+  }
+
+  100% {
+    background-image: linear-gradient(to right, yellow, indigo);
+  }
+}
+
+#latestnews {
+  background: black;
+  color: rgb(156, 156, 156);
+  padding: 0px;
+  font-style: italic;
+}
+
+#latestnews marquee:hover {
+  color: white;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 5rem;
+  z-index: 10;
+  font-size: 12px;
+}
+.carouseltitle {
+  font-size: 1.5rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 20rem;
+  transition: ease-in-out 700ms;
+}
+.carousel-item > img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 20rem;
+}
+/* Bump up size of carousel content */
+.carousel-caption {
+  bottom: 10rem;
+  z-index: 10;
+  font-size: 2em;
+}
+
+.carousel-caption p {
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  font-size: calc(0.2em + 1.6vw);
+  color: white;
+  line-height: 1.4;
+}
+.carousel-item {
+  height: 34rem;
+}
+.carouseltitle {
+  font-size: calc(0.5em + 3vw);
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 35rem;
+}

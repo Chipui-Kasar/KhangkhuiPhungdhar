@@ -1,0 +1,16 @@
+.align-center {
+  text-align: center;
+}
+.image {
+  margin: auto;
+  border: 1px solid grey;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.image:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}

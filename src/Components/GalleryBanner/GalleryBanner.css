@@ -1,0 +1,39 @@
+.gallerycontainer {
+  min-height: 65vh;
+}
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+.info {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 30rem;
+}
+.youtubetitle {
+  font-size: calc(0.7em + 1.5vw);
+  font-weight: 600;
+}
+.youtube {
+  display: flex;
+}
