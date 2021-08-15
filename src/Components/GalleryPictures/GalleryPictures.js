@@ -217,7 +217,7 @@ function GalleryPictures() {
             &times;
           </span>
           <div className="w3-modal-content w3-animate-zoom">
-            <img id="img01" style={{ width: "100%" }} />
+            <img id="img01" alt="" style={{ width: "100%" }} />
           </div>
         </div>
       </div>
