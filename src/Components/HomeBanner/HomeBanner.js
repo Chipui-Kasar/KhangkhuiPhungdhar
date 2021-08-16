@@ -5,6 +5,7 @@ import harvakhangai from "../../images/harva.jpeg";
 function HomeBanner() {
   return (
     <>
+    
       <div className="news text-center">
         <div className="col-md-3 col-12 pl-1 pt-1" id="leftnews">
           News & Updates
