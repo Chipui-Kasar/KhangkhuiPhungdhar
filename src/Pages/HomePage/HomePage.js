@@ -5,10 +5,11 @@ import HomeVA from "../../Components/HomeVA/HomeVA";
 import HomeAboutPlaces from "../../Components/HomeAboutPlaces/HomeAboutPlaces";
 import "./HomePage.css";
 
-function HomePage() {
+function HomePage(props) {
+  const visit = props.visits;
   return (
     <div>
-      <HomeBanner />
+      <HomeBanner visit={visit} />
       <div className="container-fluid marketing">
         <HomeFounder />
         <HomeVA />

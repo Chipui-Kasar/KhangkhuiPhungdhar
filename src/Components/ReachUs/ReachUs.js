@@ -64,6 +64,7 @@ function ReachUs() {
             </div>
           </div>
         </div>
+
         <hr className="featurette-divider" />
         <div className="row text-left">
           <div className="col-sm-12 col-xs-12 col-md-7 py-4 pl-5">
@@ -140,6 +141,10 @@ function ReachUs() {
           Copyright &copy; All rights reserved @2021 &middot;
         </p>
       </footer>
+      <script
+        type="text/javascript"
+        src="https://freehitcounters.org/count/95j7"
+      ></script>
     </div>
   );
 }

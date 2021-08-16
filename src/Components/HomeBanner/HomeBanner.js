@@ -2,10 +2,9 @@ import React from "react";
 import "./HomeBanner.css";
 import { Link } from "react-router-dom";
 import harvakhangai from "../../images/harva.jpeg";
-function HomeBanner() {
+function HomeBanner(props) {
   return (
     <>
-    
       <div className="news text-center">
         <div className="col-md-3 col-12 pl-1 pt-1" id="leftnews">
           News & Updates
@@ -56,6 +55,7 @@ function HomeBanner() {
                     Learn More about Khangkhui
                   </a>
                 </p>
+                <p>You have visited our site {props.visit} times</p>
               </div>
             </div>
           </div>
