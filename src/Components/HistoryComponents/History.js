@@ -11,7 +11,7 @@ function History() {
       <div>
         <div className="col-md-3"></div>
         <div className="col-md-6 video-align">
-          <div className="card mb-4 shadow-lg ">
+          <div className="card mb-4 shadow-lg">
             <iframe
               width="100%"
               height="347"

@@ -63,7 +63,7 @@ function BlogComponent() {
           })}
         </div>
 
-        <main role="main" className="container">
+        <main role="main">
           <div className="row">
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>

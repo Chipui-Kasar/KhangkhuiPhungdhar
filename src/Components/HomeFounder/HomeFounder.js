@@ -24,8 +24,8 @@ function HomeFounder() {
               <h2>{king.title}</h2>
 
               <div className="row">
-                <div className="col-lg-12 col-md-12 col-sm-2"></div>
-                <div className="col-lg-12 col-md-12 col-sm-8 col-12">
+                <div className="col-md-12 col-sm-2"></div>
+                <div className="col-md-12 col-sm-8 col-12">
                   <h5>Name: {king.name} </h5>
                   <h5>DOB:{king.dob}</h5>
                   <h5>DOD:{king.dod}</h5>
@@ -44,7 +44,7 @@ function HomeFounder() {
                     </div>
                   </p>
                 </div>
-                <div className="col-lg-12 col-md-12 col-sm-2"></div>
+                <div className="col-md-12 col-sm-2"></div>
               </div>
             </div>
           );

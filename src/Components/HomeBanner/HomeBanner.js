@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomeBanner.css";
 import { Link } from "react-router-dom";
+import harvakhangai from "../../images/harva.jpeg";
 function HomeBanner() {
   return (
     <>
@@ -63,16 +64,16 @@ function HomeBanner() {
               width="100%"
               height="100%"
               alt="Harva Khangai"
-              src="https://khangkhuikhunou.netlify.app/images/IMG_20171231_112357.jpg"
+              src={harvakhangai}
               focusable="false"
             />
 
             <div className="container">
               <div className="carousel-caption">
-                <h1 className="carouseltitle">
+                <h1 className="carouseltitle text-dark">
                   Khangkhui Phungdhar Harva Khangai
                 </h1>
-                <p>
+                <p className="text-warning">
                   Harva Khangai is the battle spot that was fought during the
                   2nd World War
                 </p>

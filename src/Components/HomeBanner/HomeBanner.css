@@ -2,6 +2,7 @@
   height: 25px;
   overflow: hidden;
   position: relative;
+  font-size: calc(0.4em + 1vw);
 }
 .marquee p {
   position: absolute;

@@ -2,5 +2,6 @@
   color: yellow !important;
 }
 .navbar-brand h4 {
+  margin-bottom: 0;
   font-size: calc(0.8em + 1vw);
 }

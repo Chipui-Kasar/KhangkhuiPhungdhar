@@ -8,13 +8,11 @@ import "./HomePage.css";
 function HomePage() {
   return (
     <div>
-      <div>
-        <HomeBanner />
-        <div className="container-fluid marketing">
-          <HomeFounder />
-          <HomeVA />
-          <HomeAboutPlaces />
-        </div>
+      <HomeBanner />
+      <div className="container-fluid marketing">
+        <HomeFounder />
+        <HomeVA />
+        <HomeAboutPlaces />
       </div>
     </div>
   );

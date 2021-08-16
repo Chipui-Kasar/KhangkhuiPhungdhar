@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import "./HomeAboutPlaces.css";
+import khorim from "../../images/khorim.jpeg";
+import harvaplace from "../../images/harvaplace.jpeg";
+import khangkhui from "../../images/khangkhui.jpeg";
 
 import AOS from "aos";
 function HomeAboutPlaces() {
@@ -54,7 +57,7 @@ function HomeAboutPlaces() {
           </div>
           <div className="col-lg-5 place-image   " data-aos="flip-left">
             <img
-              src="https://cdn.cdnparenting.com/articles/2018/08/602444213-H.jpg"
+              src={khangkhui}
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
               alt="Khangkhui Phungdhar"
@@ -93,7 +96,7 @@ function HomeAboutPlaces() {
             data-aos="zoom-in"
           >
             <img
-              src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-12/11/full/1607655600-5776.jpg"
+              src={harvaplace}
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
               height="500"
@@ -125,9 +128,9 @@ function HomeAboutPlaces() {
               Khangkhui
             </p>
           </div>
-          <div className="col-lg-5 place-image ">
+          <div className="col-lg-5 place-image " data-aos="flip-up">
             <img
-              src="https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Category_Header_Image_Mountain_All_Mountain_1.jpg"
+              src={khorim}
               alt="Khorim"
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
