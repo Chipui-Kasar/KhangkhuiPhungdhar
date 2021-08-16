@@ -41,7 +41,7 @@
   }
 }
 */
-/*
+
 @keyframes marquee {
   0% {
     -moz-transform: translateX(100%); /* Firefox bug fix */
@@ -54,7 +54,7 @@
     transform: translateX(-100%);
   }
 }
-*/
+
 .news {
   display: flex;
   flex-wrap: wrap;
