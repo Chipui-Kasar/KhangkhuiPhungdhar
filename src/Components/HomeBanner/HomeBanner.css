@@ -10,7 +10,7 @@
   margin: 0;
   line-height: 25px;
   text-align: center;
-
+/*
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -18,11 +18,12 @@
   -moz-animation: marquee 15s linear infinite;
   -webkit-animation: marquee 15s linear infinite;
   animation: marquee 20s linear infinite;
+*/
 }
 .marquee p:hover {
   color: rgb(255, 255, 255);
 }
-
+/*
 @-moz-keyframes marquee {
   0% {
     -moz-transform: translateX(100%);
@@ -51,7 +52,7 @@
     transform: translateX(-100%);
   }
 }
-
+*/
 .news {
   display: flex;
   flex-wrap: wrap;
