@@ -2,9 +2,6 @@ import React from "react";
 import "./ReachUs.css";
 
 function ReachUs() {
-  const donateClick = () => {
-    alert("This is in a beta, Thanks for trying");
-  };
   return (
     <div>
       <footer className="container-fluid">
@@ -39,14 +36,31 @@ function ReachUs() {
                 <i>Chipui Kasar</i>
               </h6>
             </div>
-            <br />
-            <div>
-              <button
-                className="btn btn-light btn-outline-info"
-                onClick={donateClick}
-              >
-                Donate
-              </button>
+
+            <div
+              class="razorpay-embed-btn"
+              data-url="https://pages.razorpay.com/pl_HloblkAnw19Yak/view"
+              data-text="Donate"
+              data-color="#528FF0"
+              data-size="medium"
+            >
+              <script>
+                {(function () {
+                  var d = document;
+                  var x = !d.getElementById("razorpay-embed-btn-js");
+                  if (x) {
+                    var s = d.createElement("script");
+                    s.defer = !0;
+                    s.id = "razorpay-embed-btn-js";
+                    s.src =
+                      "https://cdn.razorpay.com/static/embed_btn/bundle.js";
+                    d.body.appendChild(s);
+                  } else {
+                    var rzp = window["__rzp__"];
+                    rzp && rzp.init && rzp.init();
+                  }
+                })()}
+              </script>
             </div>
           </div>
         </div>
@@ -112,7 +126,16 @@ function ReachUs() {
             </ul>
           </div>
         </div>
-
+        {/* <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_HloblkAnw19Yak/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
+  <script>
+    (function(){
+      var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+      if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+      s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+      rzp && rzp.init && rzp.init()}})();
+  </script>
+</div>
+     */}
         <p className="text-white text-center">
           Copyright &copy; All rights reserved @2021 &middot;
         </p>
