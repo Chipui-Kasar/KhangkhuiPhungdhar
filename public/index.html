@@ -51,7 +51,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,18 +80,30 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      
-    </div>
+    <div id="root"></div>
 
     <script>
-      (function(){
-        var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-        if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-        s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-        rzp && rzp.init && rzp.init()}})();
+      (function () {
+        var d = document;
+        var x = !d.getElementById("razorpay-embed-btn-js");
+        if (x) {
+          var s = d.createElement("script");
+          s.defer = !0;
+          s.id = "razorpay-embed-btn-js";
+          s.src = "https://cdn.razorpay.com/static/embed_btn/bundle.js";
+          d.body.appendChild(s);
+        } else {
+          var rzp = window["__rzp__"];
+          rzp && rzp.init && rzp.init();
+        }
+      })();
     </script>
-  </div>
-  
+    <div id="uv">
+      <p>Unique Visitors</p>
+      <script
+        type="text/javascript"
+        src="https://www.free-counters.org/count/95os"
+      ></script>
+    </div>
   </body>
 </html>

@@ -6,7 +6,7 @@ import HomeAboutPlaces from "../../Components/HomeAboutPlaces/HomeAboutPlaces";
 import "./HomePage.css";
 
 function HomePage(props) {
-  const visit = props.visits;
+  const visit = props.visits; //from App.js
   return (
     <div>
       <HomeBanner visit={visit} />

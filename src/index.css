@@ -26,3 +26,9 @@ code {
     font-size: 3.5rem;
   }
 }
+#uv {
+  text-align: center;
+  color: rgb(158, 154, 154);
+  background-image: url("./images/footer.jpg");
+  background-size: auto;
+}

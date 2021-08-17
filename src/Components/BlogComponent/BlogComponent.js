@@ -26,13 +26,13 @@ function BlogComponent() {
               <div className="counter">
                 <i className="fa fa-eye"></i>
                 <img
-                  src="https://www.counter12.com/img-ZCZ89zzaCDY2DZA9-3.gif"
+                  src="https://www.counter12.com/img-C778Dy435yw4x0D0-3.gif"
                   alt="conter12"
                 />
               </div>
               <script
                 type="text/javascript"
-                src="https://www.counter12.com/ad.js?id=ZCZ89zzaCDY2DZA9"
+                src="https://www.counter12.com/ad.js?id=C778Dy435yw4x0D0"
               ></script>
               {/* Visit counts */}
             </p>
