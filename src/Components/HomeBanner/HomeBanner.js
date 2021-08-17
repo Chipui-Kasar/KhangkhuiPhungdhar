@@ -13,7 +13,21 @@ function HomeBanner(props) {
         <div id="latestnews" className="col-md-9 col-12 pt-1">
           <div className="marquee">
             <p>
-              ** We have re-define our site & New Blog Page has been Added **
+              {/* Visit counts */}
+              <div className="totalvisit">
+                Visited{" "}
+                <img
+                  src="https://www.counter12.com/img-ZCZ89zzaCDY2DZA9-3.gif"
+                  alt="conter12"
+                />{" "}
+                times &nbsp;&nbsp;&nbsp;&nbsp; ** We have re-define our site &
+                New Blog Page has been Added **
+              </div>
+              <script
+                type="text/javascript"
+                src="https://www.counter12.com/ad.js?id=ZCZ89zzaCDY2DZA9"
+              ></script>
+              {/* Visit counts */}
             </p>
           </div>
         </div>

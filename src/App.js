@@ -35,7 +35,7 @@ function App() {
             <BlogPage />
           </Route>
         </Switch>
-       
+
         <ReachUs />
       </Router>
     </>

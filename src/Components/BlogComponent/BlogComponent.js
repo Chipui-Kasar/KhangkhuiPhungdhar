@@ -11,8 +11,9 @@ function BlogComponent() {
             <div className="display-4 font-italic">
               Welcome to the Blog Page
             </div>
+
             <p className="lead my-3">Submit a new blog and get ₹10 per post</p>
-            <p className="lead mb-0 ">
+            <p className="lead mb-0 count">
               <a
                 href="https://chipuikasarpage.netlify.app/contact"
                 target="_child"
@@ -20,6 +21,20 @@ function BlogComponent() {
               >
                 Submit Here......
               </a>
+              {/* Visit counts */}
+
+              <div className="counter">
+                <i className="fa fa-eye"></i>
+                <img
+                  src="https://www.counter12.com/img-ZCZ89zzaCDY2DZA9-3.gif"
+                  alt="conter12"
+                />
+              </div>
+              <script
+                type="text/javascript"
+                src="https://www.counter12.com/ad.js?id=ZCZ89zzaCDY2DZA9"
+              ></script>
+              {/* Visit counts */}
             </p>
           </div>
         </div>

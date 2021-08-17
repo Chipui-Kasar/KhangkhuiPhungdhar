@@ -54,3 +54,19 @@
   font-style: italic;
   color: rgb(87, 175, 36) !important;
 }
+
+.count {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.counter {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.counter .text {
+  font-size: calc(0.1em + 1vw);
+}

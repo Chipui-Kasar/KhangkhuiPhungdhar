@@ -38,7 +38,7 @@ function ReachUs() {
             </div>
 
             <div
-              class="razorpay-embed-btn"
+              className="razorpay-embed-btn"
               data-url="https://pages.razorpay.com/pl_HloblkAnw19Yak/view"
               data-text="Donate"
               data-color="#528FF0"
