@@ -15,13 +15,14 @@ function HomeBanner(props) {
             <p>
               {/* Visit counts */}
               <div className="totalvisit">
-                Visited{" "}
+                People have visited{" "}
                 <img
                   src="https://www.counter12.com/img-ZCZ89zzaCDY2DZA9-3.gif"
                   alt="conter12"
                 />{" "}
-                times &nbsp;&nbsp;&nbsp;&nbsp; ** We have re-define our site &
-                New Blog Page has been Added **
+                times
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ** We have re-define our site & New Blog Page has been Added **
               </div>
               <script
                 type="text/javascript"
