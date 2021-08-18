@@ -36,32 +36,7 @@ function ReachUs() {
                 <i>Chipui Kasar</i>
               </h6>
             </div>
-
-            <div
-              className="razorpay-embed-btn"
-              data-url="https://pages.razorpay.com/pl_HloblkAnw19Yak/view"
-              data-text="Donate"
-              data-color="#528FF0"
-              data-size="medium"
-            >
-              <script>
-                {(function () {
-                  var d = document;
-                  var x = !d.getElementById("razorpay-embed-btn-js");
-                  if (x) {
-                    var s = d.createElement("script");
-                    s.defer = !0;
-                    s.id = "razorpay-embed-btn-js";
-                    s.src =
-                      "https://cdn.razorpay.com/static/embed_btn/bundle.js";
-                    d.body.appendChild(s);
-                  } else {
-                    var rzp = window["__rzp__"];
-                    rzp && rzp.init && rzp.init();
-                  }
-                })()}
-              </script>
-            </div>
+            <button className="btn btn-md border bg-primary">Donate</button>
           </div>
         </div>
         <hr className="featurette-divider" />
