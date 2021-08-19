@@ -36,7 +36,17 @@ function ReachUs() {
                 <i>Chipui Kasar</i>
               </h6>
             </div>
-            <button className="btn btn-md border bg-primary">Donate</button>
+            <button
+              className="btn btn-md border donate"
+              onClick={() => alert("Do you really want to donate")}
+            >
+              <a
+                href="upi://pay?pa=chipuikasar@oksbi&amp;pn=Chipuimi Kasar &amp;cu=INR"
+                class="upi-pay1"
+              >
+                Donate
+              </a>
+            </button>
           </div>
         </div>
         <hr className="featurette-divider" />

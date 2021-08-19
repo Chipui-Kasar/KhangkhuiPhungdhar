@@ -10,3 +10,14 @@ footer {
 footer p {
   margin-bottom: 0.25rem;
 }
+.donate a {
+  color: white;
+  text-decoration: none;
+}
+.donate {
+  transition: all 0.3s;
+}
+.donate:hover {
+  background-color: rgba(181, 212, 155, 0.349);
+  transition: all 0.3s;
+}

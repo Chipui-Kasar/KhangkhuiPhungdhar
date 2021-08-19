@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./HomeAboutPlaces.css";
-import khorim from "../../images/khorim.jpeg";
-import harvaplace from "../../images/harvaplace.jpeg";
-import khangkhui from "../../images/khangkhui.jpeg";
+import khorim from "../../images/Home/khorim.jpeg";
+import harvaplace from "../../images/Home/harvaplace.jpeg";
+import khangkhui from "../../images/Home/khangkhui.jpeg";
 
 import AOS from "aos";
 function HomeAboutPlaces() {

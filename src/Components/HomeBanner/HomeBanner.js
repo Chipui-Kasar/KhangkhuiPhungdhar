@@ -1,7 +1,9 @@
 import React from "react";
 import "./HomeBanner.css";
 import { Link } from "react-router-dom";
-import harvakhangai from "../../images/harva.jpeg";
+import khangkhuiHome from "../../images/Home/Carousel/khangkhui.jpeg";
+import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
+import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
 function HomeBanner(props) {
   return (
     <>
@@ -51,7 +53,7 @@ function HomeBanner(props) {
               width="100%"
               height="100%"
               alt="Khangkhui Village"
-              src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/116599134_2964280263826441_1308995543305041698_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=wxDamgiQEJQAX9R4mWI&_nc_ht=scontent.fgau1-2.fna&oh=9be33ead969b86a08a1c1446ca95c82b&oe=613CBDD1"
+              src={khangkhuiHome}
               focusable="false"
             />
 
@@ -110,7 +112,7 @@ function HomeBanner(props) {
               className="bd-placeholder-img"
               width="100%"
               height="100%"
-              src="https://lh3.googleusercontent.com/QfGWlQ53Gk6aTKn9l7bi_-EzNoyNqUau7rW0f6n3UGsQ_EA57uZv-hq6bY7amTIKHUdPQUnjZB_15QSQ=w1080-h608-p-no-v0"
+              src={nightViewHarva}
               alt="harva khangai"
               focusable="false"
             />
