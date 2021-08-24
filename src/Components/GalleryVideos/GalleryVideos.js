@@ -111,7 +111,7 @@ function GalleryVideos() {
             return (
               <div className="col-md-4" key={key}>
                 <div className="card mb-4 shadow-lg">
-                  <iframe
+                  {/* <iframe
                     width="100%"
                     height="200"
                     loading="lazy"
@@ -123,7 +123,18 @@ function GalleryVideos() {
                       border: "7px solid #424242",
                       borderRadius: "7px",
                     }}
-                  ></iframe>
+                  ></iframe> */}
+                  <embed
+                    loading="lazy"
+                    src={`https://www.youtube.com/embed/${video.videoId}`}
+                    width="100%"
+                    height="200px"
+                    title={video.title}
+                    style={{
+                      border: "7px solid #424242",
+                      borderRadius: "7px",
+                    }}
+                  />
 
                   <div className="card-body">
                     <p>
