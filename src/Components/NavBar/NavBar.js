@@ -11,19 +11,23 @@ function NavBar() {
           <h4>Khangkhui Phungdhar</h4>
         </Link>
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler`}
           type="button"
           data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <div className="navbar-nav">
+          <div
+            className="navbar-nav"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+          >
             <NavLink
               to="/"
               exact
