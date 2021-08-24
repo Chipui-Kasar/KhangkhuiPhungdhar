@@ -13,7 +13,6 @@ function App() {
   const [visit, setVisit] = useState();
   useEffect(() => {
     countapi.visits("khangkhuiphungdhar.netlify.app").then(result => {
-      console.log(result.value);
       setVisit(result.value);
     });
   }, []);

@@ -154,7 +154,38 @@
       "duration": ""
     }
   ],
-
+  "DisplayVideo": [
+    {
+      "title": "Tangkhul Hao Laa Khangkhui Awo Ayi na kasa |",
+      "pubDate": "Jan 7, 2019",
+      "src": "https://www.youtube.com/embed/GotyH9vWcEg"
+    },
+    {
+      "title": "Traditional shows of Manipur",
+      "pubDate": "Dec 31, 2018",
+      "src": "https://www.youtube.com/embed/F-wigisAeFs"
+    },
+    {
+      "title": "VKL 2018 (Tangkhul) - Khangkhui Khunou Folk Dance",
+      "pubDate": "Feb 25, 2018",
+      "src": "https://www.youtube.com/embed/39rlW6J2HCs"
+    },
+    {
+      "title": "Naga (Tangkhul) Folk Song (Khangkhui Haolaa)",
+      "pubDate": "Jan 2, 2017",
+      "src": "https://www.youtube.com/embed/d2Uv4y5pHqQ"
+    },
+    {
+      "title": "https://www.youtube.com/embed/d2Uv4y5pHqQ",
+      "pubDate": "Feb 4, 2019",
+      "src": "https://www.youtube.com/embed/RDR-YhNE2f4"
+    },
+    {
+      "title": "Class 1 students | Singing and Exercising",
+      "pubDate": "Aug 27, 2020",
+      "src": "https://www.youtube.com/embed/S945RpOG5Us"
+    }
+  ],
   "Pictures": [
     {
       "title": "",
@@ -162,6 +193,7 @@
       "alt": ""
     }
   ],
+
   "Blog": [
     {
       "id": "KPYR",

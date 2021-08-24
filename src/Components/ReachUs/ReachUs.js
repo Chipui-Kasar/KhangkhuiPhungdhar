@@ -42,7 +42,7 @@ function ReachUs() {
             >
               <a
                 href="upi://pay?pa=chipuikasar@oksbi&amp;pn=Chipuimi Kasar &amp;cu=INR"
-                class="upi-pay1"
+                className="upi-pay1"
               >
                 Donate
               </a>
