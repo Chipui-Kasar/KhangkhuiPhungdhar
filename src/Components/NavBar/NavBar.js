@@ -3,6 +3,12 @@ import "./NavBar.css";
 import { NavLink, Link } from "react-router-dom";
 
 function NavBar() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
@@ -33,6 +39,7 @@ function NavBar() {
               exact
               className="nav-item nav-link "
               activeClassName="active"
+              onClick={scrollToTop}
             >
               Home
             </NavLink>
@@ -41,6 +48,7 @@ function NavBar() {
               exact
               className="nav-item nav-link "
               activeClassName="active"
+              onClick={scrollToTop}
             >
               Gallery
             </NavLink>
@@ -49,6 +57,7 @@ function NavBar() {
               exact
               className="nav-item nav-link "
               activeClassName="active"
+              onClick={scrollToTop}
             >
               History
             </NavLink>
@@ -57,6 +66,7 @@ function NavBar() {
               exact
               className="nav-item nav-link "
               activeClassName="active"
+              onClick={scrollToTop}
             >
               Blog
             </NavLink>

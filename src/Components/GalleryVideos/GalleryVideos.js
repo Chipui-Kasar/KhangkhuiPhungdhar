@@ -66,9 +66,11 @@
 
 import React, { useEffect, useState } from "react";
 // import Videos from "../../AllData.json";
+import "./GalleryVideos.css";
+import button from "../../images/button.png";
 
 function GalleryVideos() {
-  const [video, setVideo] = useState([]);
+  const [video, setVideo] = useState("");
   // const [spinner, setSpinner] = useState(true);
   //AIzaSyCVGBklLLNd-0tTrFJQIxo4Uw6zro9dQ9k
   useEffect(() => {
@@ -114,8 +116,7 @@ function GalleryVideos() {
                   {/* <iframe
                     width="100%"
                     height="200"
-                    loading="lazy"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
+                    src={`//www.youtube.com/embed/${video.videoId}`}
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     title={video.title}
@@ -124,18 +125,25 @@ function GalleryVideos() {
                       borderRadius: "7px",
                     }}
                   ></iframe> */}
-                  <embed
-                    loading="lazy"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
+                  <iframe
                     width="100%"
                     height="200px"
-                    title={video.title}
+                    id="videoframe"
+                    title="Khangkhui"
+                    src={`https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1`}
+                    srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{background:#000;height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style>
+  <a href=https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1>
+  <img src=https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg>
+  <img id='playbutton' src=${button} style='width: 66px; position: absolute; left: 41.5%;'></a>`}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"
                     style={{
                       border: "7px solid #424242",
                       borderRadius: "7px",
                     }}
-                  />
-
+                  ></iframe>
                   <div className="card-body">
                     <p>
                       <i className="fa fa-calendar"></i> : {video.publishedAt}
@@ -149,7 +157,9 @@ function GalleryVideos() {
             );
           })
         ) : (
-          <i className="fa fa-cog fa-spin"></i>
+          <p className="spinner">
+            <i className="fa fa-spinner fa-pulse fa-3x"></i>
+          </p>
         )}
       </div>
 
