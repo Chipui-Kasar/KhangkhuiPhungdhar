@@ -59,7 +59,7 @@ function HomeBanner(props) {
 
             <div className="container">
               <div className="carousel-caption text-left">
-                <h1 className="carouseltitle">
+                <h1 className="carouseltitle text-success">
                   Welcome to Khangkhui Phungdhar official Website
                 </h1>
                 <p>A beautiful village with lots of memories</p>

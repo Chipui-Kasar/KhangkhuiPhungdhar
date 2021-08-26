@@ -1,9 +1,10 @@
 import React from "react";
-// import blogdata from "../../AllData.json";
+import blogdata from "../../AllData.json";
 import { Link } from "react-router-dom";
 import "./BlogComponent.css";
-import { Blog } from "../../Data/AllData";
+//import { Blog } from "../../Data/AllData";
 function BlogComponent() {
+  console.log(blogdata);
   return (
     <>
       <div className="container blog-container">
@@ -43,7 +44,7 @@ function BlogComponent() {
 
         <h1>Recent Blogs</h1>
         <div className="row">
-          {Blog.map(data => {
+          {blogdata.Blog.map(data => {
             return (
               <div className="col-md-6">
                 <div className="card border rounded mb-4 shadow-sm">
@@ -83,7 +84,7 @@ function BlogComponent() {
           <div className="row">
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
-              {Blog.map(blog => {
+              {blogdata.Blog.map(blog => {
                 return (
                   <>
                     <div id={blog.id}>
