@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./MYCPage.css";
 import { Helmet } from "react-helmet";
+import Ura from "../../AllData.json";
 
 function MYCPage() {
   useEffect(() => {
@@ -160,76 +161,16 @@ function MYCPage() {
       <div className="destination">Ura Yarnao</div>
       <div id="drag-container">
         <div id="spin-container">
-          <a
-            href="https://www.facebook.com/profile.php?id=100006859965748"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img
-              src="https://scontent.fgau3-1.fna.fbcdn.net/v/t1.6435-9/36744876_2116865928552052_2440001823147294720_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=2gX7q5kfBYsAX8NBFoy&tn=RHRdgxsE3c_JskQB&_nc_ht=scontent.fgau3-1.fna&oh=2aaf032807fc7ff7e41f7b6a5674d356&oe=614C9CB3"
-              alt="Aimson"
-            />
-          </a>
-          <a
-            href="https://chipuikasarpage.netlify.app/"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img
-              src="https://chipuikasarpage.netlify.app/static/media/about.29ccae07.png"
-              alt="Chipui"
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/soreipam.khudai.9"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img src="" alt="Soreipam" />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100007363122239"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img
-              src="https://scontent.fgau3-1.fna.fbcdn.net/v/t1.18169-9/12066055_1550069841915105_3593860267440417747_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=oiXNLkb5wi4AX_ngYU2&_nc_ht=scontent.fgau3-1.fna&oh=2f37e6e12e212c50de0c575d4ccdec18&oe=614F51BF"
-              alt="Hormipam"
-              target="#hormipam"
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100006166546912"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img
-              src="https://scontent.fgau3-1.fna.fbcdn.net/v/t1.6435-9/221714598_2936427096572813_1847925721466239211_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=DCSUyFYF1lQAX8roNvG&_nc_ht=scontent.fgau3-1.fna&oh=bb34acd87d1cdd6c3a6de76e3598ea65&oe=614DE6AE"
-              alt="Atim"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/khitolae/"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img src="" alt="Khanchuila" />
-          </a>
-
-          <img src="" alt="Sochuichon" />
-
-          <img src="" alt="Pamyophi" />
-
-          <a
-            href="https://www.instagram.com/ayam_khudai/"
-            target="_child"
-            rel="noreferrer"
-          >
-            <img
-              src="https://scontent.fgau3-1.fna.fbcdn.net/v/t1.6435-9/38446581_114064682862827_7718860407703601152_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=o7epE2Ap380AX8jKupe&_nc_ht=scontent.fgau3-1.fna&oh=e4c0a34c213573eaf77c553fdf3868f2&oe=614E470E"
-              alt="Ayam"
-            />
-          </a>
+          {Ura.Ura.map(person => {
+            return (
+              <>
+                <a href={person.socialsite} target="_child" rel="noreferrer">
+                  <img src={person.img} alt={person.alt} loading="lazy" />
+                </a>
+                <div className="name"></div>
+              </>
+            );
+          })}
           <div className="text">We are one</div>
           <p>Ura Yarnao</p>
         </div>

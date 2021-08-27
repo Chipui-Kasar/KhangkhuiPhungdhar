@@ -51,6 +51,7 @@ function BlogComponent() {
                   <img
                     src={data.src}
                     alt={data.alt}
+                    loading="lazy"
                     height="225"
                     className="image-right"
                   />

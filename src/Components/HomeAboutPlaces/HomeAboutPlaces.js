@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./HomeAboutPlaces.css";
-import khorim from "../../images/Home/khorim.jpeg";
+import khorim from "../../images/Home/khorim.jpg";
 import harvaplace from "../../images/Home/harvaplace.jpeg";
 import khangkhui from "../../images/Home/khangkhui.jpeg";
 

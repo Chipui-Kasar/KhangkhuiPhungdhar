@@ -55,7 +55,7 @@
   color: rgb(124, 124, 124) !important;
 }
 #drag-container img,
-#drag-container video {
+.name {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   position: absolute;
