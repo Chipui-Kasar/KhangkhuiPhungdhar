@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./MYCPage.css";
+import { Helmet } from "react-helmet";
 
 function MYCPage() {
   useEffect(() => {
@@ -118,6 +119,15 @@ function MYCPage() {
 
   return (
     <div className="MYCcontainer">
+      <Helmet>
+        <base />
+        <title>Ura Yarnao</title>
+        <meta
+          name="description"
+          content="Coming together is a beginning. Keeping together is progress. Working together is success."
+        />
+        <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+      </Helmet>
       <div className="destination">Ura Yarnao</div>
       <div id="drag-container">
         <div id="spin-container">
