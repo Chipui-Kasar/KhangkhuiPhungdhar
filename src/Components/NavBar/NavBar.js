@@ -11,7 +11,7 @@ function NavBar() {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <nav className="navbar navbar-expand-md navbar-dark  sticky-top">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/" className="navbar-brand ">
           <h4>Khangkhui Phungdhar</h4>

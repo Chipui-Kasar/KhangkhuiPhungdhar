@@ -1,7 +1,6 @@
 .marquee {
   height: 25px;
   overflow: hidden;
-
   position: relative;
   font-size: calc(0.4em + 1vw);
 }
@@ -69,6 +68,7 @@
 
   animation: changecolor;
   animation-duration: 5s;
+  transition: all 0.3s ease-in-out;
   animation-iteration-count: infinite;
 }
 
@@ -83,7 +83,7 @@
 }
 
 #latestnews {
-  background: black;
+  background: rgba(2, 2, 2, 0.788);
   color: rgb(156, 156, 156);
   padding: 0px;
   font-style: italic;
