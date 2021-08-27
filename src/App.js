@@ -34,7 +34,7 @@ function App() {
           <Route path="/blog">
             <BlogPage />
           </Route>
-          <Route path="/myc">
+          <Route path="/ura">
             <MYCPage />
           </Route>
         </Switch>
