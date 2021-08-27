@@ -123,6 +123,10 @@ function MYCPage() {
         <base />
         <title>Ura Yarnao</title>
         <meta
+          name="title"
+          content="Coming together is a beginning. Keeping together is progress. Working together is success."
+        />
+        <meta
           name="description"
           content="Coming together is a beginning. Keeping together is progress. Working together is success."
         />

@@ -14,6 +14,10 @@ function GalleryPage() {
           name="description"
           content="Check out some of the Videos and Pictures of Khangkhui Khunou"
         />
+        <meta
+          name="title"
+          content="Check out some of the Videos and Pictures of Khangkhui Khunou"
+        />
 
         <meta property="og:title" content="Khangkhui Phungdhar's Gallery" />
         <meta

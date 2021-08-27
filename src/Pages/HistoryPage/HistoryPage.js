@@ -13,7 +13,10 @@ function HistoryPage() {
             name="description"
             content="check out the History of Khangkhui Phungdhar"
           />
-
+          <meta
+            name="title"
+            content="Check out the History of Khangkhui Phungdhar"
+          />
           <meta property="og:title" content="History of Khangkhui Phungdhar" />
           <meta
             property="og:description"
