@@ -127,6 +127,31 @@ function MYCPage() {
           content="Coming together is a beginning. Keeping together is progress. Working together is success."
         />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+
+        <meta property="og:title" content="Ura Yarnao" />
+        <meta
+          property="og:description"
+          content="Coming together is a beginning. Keeping together is progress. Working together is success."
+        />
+        <meta
+          property="og:image"
+          content="https://khangkhuiphungdhar.netlify.app/static/media/nightViewHarva.2289ef58.jpg"
+        />
+        <meta
+          property="og:url"
+          content="//khangkhuiphungdhar.netlify.app/ura"
+        />
+        <meta name="twitter:title" content="Ura Yarnao " />
+        <meta
+          name="twitter:description"
+          content="Coming together is a beginning. Keeping together is progress. Working together is success."
+        />
+        <meta
+          name="twitter:image"
+          content="https://khangkhuiphungdhar.netlify.app/static/media/nightViewHarva.2289ef58.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@chipui" />
       </Helmet>
       <div className="destination">Ura Yarnao</div>
       <div id="drag-container">
