@@ -14,24 +14,27 @@ function HomeBanner(props) {
 
         <div id="latestnews" className="col-md-9 col-12 pt-1">
           <div className="marquee">
-            <p>
+            <ul>
               {/* Visit counts */}
-              <div className="totalvisit">
+              <li>
                 People have visited{" "}
                 <img
                   src="https://www.counter12.com/img-C778Dy435yw4x0D0-3.gif"
                   alt="conter12"
-                />{" "}
+                />
                 times
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </li>
+              <li>
                 ** We have re-define our site & New Blog Page has been Added **
-              </div>
+              </li>
+              <li>**Aruihon Rakhui vak Shaktiman mazatmilu, Ningshinara**</li>
+
               <script
                 type="text/javascript"
                 src="https://www.counter12.com/ad.js?id=C778Dy435yw4x0D0"
               ></script>
               {/* Visit counts */}
-            </p>
+            </ul>
           </div>
         </div>
       </div>

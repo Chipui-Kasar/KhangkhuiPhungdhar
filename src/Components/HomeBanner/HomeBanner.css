@@ -1,29 +1,35 @@
 .marquee {
   height: 25px;
   overflow: hidden;
+
   position: relative;
   font-size: calc(0.4em + 1vw);
 }
-.marquee p {
-  position: relative;
+.marquee ul {
+  position: absolute;
   margin: 0;
   line-height: 25px;
   white-space: nowrap;
   box-sizing: border-box;
 
-  /* -moz-transform: translateX(100%);
+  -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 
   -moz-animation: marquee 15s linear infinite;
-  -webkit-animation: marquee 15s linear infinite; */
-  animation: marquee 15s linear infinite;
+  -webkit-animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
 }
-.marquee p:hover {
+
+.marquee li {
+  margin-right: 100px !important;
+  display: inline;
+}
+.marquee ul:hover {
   color: rgb(255, 255, 255);
 }
 
-/* @-moz-keyframes marquee {
+@-moz-keyframes marquee {
   0% {
     -moz-transform: translateX(100%);
   }
@@ -38,7 +44,8 @@
   100% {
     -webkit-transform: translateX(-100%);
   }
-} */
+}
+
 @keyframes marquee {
   0% {
     -moz-transform: translateX(100%); /* Firefox bug fix */
