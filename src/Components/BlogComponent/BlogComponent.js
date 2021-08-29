@@ -6,7 +6,7 @@ import axios from "axios";
 import moment from "moment";
 //import { Blog } from "../../Data/AllData";
 function BlogComponent() {
-  const [data, setDate] = useState("");
+  const [data, setData] = useState("");
   const [toggle, settoggle] = useState(false);
 
   console.log(blogdata);
@@ -17,9 +17,12 @@ function BlogComponent() {
         `https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195`
       )
       .then(res => {
-        setDate(res.data.articles);
+        setData(res.data.articles);
+      })
+      .catch(err => {
+        console.error(err);
       });
-  }, []);
+  }, [setData]);
   return (
     <>
       <div className="container blog-container">
