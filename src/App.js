@@ -9,6 +9,7 @@ import ReachUs from "./Components/ReachUs/ReachUs";
 import BlogPage from "./Pages/BlogPage/BlogPage";
 import MYCPage from "./Pages/MYCPage/MYCPage";
 import countapi from "countapi-js";
+import Admin from "./Pages/Admin/Admin";
 
 function App() {
   const [visit, setVisit] = useState();
@@ -34,8 +35,12 @@ function App() {
           <Route path="/blog">
             <BlogPage />
           </Route>
+
           <Route path="/ura">
             <MYCPage />
+          </Route>
+          <Route path="/adminkk">
+            <Admin />
           </Route>
         </Switch>
 

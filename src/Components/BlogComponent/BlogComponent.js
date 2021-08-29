@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import blogdata from "../../AllData.json";
 import { Link } from "react-router-dom";
 import "./BlogComponent.css";
+import axios from "axios";
+import moment from "moment";
 //import { Blog } from "../../Data/AllData";
 function BlogComponent() {
+  const [data, setDate] = useState("");
+  const [toggle, settoggle] = useState(false);
+
   console.log(blogdata);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195`
+      )
+      .then(res => {
+        setDate(res.data.articles);
+      });
+  }, []);
   return (
     <>
       <div className="container blog-container">
@@ -107,34 +122,7 @@ function BlogComponent() {
                   </>
                 );
               })}
-
-              <div className="blog-post">
-                <h2 className="blog-post-title">Adventure</h2>
-                <p className="blog-post-meta">
-                  December 14, 2020 by <b>Chris</b>
-                </p>
-
-                <p className="description">
-                  From Tokyo to Mexico, to Rio. Yeah, you take me to utopia. I'm
-                  walking on air. We'd make out in your Mustang to Radiohead. I
-                  mean the ones, I mean like she's the one. Sun-kissed skin so
-                  hot we'll melt your popsicle. Slow cooking pancakes for my
-                  boy, still up, still fresh as a Daisy.
-                </p>
-                <ul className="description">
-                  <li>I hope you got a healthy appetite.</li>
-                  <li>You're never gonna be unsatisfied.</li>
-                  <li>Got a motel and built a fort out of sheets.</li>
-                </ul>
-                <p className="description">
-                  Don't need apologies. Boy, you're an alien your touch so
-                  foreign, it's <em>supernatural</em>, extraterrestrial. Talk
-                  about our future like we had a clue. I can feel a phoenix
-                  inside of me.
-                </p>
-              </div>
             </div>
-
             <aside className="col-md-4 blog-sidebar">
               <div className="p-4 mb-3 bg-light rounded mt-5">
                 <h4 className="font-italic">Sad Story</h4>
@@ -195,6 +183,75 @@ function BlogComponent() {
                 </ol>
               </div>
             </aside>
+          </div>
+
+          <div className="row">
+            <div className="col-md-12 blog-main">
+              <hr style={{ border: "1px solid #fff" }} />
+              <div className="blog-post-title text-center text-danger">
+                Today's Top Headline News
+              </div>
+              <hr style={{ border: "1px solid #fff" }} />
+              {data
+                ? data.map((news, key) => {
+                    return (
+                      <div className="blog-post" key={key}>
+                        <h2 className="blog-post-title text-white">
+                          {news.title}
+                        </h2>
+                        <p className="blog-post-meta">
+                          {moment(news.publishedAt).calendar()} by{" "}
+                          <b>{news.source.name}</b>
+                        </p>
+                        <img
+                          width="30%"
+                          src={news.urlToImage}
+                          alt={news.title}
+                        />
+                        <p className="description">{news.description}</p>
+                        <p className="description">{news.content}</p>
+
+                        <button
+                          onClick={() => settoggle(!toggle)}
+                          className="btn btn-primary"
+                        >
+                          <a href={news.url} target="_child" rel="noreferrer">
+                            Read full article
+                          </a>
+                        </button>
+                        <hr style={{ border: "1px solid #fff" }} />
+                        <hr style={{ border: "1px solid #fff" }} />
+                      </div>
+                    );
+                  })
+                : "Loading......"}
+
+              <div className="blog-post">
+                <h2 className="blog-post-title">Adventure</h2>
+                <p className="blog-post-meta">
+                  December 14, 2020 by <b>Chris</b>
+                </p>
+
+                <p className="description">
+                  From Tokyo to Mexico, to Rio. Yeah, you take me to utopia. I'm
+                  walking on air. We'd make out in your Mustang to Radiohead. I
+                  mean the ones, I mean like she's the one. Sun-kissed skin so
+                  hot we'll melt your popsicle. Slow cooking pancakes for my
+                  boy, still up, still fresh as a Daisy.
+                </p>
+                <ul className="description">
+                  <li>I hope you got a healthy appetite.</li>
+                  <li>You're never gonna be unsatisfied.</li>
+                  <li>Got a motel and built a fort out of sheets.</li>
+                </ul>
+                <p className="description">
+                  Don't need apologies. Boy, you're an alien your touch so
+                  foreign, it's <em>supernatural</em>, extraterrestrial. Talk
+                  about our future like we had a clue. I can feel a phoenix
+                  inside of me.
+                </p>
+              </div>
+            </div>
           </div>
         </main>
       </div>

@@ -26,12 +26,17 @@
 .blog-post {
   margin-bottom: 4rem;
 }
+.blog-post a {
+  color: white;
+  text-decoration: none;
+}
 .blog-post-title {
   color: rgb(177, 174, 174);
   margin-bottom: 0.25rem;
   font-size: calc(0.9em + 1.3vw);
 }
 .description {
+  text-align: justify;
   font-size: calc(0.6em + 0.9vw);
 }
 .blog-post-meta {
