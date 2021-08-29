@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import khangkhuiHome from "../../images/Home/Carousel/khangkhui.jpeg";
 import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
 import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
+//import axios from "axios";
 function HomeBanner(props) {
   return (
     <>
@@ -17,7 +18,7 @@ function HomeBanner(props) {
             <ul>
               {/* Visit counts */}
               <li>
-                People have visited{" "}
+                People have visited
                 <img
                   src="https://www.counter12.com/img-C778Dy435yw4x0D0-3.gif"
                   alt="conter12"
@@ -75,6 +76,7 @@ function HomeBanner(props) {
                     Learn More about Khangkhui
                   </a>
                 </p>
+
                 <p>You have visited our site {props.visit} times</p>
               </div>
             </div>
