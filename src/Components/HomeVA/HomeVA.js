@@ -21,7 +21,7 @@ function HomeVA() {
                   src={va.img}
                   width="140"
                   height="140"
-                  alt={`No image ${va.name}`}
+                  alt={`${va.name}`}
                 />
               </div>
               <div className="vaDetails">
