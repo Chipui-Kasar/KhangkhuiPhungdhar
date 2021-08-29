@@ -19,6 +19,7 @@ function HomeVA() {
                 <img
                   className="bd-placeholder-img rounded-circle"
                   src={va.img}
+                  loading="lazy"
                   width="140"
                   height="140"
                   alt={`${va.name}`}

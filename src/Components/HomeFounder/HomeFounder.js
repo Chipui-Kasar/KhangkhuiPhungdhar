@@ -19,6 +19,7 @@ function HomeFounder() {
                   height="140"
                   focusable="false"
                   alt={king.alt}
+                  loading="lazy"
                 />
               </div>
               <h2>{king.title}</h2>
