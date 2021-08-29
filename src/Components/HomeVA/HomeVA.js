@@ -21,7 +21,7 @@ function HomeVA() {
                   src={va.img}
                   width="140"
                   height="140"
-                  alt={va.alt}
+                  alt={`No image ${va.name}`}
                 />
               </div>
               <div className="vaDetails">
@@ -29,7 +29,6 @@ function HomeVA() {
 
                 <h6>Name: {va.name}</h6>
                 <h6>DOB:{va.dob}</h6>
-                <h6>DOD:{va.dod}</h6>
                 <h6>Duration: {va.duration}</h6>
               </div>
               <p>
