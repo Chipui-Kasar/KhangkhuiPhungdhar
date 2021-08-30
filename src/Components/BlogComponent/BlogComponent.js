@@ -16,7 +16,7 @@ function BlogComponent() {
     //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
     axios
       .get(
-        `https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us`
+        `https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in`
       )
       .then(res => {
         setData(res.data.articles);
