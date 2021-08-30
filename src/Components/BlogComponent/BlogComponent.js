@@ -12,9 +12,11 @@ function BlogComponent() {
   console.log(blogdata);
 
   useEffect(() => {
+    //https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195
+    //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195`
+        `https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us`
       )
       .then(res => {
         setData(res.data.articles);
@@ -206,11 +208,7 @@ function BlogComponent() {
                           {moment(news.publishedAt).calendar()} by{" "}
                           <b>{news.source.name}</b>
                         </p>
-                        <img
-                          width="30%"
-                          src={news.urlToImage}
-                          alt={news.title}
-                        />
+                        <img width="40%" src={news.image} alt={news.title} />
                         <p className="description">{news.description}</p>
                         <p className="description">{news.content}</p>
 
