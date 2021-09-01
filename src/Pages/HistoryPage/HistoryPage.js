@@ -52,4 +52,4 @@ function HistoryPage() {
   );
 }
 
-export default HistoryPage;
+export default React.memo(HistoryPage);

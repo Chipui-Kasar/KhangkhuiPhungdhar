@@ -145,4 +145,4 @@ function HomeAboutPlaces() {
   );
 }
 
-export default HomeAboutPlaces;
+export default React.memo(HomeAboutPlaces);

@@ -56,4 +56,4 @@ function GalleryPage() {
   );
 }
 
-export default GalleryPage;
+export default React.memo(GalleryPage);

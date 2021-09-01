@@ -55,4 +55,4 @@ function HomeFounder() {
   );
 }
 
-export default HomeFounder;
+export default React.memo(HomeFounder);

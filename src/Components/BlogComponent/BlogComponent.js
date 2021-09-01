@@ -260,4 +260,4 @@ function BlogComponent() {
   );
 }
 
-export default BlogComponent;
+export default React.memo(BlogComponent);

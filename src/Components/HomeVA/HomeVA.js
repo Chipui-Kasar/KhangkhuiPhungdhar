@@ -51,4 +51,4 @@ function HomeVA() {
   );
 }
 
-export default HomeVA;
+export default React.memo(HomeVA);
