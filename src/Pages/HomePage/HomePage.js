@@ -32,7 +32,7 @@ function HomePage(props) {
         />
         <meta
           property="og:image"
-          content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26114299_2127595117494964_1517657411031770738_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=0debeb&_nc_ohc=HDTctLBIVZIAX9M_ssT&_nc_ht=scontent.fgau3-1.fna&oh=52872fdda8f3389c14c4061c6b198323&oe=614D82E3"
+          content="//lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
         />
         <meta property="og:url" content="//khangkhuiphungdhar.netlify.app" />
         <meta
@@ -45,7 +45,7 @@ function HomePage(props) {
         />
         <meta
           name="twitter:image"
-          content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26114299_2127595117494964_1517657411031770738_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=0debeb&_nc_ohc=HDTctLBIVZIAX9M_ssT&_nc_ht=scontent.fgau3-1.fna&oh=52872fdda8f3389c14c4061c6b198323&oe=614D82E3"
+          content="//lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />

@@ -24,7 +24,7 @@ function HistoryPage() {
           />
           <meta
             property="og:image"
-            content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26114299_2127595117494964_1517657411031770738_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=0debeb&_nc_ohc=HDTctLBIVZIAX9M_ssT&_nc_ht=scontent.fgau3-1.fna&oh=52872fdda8f3389c14c4061c6b198323&oe=614D82E3"
+            content="//leverageedu.com/blog/wp-content/uploads/2019/09/BA-History.png"
           />
           <meta
             property="og:url"
@@ -40,7 +40,7 @@ function HistoryPage() {
           />
           <meta
             name="twitter:image"
-            content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26114299_2127595117494964_1517657411031770738_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=0debeb&_nc_ohc=HDTctLBIVZIAX9M_ssT&_nc_ht=scontent.fgau3-1.fna&oh=52872fdda8f3389c14c4061c6b198323&oe=614D82E3"
+            content="//leverageedu.com/blog/wp-content/uploads/2019/09/BA-History.png"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@chipui" />

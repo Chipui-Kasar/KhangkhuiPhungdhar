@@ -26,7 +26,7 @@ function GalleryPage() {
         />
         <meta
           property="og:image"
-          content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26171788_2127592207495255_4791033178210349996_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=0debeb&_nc_ohc=dDbUiWB7W8QAX9ufN-u&_nc_ht=scontent.fgau3-1.fna&oh=ea208bfd1d67e33065906046b0967794&oe=614CF65B"
+          content="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/s640x640/245161982_4331496073602962_7780340899764369381_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=KqC2PlF9y9EAX8O7ZUd&tn=5U3BRKsECvtRmyhs&_nc_ht=scontent.fgau1-2.fna&oh=5f2a8fbc4491f083c1609d9514c0ac2f&oe=618A540A"
         />
         <meta
           property="og:url"
@@ -39,7 +39,7 @@ function GalleryPage() {
         />
         <meta
           name="twitter:image"
-          content="https://scontent.fgau3-1.fna.fbcdn.net/v/t31.18172-8/26171788_2127592207495255_4791033178210349996_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=0debeb&_nc_ohc=dDbUiWB7W8QAX9ufN-u&_nc_ht=scontent.fgau3-1.fna&oh=ea208bfd1d67e33065906046b0967794&oe=614CF65B"
+          content="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/s640x640/245161982_4331496073602962_7780340899764369381_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=KqC2PlF9y9EAX8O7ZUd&tn=5U3BRKsECvtRmyhs&_nc_ht=scontent.fgau1-2.fna&oh=5f2a8fbc4491f083c1609d9514c0ac2f&oe=618A540A"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
