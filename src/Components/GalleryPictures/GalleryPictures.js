@@ -12,7 +12,7 @@ function GalleryPictures() {
             <div className="col-md-4">
               <div className="card mb-4 shadow-sm">
                 <img
-                  alt={pic.title}
+                  alt={pic.alt}
                   src={pic.src}
                   width="100%"
                   loading="lazy"
