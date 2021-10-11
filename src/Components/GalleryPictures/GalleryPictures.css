@@ -9,7 +9,9 @@
 .w3-animate-zoom {
   animation: animatezoom 0.6s;
 }
-
+.card-text {
+  font-size: calc(0.8em + 1vw) !important;
+}
 @keyframes animatezoom {
   from {
     transform: scale(0);

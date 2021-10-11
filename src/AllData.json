@@ -186,13 +186,6 @@
       "src": "//www.youtube.com/embed/S945RpOG5Us"
     }
   ],
-  "Pictures": [
-    {
-      "title": "",
-      "src": "",
-      "alt": ""
-    }
-  ],
 
   "Blog": [
     {
@@ -227,7 +220,7 @@
     },
     {
       "name": "Chipui",
-      "img": "//chipuikasarpage.netlify.app/static/media/about.29ccae07.png",
+      "img": "//chipuikasarpage.netlify.app/static/media/about.a44d5625.png",
       "alt": "Chipui",
       "socialsite": "//chipuikasarpage.netlify.app/"
     },
