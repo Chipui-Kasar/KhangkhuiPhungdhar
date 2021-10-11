@@ -61,4 +61,4 @@ function HomePage(props) {
   );
 }
 
-export default React.memo(HomePage);
+export default HomePage;
