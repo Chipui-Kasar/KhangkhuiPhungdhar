@@ -1,16 +1,16 @@
 body {
   margin: 0;
-  font-family: "Skranji", cursive;
+  font-family: "Skranji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 html {
   scroll-behavior: smooth;
 }
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 .bd-placeholder-img {
   font-size: 1.125rem;
