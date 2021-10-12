@@ -26,7 +26,7 @@ function GalleryPage() {
         />
         <meta
           property="og:image"
-          content="https://khangkhuiphungdhar.netlify.app/static/media/ayahkhudai.4ddfbbb3.jpg"
+          content="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/p403x403/244749393_4005142446256703_2540969290474164681_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=110474&_nc_ohc=FFLWAs8CORwAX_Xs8LM&_nc_ht=scontent.fgau1-1.fna&edm=AN6CN6oEAAAA&oh=dffe539ef50be77d37bf05da2d8ba309&oe=618C5A63"
           data-rh="true"
         />
         <meta
@@ -46,7 +46,7 @@ function GalleryPage() {
         />
         <meta
           name="twitter:image"
-          content="https://khangkhuiphungdhar.netlify.app/static/media/ayahkhudai.4ddfbbb3.jpg"
+          content="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/p403x403/244749393_4005142446256703_2540969290474164681_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=110474&_nc_ohc=FFLWAs8CORwAX_Xs8LM&_nc_ht=scontent.fgau1-1.fna&edm=AN6CN6oEAAAA&oh=dffe539ef50be77d37bf05da2d8ba309&oe=618C5A63"
           data-rh="true"
         />
         <meta name="twitter:card" content="summary_large_image" />
