@@ -17,30 +17,40 @@ function HistoryPage() {
             name="title"
             content="Check out the History of Khangkhui Phungdhar"
           />
-          <meta property="og:title" content="History of Khangkhui Phungdhar" />
+          <meta
+            property="og:title"
+            content="History of Khangkhui Phungdhar"
+            data-rh="true"
+          />
           <meta
             property="og:description"
             content="check out the History of Khangkhui Phungdhar"
+            data-rh="true"
           />
           <meta
             property="og:image"
             content="//leverageedu.com/blog/wp-content/uploads/2019/09/BA-History.png"
+            data-rh="true"
           />
           <meta
             property="og:url"
             content="//khangkhuiphungdhar.netlify.app/history"
+            data-rh="true"
           />
           <meta
             name="twitter:title"
             content="History of Khangkhui Phungdhar "
+            data-rh="true"
           />
           <meta
             name="twitter:description"
             content="check out the History of Khangkhui Phungdhar"
+            data-rh="true"
           />
           <meta
             name="twitter:image"
             content="//leverageedu.com/blog/wp-content/uploads/2019/09/BA-History.png"
+            data-rh="true"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@chipui" />
