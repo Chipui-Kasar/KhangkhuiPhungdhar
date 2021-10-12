@@ -1,6 +1,6 @@
 export const Pictures = [
   {
-    title: "Beautiful Cosmos",
+    title: "Cosmos",
     src: "//www.floretflowers.com/wp-content/uploads/2018/12/FloretBlog-670B1221-640x427.jpg",
     alt: "Cosmos",
   },
