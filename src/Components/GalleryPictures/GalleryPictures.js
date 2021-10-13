@@ -48,4 +48,4 @@ function GalleryPictures() {
   );
 }
 
-export default GalleryPictures;
+export default React.memo(GalleryPictures);
