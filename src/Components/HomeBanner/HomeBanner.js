@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomeBanner.css";
 import { Link } from "react-router-dom";
-import khangkhuiHome from "../../images/Home/Carousel/khangkhui.jpeg";
+import khangkhuiHome from "../../images/Home/Carousel/khangkhui1.jpg";
 import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
 import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
 //import axios from "axios";
@@ -25,10 +25,8 @@ function HomeBanner(props) {
                 />
                 times
               </li>
-              <li>
-                ** We have re-define our site & New Blog Page has been Added **
-              </li>
-              <li>**Aruihon Rakhui vak Shaktiman mazatmilu, Ningshinara**</li>
+              <li>** Welcome to Khangkhui Phungdhar official website **</li>
+              <li>**Thanks for visiting, visit again**</li>
 
               <script
                 type="text/javascript"
@@ -66,7 +64,12 @@ function HomeBanner(props) {
                 <h1 className="carouseltitle text-success">
                   Welcome to Khangkhui Phungdhar official Website
                 </h1>
-                <p>A beautiful village with lots of memories</p>
+                <p
+                  className="pr-2 pl-2"
+                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
+                >
+                  A beautiful village with lots of memories
+                </p>
                 <p>
                   <a
                     className="btn btn-lg btn-primary"
@@ -77,7 +80,12 @@ function HomeBanner(props) {
                   </a>
                 </p>
 
-                <p>You have visited our site {props.visit} times</p>
+                <p
+                  className="pr-2 pl-2"
+                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
+                >
+                  You have visited our site {props.visit} times
+                </p>
               </div>
             </div>
           </div>
@@ -96,7 +104,10 @@ function HomeBanner(props) {
                 <h1 className="carouseltitle text-dark">
                   Khangkhui Phungdhar Harva Khangai
                 </h1>
-                <p className="text-warning">
+                <p
+                  className="text-warning pr-2 pl-2"
+                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
+                >
                   Harva Khangai is the battle spot that was fought during the
                   2nd World War
                 </p>

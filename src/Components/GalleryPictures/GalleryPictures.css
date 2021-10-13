@@ -11,6 +11,11 @@
 }
 .card-text {
   font-size: calc(0.8em + 1vw) !important;
+  margin: 0;
+}
+.source {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-style: italic;
 }
 @keyframes animatezoom {
   from {

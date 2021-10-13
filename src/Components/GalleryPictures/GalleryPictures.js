@@ -20,6 +20,7 @@ function GalleryPictures() {
                 />
                 <div className="card-body text-center">
                   <p className="card-text">{pic.title}</p>
+                  <p className="source">Source: {pic.source}</p>
                   <div className="d-flex justify-content-center align-items-center">
                     <div className="btn-group">
                       <a
