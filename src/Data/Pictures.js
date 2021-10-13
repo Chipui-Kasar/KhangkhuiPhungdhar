@@ -1,5 +1,11 @@
 export const Pictures = [
   {
+    title: "Leishinim & Khaying",
+    src: require("../images/Gallery/cuties.jpg").default,
+    alt: "Cuties",
+    source: "Aphungwon",
+  },
+  {
     title: "Cosmos",
     src: "//www.floretflowers.com/wp-content/uploads/2018/12/FloretBlog-670B1221-640x427.jpg",
     alt: "Cosmos",
