@@ -48,6 +48,12 @@ export const Pictures = [
     source: "Aphungwon",
   },
   {
+    title: "Paddy",
+    src: require("../images/Gallery/paddyfield.jpeg").default,
+    alt: "Paddy",
+    source: "Aphungwon",
+  },
+  {
     title: "Ngaiva Ngaiva",
     src: "//scontent.fgau1-2.fna.fbcdn.net/v/t31.18172-8/20045464_1185370544942347_7878171834122238402_o.jpg?_nc_cat=110&ccb=1-5&_nc_sid=0debeb&_nc_ohc=NmE1_PvR114AX-pFUFF&tn=5U3BRKsECvtRmyhs&_nc_ht=scontent.fgau1-2.fna&oh=b992ea1960eda31957720ccdbb599a32&oe=6189C706",
     alt: "Ngaiva Ngaiva",
