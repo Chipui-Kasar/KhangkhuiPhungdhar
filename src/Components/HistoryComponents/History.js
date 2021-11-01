@@ -25,9 +25,9 @@ function History() {
   <a href=https://www.youtube-nocookie.com/embed/YVb2CTHFdLM?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1>
   <img src=https://img.youtube.com/vi/YVb2CTHFdLM/hqdefault.jpg>
   <img id='playbutton' src=${button} style='width: 88px; position: absolute; left: 41.5%;'></a>`}
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
               style={{
                 border: "7px solid #424242",

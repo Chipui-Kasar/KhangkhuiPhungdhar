@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import History from "../../Components/HistoryComponents/History";
 import "./HistoryPage.css";
 function HistoryPage() {
+  console.log("History");
   return (
     <>
       <div className="historyContainer">

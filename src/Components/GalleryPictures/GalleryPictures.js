@@ -7,10 +7,10 @@ function GalleryPictures() {
       <hr className="featurette-divider" id="pictures" />
       <h1 className="text-center pb-3 title">PHOTOS OF KHANGKHUI PHUNGDHAR</h1>
       <div className="row">
-        {Pictures.map(pic => {
+        {Pictures.map((pic, key) => {
           return (
             <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
+              <div className="card mb-4 shadow-sm" key={key}>
                 <img
                   alt={pic.alt}
                   src={pic.src}
