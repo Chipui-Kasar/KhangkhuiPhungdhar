@@ -1,17 +1,27 @@
 import React, { useEffect, useState } from "react";
-import blogdata from "../../AllData.json";
+// import blogdata from "../../AllData.json";
 import { Link } from "react-router-dom";
 import "./BlogComponent.css";
 import axios from "axios";
 import moment from "moment";
+import { PropagateLoader } from "react-spinners";
 //import { Blog } from "../../Data/AllData";
 function BlogComponent() {
   const [data, setData] = useState("");
+  const [blog, setBblog] = useState("");
   const [toggle, settoggle] = useState(false);
 
-  console.log(blogdata);
-
   useEffect(() => {
+    axios
+      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
+      .then(response => {
+        setBblog(response.data);
+        //console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
     //https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195
     //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
     axios
@@ -25,6 +35,7 @@ function BlogComponent() {
         console.error(err);
       });
   }, [setData]);
+
   return (
     <>
       <div className="container blog-container">
@@ -64,69 +75,77 @@ function BlogComponent() {
 
         <h1>Recent Blogs</h1>
         <div className="row">
-          {blogdata.Blog.map(data => {
-            return (
-              <div className="col-md-6">
-                <div className="card border rounded mb-4 shadow-sm">
-                  <img
-                    src={data.src}
-                    alt={data.alt}
-                    loading="lazy"
-                    height="225"
-                    className="image-right"
-                  />
+          {blog
+            ? blog.map(data => {
+                return (
+                  <div className="col-md-6">
+                    <div className="card border rounded mb-4 shadow-sm">
+                      <img
+                        src={data.src}
+                        alt={data.alt}
+                        loading="lazy"
+                        height="225"
+                        className="image-right"
+                      />
 
-                  <div>
-                    <p className="card-text">
-                      <div className="p-3">
-                        <h4 className="mb-0">{data.title}</h4>
-                        <div className="mb-1 text-success">
-                          By : {data.author}
-                        </div>
-                        <div className="mb-1 text-muted">
-                          Posted : {data.date}
-                        </div>
-                        <p className="card-text text-truncate mb-auto text-white ">
-                          {data.displaytext}
+                      <div>
+                        <p className="card-text">
+                          <div className="p-3">
+                            <h4 className="mb-0">{data.title}</h4>
+                            <div className="mb-1 text-success">
+                              By : {data.author}
+                            </div>
+                            <div className="mb-1 text-muted">
+                              Posted : {data.date}
+                            </div>
+                            <p className="card-text text-truncate mb-auto text-white ">
+                              {data.displaytext}
+                            </p>
+                            <a href={`#${data.id}`} className="stretched-link">
+                              Continue reading
+                            </a>
+                          </div>
                         </p>
-                        <a href={`#${data.id}`} className="stretched-link">
-                          Continue reading
-                        </a>
                       </div>
-                    </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                );
+              })
+            : "Loading........."}
         </div>
 
         <main role="main">
           <div className="row">
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
-              {blogdata.Blog.map(blog => {
-                return (
-                  <>
-                    <div id={blog.id}>
-                      <hr style={{ border: "1px solid #fff" }} />
-                      <hr style={{ border: "1px solid #fff" }} />
-                      <div className="blog-post mt-5">
-                        <h2 className="blog-post-title">{blog.title}</h2>
-                        <p className="blog-post-meta">
-                          {blog.date} by{" "}
-                          <a href={blog.socialsite} target="_child">
-                            {blog.author}
-                          </a>
-                        </p>
-                        <p className="text-justify description">
-                          {blog.description}
-                        </p>
+              {blog ? (
+                blog.map(blog => {
+                  return (
+                    <>
+                      <div id={blog.id}>
+                        <hr style={{ border: "1px solid #fff" }} />
+                        <hr style={{ border: "1px solid #fff" }} />
+                        <div className="blog-post mt-5">
+                          <h2 className="blog-post-title">{blog.title}</h2>
+                          <p className="blog-post-meta">
+                            {blog.date} by{" "}
+                            <a href={blog.socialsite} target="_child">
+                              {blog.author}
+                            </a>
+                          </p>
+                          <p className="text-justify description">
+                            {blog.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </>
-                );
-              })}
+                    </>
+                  );
+                })
+              ) : (
+                <div className="text-center">
+                  <PropagateLoader color="white" />
+                </div>
+              )}
             </div>
             <aside className="col-md-4 blog-sidebar">
               <div className="p-4 mb-3 bg-light rounded mt-5">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./GalleryPictures.css";
 import { Pictures } from "../../Data/Pictures";
+
 function GalleryPictures() {
   return (
     <>

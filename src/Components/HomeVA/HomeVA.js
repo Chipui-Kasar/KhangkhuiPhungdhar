@@ -3,6 +3,7 @@ import React from "react";
 // import axios from "axios";
 import "./HomeVA.css";
 import { VillageAuthority } from "../../AllData.json";
+import icon from "../../images/icon.png";
 function HomeVA() {
   // const [data, setData] = useState("");
   // useEffect(() => {
@@ -35,7 +36,7 @@ function HomeVA() {
                   <div className="image">
                     <img
                       className="bd-placeholder-img rounded-circle"
-                      src={va.img}
+                      src={va.img ? va.img : icon}
                       loading="lazy"
                       width="140"
                       height="140"
