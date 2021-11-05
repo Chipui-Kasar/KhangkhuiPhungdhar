@@ -1,5 +1,6 @@
 import React from "react";
 import "./ReachUs.css";
+import developer from "../../images/developer.jpg";
 
 function ReachUs() {
   return (
@@ -23,10 +24,11 @@ function ReachUs() {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <div>
               <img
+                style={{ objectFit: "cover" }}
                 className="bd-placeholder-img rounded-circle"
                 width="170"
                 height="170"
-                src="https://i.pinimg.com/280x280_RS/6c/e2/e9/6ce2e9d1c9ba5e5ed762c2f2d4eb7f7b.jpg"
+                src={developer}
                 alt="Chipui Kasar"
               ></img>
               <h2 className="text-white">

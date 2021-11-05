@@ -79,7 +79,7 @@ function HomeAboutPlaces() {
               level. One can view the beautiful sunrise from the top of the
               mountain. From the hill top of Harva Khangai one can behold the
               scenic view of Ningthi River, Myanmar, Angoching Range, Ukhrul
-              town, Khayang Phungtha water falls, Shiroy mountain and beautiful
+              town, Khayang Phungtha water falls, Shirui mountain and beautiful
               view of the Imphal Valley. Harva Khangai Kaphung is a beautiful
               plateau which has great potential for tourist attraction. It could
               be well said that Harva Khangai is a hidden treasure of not only

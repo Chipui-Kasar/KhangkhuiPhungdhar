@@ -5,6 +5,7 @@ import khangkhuiHome from "../../images/Home/Carousel/khangkhui1.jpg";
 import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
 import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
 //import axios from "axios";
+
 function HomeBanner(props) {
   return (
     <>
