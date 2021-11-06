@@ -32,7 +32,9 @@ function GalleryPictures() {
       document.getElementById("btntext").innerHTML = text;
     }
   }, [limit, last]);
+  //---------------------------------------
 
+  //---------------------------------------
   return (
     <>
       <hr className="featurette-divider" id="pictures" />
@@ -70,7 +72,11 @@ function GalleryPictures() {
                       src={pic.src}
                       width="100%"
                       loading="lazy"
-                      style={{ objectFit: "cover", maxHeight: "350px" }}
+                      style={{
+                        objectFit: "cover",
+                        minHeight: "250px",
+                        maxHeight: "350px",
+                      }}
                     />
                     <div className="card-body text-center">
                       <p className="card-text">{pic.title}</p>

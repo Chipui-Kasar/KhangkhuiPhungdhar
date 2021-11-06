@@ -4,6 +4,8 @@ import React from "react";
 import "./HomeVA.css";
 import { VillageAuthority } from "../../AllData.json";
 import icon from "../../images/icon.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function HomeVA() {
   // const [data, setData] = useState("");
   // useEffect(() => {
@@ -34,7 +36,7 @@ function HomeVA() {
                   key={key}
                 >
                   <div className="image">
-                    <img
+                    <LazyLoadImage
                       className="bd-placeholder-img rounded-circle"
                       src={va.img ? va.img : icon}
                       loading="lazy"
