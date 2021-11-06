@@ -46,7 +46,7 @@ function GalleryPictures() {
           className="form-control border border-warning"
           value={search}
           aria-describedby="helpId"
-          placeholder="Search by name, Eg. khangkhui"
+          placeholder="Search by people or place Eg Khangkhui"
         />
       </div>
       <div className="row">
