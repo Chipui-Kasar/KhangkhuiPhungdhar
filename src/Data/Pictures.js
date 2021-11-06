@@ -12,6 +12,12 @@ export const Pictures = [
     source: "Unknown",
   },
   {
+    title: "Awungtang",
+    src: require("../images/Gallery/DSCN3715.jpg").default,
+    alt: "Awungtang choirs",
+    source: "Owner",
+  },
+  {
     title: "Ayah Khudai",
     src: require("../images/Gallery/ayahkhudai.jpg").default,
     alt: "Cosmos, Ayah Khudai",
