@@ -41,7 +41,7 @@ function GalleryPictures() {
         <input
           onChange={searchChange}
           type="text"
-          className="form-control"
+          className="form-control border border-warning"
           value={search}
           aria-describedby="helpId"
           placeholder="Search by name, Eg. khangkhui"

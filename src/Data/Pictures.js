@@ -17,6 +17,7 @@ export const Pictures = [
     alt: "Awungtang choirs",
     source: "Owner",
   },
+
   {
     title: "Ayah Khudai",
     src: require("../images/Gallery/ayahkhudai.jpg").default,
