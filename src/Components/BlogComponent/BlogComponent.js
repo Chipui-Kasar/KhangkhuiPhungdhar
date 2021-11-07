@@ -76,41 +76,47 @@ function BlogComponent() {
         <h1>Recent Blogs</h1>
         <div className="row">
           {blog
-            ? blog.map(data => {
-                return (
-                  <div className="col-md-6">
-                    <div className="card border rounded mb-4 shadow-sm">
-                      <img
-                        src={data.src}
-                        alt={data.alt}
-                        loading="lazy"
-                        height="225"
-                        className="image-right"
-                      />
+            ? blog
+                .slice(-2)
+                .sort()
+                .map(data => {
+                  return (
+                    <div className="col-md-6">
+                      <div className="card border rounded mb-4 shadow-sm">
+                        <img
+                          src={data.src}
+                          alt={data.alt}
+                          loading="lazy"
+                          height="225"
+                          className="image-right"
+                        />
 
-                      <div>
-                        <p className="card-text">
-                          <div className="p-3">
-                            <h4 className="mb-0">{data.title}</h4>
-                            <div className="mb-1 text-success">
-                              By : {data.author}
+                        <div>
+                          <p className="card-text">
+                            <div className="p-3">
+                              <h4 className="mb-0">{data.title}</h4>
+                              <div className="mb-1 text-success">
+                                By : {data.author}
+                              </div>
+                              <div className="mb-1 text-muted">
+                                Posted : {data.date}
+                              </div>
+                              <p className="card-text text-truncate mb-auto text-white ">
+                                {data.displaytext}
+                              </p>
+                              <a
+                                href={`#${data.id}`}
+                                className="stretched-link"
+                              >
+                                Continue reading
+                              </a>
                             </div>
-                            <div className="mb-1 text-muted">
-                              Posted : {data.date}
-                            </div>
-                            <p className="card-text text-truncate mb-auto text-white ">
-                              {data.displaytext}
-                            </p>
-                            <a href={`#${data.id}`} className="stretched-link">
-                              Continue reading
-                            </a>
-                          </div>
-                        </p>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })
+                  );
+                })
             : "Loading........."}
         </div>
 
