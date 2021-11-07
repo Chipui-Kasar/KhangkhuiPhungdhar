@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import previewImage from "../../images/Gallery/preview.jpg";
 import GalleryBanner from "../../Components/GalleryBanner/GalleryBanner";
 import GalleryPictures from "../../Components/GalleryPictures/GalleryPictures";
 import GalleryVideos from "../../Components/GalleryVideos/GalleryVideos";
@@ -24,14 +25,10 @@ function GalleryPage() {
           content="Check out some of the Videos and Pictures of Khangkhui Khunou"
           data-rh="true"
         />
-        <meta
-          property="og:image"
-          content="//www.floretflowers.com/wp-content/uploads/2018/12/FloretBlog-670B1221-640x427.jpg"
-          data-rh="true"
-        />
+        <meta property="og:image" content={previewImage} data-rh="true" />
         <meta
           property="og:url"
-          content="//khangkhuiphungdhar.netlify.app/gallery"
+          content="https://khangkhuiphungdhar.netlify.app/gallery"
           data-rh="true"
         />
         <meta
@@ -44,14 +41,10 @@ function GalleryPage() {
           content="Check out some of the Videos and Pictures of Khangkhui Khunou"
           data-rh="true"
         />
-        <meta
-          name="twitter:image"
-          content="//www.floretflowers.com/wp-content/uploads/2018/12/FloretBlog-670B1221-640x427.jpg"
-          data-rh="true"
-        />
+        <meta name="twitter:image" content={previewImage} data-rh="true" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
-        <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+        <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />
       </Helmet>
       <GalleryBanner />
       <div className="album py-2">
