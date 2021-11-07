@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import previewImage from "../../images/Gallery/preview.jpg";
 import GalleryBanner from "../../Components/GalleryBanner/GalleryBanner";
 import GalleryPictures from "../../Components/GalleryPictures/GalleryPictures";
 import GalleryVideos from "../../Components/GalleryVideos/GalleryVideos";
@@ -25,7 +24,11 @@ function GalleryPage() {
           content="Check out some of the Videos and Pictures of Khangkhui Khunou"
           data-rh="true"
         />
-        <meta property="og:image" content={previewImage} data-rh="true" />
+        <meta
+          property="og:image"
+          content="https://lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
+          data-rh="true"
+        />
         <meta
           property="og:url"
           content="https://khangkhuiphungdhar.netlify.app/gallery"
@@ -41,7 +44,11 @@ function GalleryPage() {
           content="Check out some of the Videos and Pictures of Khangkhui Khunou"
           data-rh="true"
         />
-        <meta name="twitter:image" content={previewImage} data-rh="true" />
+        <meta
+          name="twitter:image"
+          content="https://lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
+          data-rh="true"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
         <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />

@@ -3,6 +3,7 @@ import HomeBanner from "../../Components/HomeBanner/HomeBanner";
 import HomeFounder from "../../Components/HomeFounder/HomeFounder";
 import HomeVA from "../../Components/HomeVA/HomeVA";
 import HomeAboutPlaces from "../../Components/HomeAboutPlaces/HomeAboutPlaces";
+import previewImage from "../../images/Home/preview.jpg";
 import "./HomePage.css";
 import { Helmet } from "react-helmet";
 
@@ -35,11 +36,7 @@ function HomePage(props) {
           content="Khangkhui Phungdhar is a name of a village, it is located on the east of Ukhrul town. It is about 12Km from the town. One can reach the village easily on the vehicle or by foot. There is a beautiful mountain where people can visit and see the beautiful sunrise and sunset from the top of the mountain. The place is also known as Harva Khangai, The mountain where the second world war took place"
           data-rh="true"
         />
-        <meta
-          property="og:image"
-          content="https://lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
-          data-rh="true"
-        />
+        <meta property="og:image" content={previewImage} data-rh="true" />
         <meta
           property="og:url"
           content="//khangkhuiphungdhar.netlify.app"
@@ -55,11 +52,7 @@ function HomePage(props) {
           content="Khangkhui Phungdhar is a name of a village, it is located on the east of Ukhrul town. It is about 12Km from the town. One can reach the village easily on the vehicle or by foot. There is a beautiful mountain where people can visit and see the beautiful sunrise and sunset from the top of the mountain. The place is also known as Harva Khangai, The mountain where the second world war took place."
           data-rh="true"
         />
-        <meta
-          name="twitter:image"
-          content="https://lh3.googleusercontent.com/p/AF1QipNjXA4qOoUzkiX8tx1X4GdgZnd3Kho3F6Rl6R1P=s1600-w400"
-          data-rh="true"
-        />
+        <meta name="twitter:image" content={previewImage} data-rh="true" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
