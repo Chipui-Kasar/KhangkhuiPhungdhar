@@ -162,11 +162,11 @@ export const Blog = [
     displaytext:
       "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗 ",
     description:
-      "Mikumo mirin machuk kazaklu, Mirin hunkha rāokathui hili, Khamathā āyeithei ākha ngasā khavai ngarānlu Mikumo wui mirin āman kasak khilikha chansam khavai maleimana; ",
+      "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗. Tangkhul Ram wui ngachaili Reisangchonme na Leishimayolāk eina sem khami ramna❤️. Ngahong kashā, sāyur, vāyur, Hanthing hanrā Khavāt malei Teokha kahaolei🤷‍♂️. Tara̲ khavāt malei, Wonshimui, sākazāt  marāza̲  ngasak Vare na leishikhai nā haoda☝️❤️.",
     description2:
-      "Ātam leilakha tamsha̲khuilu, ātamna mangarai Mikumo li, Ātam leilakha tamsha̲khuilu, Chāngkuirem ngashun ngayā pipam haikha ānaolam chāmtheira mazi paishina: Machuk kazaklu ātamna leilakha, Hihilo-hāhālo āchuk-ātha makazng ābung makhalei ākhong kathā ngasā haipai shina Ātam singtheida ot sālu, machangnarem hailu, Korkharam ātam maningluimana;",
+      "Kha, Ningkashi khami Malaikhok bichar kasāna  ramli   ākachang ngasā 😭. Khangazan khipali phensidoh! Khararthot/khanuithot?😇. Ākhoka sākhangai fa̲a̲ na sāra̲gui shirui kashong rikha kakahaothā🏞️. Yangvā Yarui wuivāng nganingkashap ākhoka mi Machung thu ram kateina chipat vaihao🙆‍♂️.",
     description3:
-      "Saikora her hailaga naoda wuivāng machuk usa. Mirin mangachangrang lakha ngacheikhui laksa lumreipum kahai ātam hili Yāngpangshap chishotda ot sāphok haosa ātam huirot haipaishina.",
+      "Ichā khalatda li ākhoka kasā eina vaihao, Oh! ningngaikhamā😌 Okathuiwui Lanna Naongarā li sakmeida khuihao  āwor Li khamalai  ram ngasā thuihaira😭, Misui Morei  pheikazatli zimik tunvai 🌤️ Dhamarin Khangazan Makaphā kasāli ākhoka ngasāda  Mina mingzaiya😡. Mili Katommi khangarok ningli  maleithu Ngakhun katāna āwui ringkaphā ngasāhao. Phaning kazakda ot sāsa oh!Khangkhui khanuithot! ānaolam wuivang majuk kazakda  wortam tamkhui lāksa.",
     description4: "",
     description5: "",
     src: "https://khangkhuikhunou.netlify.app/images/IMG_20171231_112357.jpg",
