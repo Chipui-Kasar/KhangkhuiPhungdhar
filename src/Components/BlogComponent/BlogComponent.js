@@ -140,7 +140,16 @@ function BlogComponent() {
                             </a>
                           </p>
                           <p className="text-justify description">
-                            {blog.description}
+                            {blog.description2}
+                          </p>
+                          <p className="text-justify description">
+                            {blog.description3}
+                          </p>
+                          <p className="text-justify description">
+                            {blog.description4}
+                          </p>
+                          <p className="text-justify description">
+                            {blog.description5}
                           </p>
                         </div>
                       </div>
