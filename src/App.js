@@ -36,9 +36,7 @@ function App() {
           <Route path="/blog">
             <BlogPage />
           </Route>
-          <Route path="/read/:id">
-            <ReadFullBlog />
-          </Route>
+          <Route path="/read/:id" component={ReadFullBlog} />
 
           <Route path="/ura">
             <MYCPage />

@@ -6,7 +6,8 @@ import axios from "axios";
 import moment from "moment";
 import { PropagateLoader } from "react-spinners";
 import { Blog } from "../../Data/AllData";
-function BlogComponent(props) {
+
+function BlogComponent() {
   const [data, setData] = useState("");
   // const [blog, setBblog] = useState("");
   const [toggle, settoggle] = useState(false);
@@ -35,7 +36,12 @@ function BlogComponent(props) {
         console.error(err);
       });
   }, [setData]);
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="container blog-container">
@@ -76,7 +82,7 @@ function BlogComponent(props) {
         <h1>Recent Blogs</h1>
         <div className="row">
           {Blog
-            ? Blog.slice(0, 2).map(data => {
+            ? Blog.map(data => {
                 return (
                   <div className="col-md-6">
                     <div className="card border rounded mb-4 shadow-sm">
@@ -102,6 +108,7 @@ function BlogComponent(props) {
                               {data.displaytext}
                             </p>
                             <Link
+                              onClick={scrollToTop}
                               to={`/read/${data.title}`}
                               className="stretched-link"
                             >

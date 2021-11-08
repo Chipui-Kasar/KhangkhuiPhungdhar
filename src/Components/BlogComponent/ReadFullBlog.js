@@ -1,40 +1,81 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+// import axios from "axios";
+import React from "react";
+import "./BlogComponent.css";
 import { PropagateLoader } from "react-spinners";
+import { Blog } from "../../Data/AllData";
+import { Link, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+function ReadFullBlog() {
+  //   const [Blog, setBblog] = useState("");
+  //   console.log(props);
+  //   useEffect(() => {
+  //     axios
+  //       .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
+  //       .then(response => {
+  //         setBblog(response.data.reverse());
+  //         //console.log(response.data);
+  //       })
+  //       .catch(error => {
+  //         console.error(error);
+  //       });
+  //   }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  const id = useParams();
+  const seo = Blog.filter(item => {
+    if (item.title === id.id) {
+      return item;
+    } else {
+      return null;
+    }
+  }).map(item => {
+    console.log(item);
+    return (
+      <>
+        <Helmet>
+          <base />
+          <title>{item.title}</title>
+          <meta name="description" content={item.displaytext} />
+          <meta name="title" content={item.title} />
+          <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
 
-function ReadFullBlog(props) {
-  const [blog, setBblog] = useState("");
-  console.log(props);
-  useEffect(() => {
-    axios
-      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-      .then(response => {
-        setBblog(response.data.reverse());
-        //console.log(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
+          <meta property="og:title" content="Blog" />
+          <meta property="og:description" content={item.displaytext} />
+          <meta property="og:image" content={item.src} />
+          <meta
+            property="og:url"
+            content="//khangkhuiphungdhar.netlify.app/Blog"
+          />
+          <meta name="twitter:title" content={item.title} />
+          <meta name="twitter:description" content={item.displaytext} />
+          <meta name="twitter:image" content={item.src} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@chipui" />
+        </Helmet>
+      </>
+    );
+  });
   return (
-    <div>
-      <div className="col-md-8 blog-main">
-        <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
-        {blog ? (
-          blog
-            .filter(clickedBlog => {
-              if (clickedBlog.title === "") {
+    <>
+      {seo}
+
+      <div className="read-container" style={{ padding: "1px" }}>
+        <div className="col-md-12 blog-main">
+          {Blog ? (
+            Blog.filter(clickedBlog => {
+              if (clickedBlog.title === id.id) {
                 return clickedBlog;
               } else {
                 return null;
               }
-            })
-            .map(blog => {
+            }).map(blog => {
               return (
                 <>
-                  <div id={blog.id}>
-                    <hr style={{ border: "1px solid #fff" }} />
-                    <hr style={{ border: "1px solid #fff" }} />
+                  <div id={blog.id} className="container">
                     <div className="blog-post mt-5">
                       <h2 className="blog-post-title">{blog.title}</h2>
                       <p className="blog-post-meta">
@@ -42,6 +83,9 @@ function ReadFullBlog(props) {
                         <a href={blog.socialsite} target="_child">
                           {blog.author}
                         </a>
+                      </p>
+                      <p className="text-justify description">
+                        {blog.description}
                       </p>
                       <p className="text-justify description">
                         {blog.description2}
@@ -60,14 +104,24 @@ function ReadFullBlog(props) {
                 </>
               );
             })
-        ) : (
+          ) : (
+            <div className="text-center">
+              <PropagateLoader color="white" />
+            </div>
+          )}
           <div className="text-center">
-            <PropagateLoader color="white" />
+            <Link to="/blog">
+              <button
+                className="btn btn-outline-primary mb-5"
+                onClick={scrollToTop}
+              >
+                Back to Blog
+              </button>
+            </Link>
           </div>
-        )}
+        </div>
       </div>
-      ;
-    </div>
+    </>
   );
 }
 
