@@ -125,4 +125,4 @@ function ReadFullBlog() {
   );
 }
 
-export default ReadFullBlog;
+export default React.memo(ReadFullBlog);
