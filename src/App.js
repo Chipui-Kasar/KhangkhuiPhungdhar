@@ -10,6 +10,7 @@ import BlogPage from "./Pages/BlogPage/BlogPage";
 import MYCPage from "./Pages/MYCPage/MYCPage";
 import countapi from "countapi-js";
 import Admin from "./Pages/Admin/Admin";
+import ReadFullBlog from "./Components/BlogComponent/ReadFullBlog";
 
 function App() {
   const [visit, setVisit] = useState();
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/blog">
             <BlogPage />
+          </Route>
+          <Route path="/read/:id">
+            <ReadFullBlog />
           </Route>
 
           <Route path="/ura">

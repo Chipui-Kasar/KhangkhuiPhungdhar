@@ -5,22 +5,22 @@ import "./BlogComponent.css";
 import axios from "axios";
 import moment from "moment";
 import { PropagateLoader } from "react-spinners";
-//import { Blog } from "../../Data/AllData";
-function BlogComponent() {
+import { Blog } from "../../Data/AllData";
+function BlogComponent(props) {
   const [data, setData] = useState("");
-  const [blog, setBblog] = useState("");
+  // const [blog, setBblog] = useState("");
   const [toggle, settoggle] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-      .then(response => {
-        setBblog(response.data);
-        //console.log(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    // axios
+    //   .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
+    //   .then(response => {
+    //     setBblog(response.data.reverse());
+    //     //console.log(response.data);
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
 
     //https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195
     //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
@@ -75,48 +75,45 @@ function BlogComponent() {
 
         <h1>Recent Blogs</h1>
         <div className="row">
-          {blog
-            ? blog
-                .slice(-2)
-                .sort()
-                .map(data => {
-                  return (
-                    <div className="col-md-6">
-                      <div className="card border rounded mb-4 shadow-sm">
-                        <img
-                          src={data.src}
-                          alt={data.alt}
-                          loading="lazy"
-                          height="225"
-                          className="image-right"
-                        />
+          {Blog
+            ? Blog.slice(0, 2).map(data => {
+                return (
+                  <div className="col-md-6">
+                    <div className="card border rounded mb-4 shadow-sm">
+                      <img
+                        src={data.src}
+                        alt={data.alt}
+                        loading="lazy"
+                        height="225"
+                        className="image-right"
+                      />
 
-                        <div>
-                          <p className="card-text">
-                            <div className="p-3">
-                              <h4 className="mb-0">{data.title}</h4>
-                              <div className="mb-1 text-success">
-                                By : {data.author}
-                              </div>
-                              <div className="mb-1 text-muted">
-                                Posted : {data.date}
-                              </div>
-                              <p className="card-text text-truncate mb-auto text-white ">
-                                {data.displaytext}
-                              </p>
-                              <a
-                                href={`#${data.id}`}
-                                className="stretched-link"
-                              >
-                                Continue reading
-                              </a>
+                      <div>
+                        <p className="card-text">
+                          <div className="p-3">
+                            <h4 className="mb-0">{data.title}</h4>
+                            <div className="mb-1 text-success">
+                              By : {data.author}
                             </div>
-                          </p>
-                        </div>
+                            <div className="mb-1 text-muted">
+                              Posted : {data.date}
+                            </div>
+                            <p className="card-text text-truncate mb-auto text-white ">
+                              {data.displaytext}
+                            </p>
+                            <Link
+                              to={`/read/${data.title}`}
+                              className="stretched-link"
+                            >
+                              Continue reading
+                            </Link>
+                          </div>
+                        </p>
                       </div>
                     </div>
-                  );
-                })
+                  </div>
+                );
+              })
             : "Loading........."}
         </div>
 
@@ -124,8 +121,8 @@ function BlogComponent() {
           <div className="row">
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
-              {blog ? (
-                blog.map(blog => {
+              {Blog ? (
+                Blog.map(blog => {
                   return (
                     <>
                       <div id={blog.id}>
@@ -138,6 +135,9 @@ function BlogComponent() {
                             <a href={blog.socialsite} target="_child">
                               {blog.author}
                             </a>
+                          </p>
+                          <p className="text-justify description">
+                            {blog.description}
                           </p>
                           <p className="text-justify description">
                             {blog.description2}
