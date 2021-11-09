@@ -59,10 +59,9 @@ function ReachUs() {
             </h4>
             <p className="text-muted">
               This webpage is about the History and the current ongoing of
-              Khangkhui Phungdhar. Here, you can see the history of how the
-              village was founded and by whom. Not only that there lot more
-              information about Khangkhui Phungdhar. You can also watch some of
-              the pics and videos
+              Khangkhui Phungdhar. Not only that there lot more information
+              about Khangkhui Phungdhar. You can also watch some of the pics and
+              videos
             </p>
           </div>
           <div className=" offset-md-1 py-4 pl-5">

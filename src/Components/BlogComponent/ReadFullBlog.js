@@ -135,6 +135,21 @@ function ReadFullBlog() {
                       <p className="text-justify description">
                         {blog.description5}
                       </p>
+                      <p className="text-justify description">
+                        {blog.description6}
+                      </p>
+                      <p className="text-justify description">
+                        {blog.description7}
+                      </p>
+                      <p className="text-justify description">
+                        {blog.description8}
+                      </p>
+                      <p className="text-justify description">
+                        {blog.description9}
+                      </p>
+                      <p className="text-justify description">
+                        {blog.description10}
+                      </p>
                     </div>
                   </div>
                 </>
