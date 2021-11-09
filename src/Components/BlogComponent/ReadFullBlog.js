@@ -1,9 +1,9 @@
 // import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import "./BlogComponent.css";
 import { PropagateLoader } from "react-spinners";
 import { Blog } from "../../Data/AllData";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
 function ReadFullBlog() {
   //   const [Blog, setBblog] = useState("");
@@ -25,15 +25,21 @@ function ReadFullBlog() {
       behavior: "smooth",
     });
   };
+  const history = useHistory();
   const id = useParams();
+  var newUrl = id.id.replace(/ /g, "-");
+
+  useEffect(() => {
+    history.replace(`/read/${newUrl}`);
+  }, [newUrl, history]);
+
   const seo = Blog.filter(item => {
-    if (item.title === id.id) {
+    if (item.title.replace(/ /g, "-") === newUrl) {
       return item;
     } else {
       return null;
     }
   }).map(item => {
-    console.log(item);
     return (
       <>
         <Helmet>
@@ -62,12 +68,11 @@ function ReadFullBlog() {
   return (
     <>
       {seo}
-
       <div className="read-container" style={{ padding: "1px" }}>
         <div className="col-md-12 blog-main">
           {Blog ? (
             Blog.filter(clickedBlog => {
-              if (clickedBlog.title === id.id) {
+              if (clickedBlog.title.replace(/ /g, "-") === newUrl) {
                 return clickedBlog;
               } else {
                 return null;
