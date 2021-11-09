@@ -5,6 +5,8 @@ import { PropagateLoader } from "react-spinners";
 import { Blog } from "../../Data/AllData";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { RWebShare } from "react-web-share";
+
 function ReadFullBlog() {
   //   const [Blog, setBblog] = useState("");
   //   console.log(props);
@@ -88,6 +90,35 @@ function ReadFullBlog() {
                         <a href={blog.socialsite} target="_child">
                           {blog.author}
                         </a>
+                        &nbsp; &nbsp; &nbsp;
+                        <RWebShare
+                          data={{
+                            text: blog.title,
+                            url: `https://khangkhuiphungdhar.netlify.app/read/${blog.title.replace(
+                              / /g,
+                              "-"
+                            )}`,
+                            title: "Share this content",
+                          }}
+                          sites={[
+                            "facebook",
+                            "twitter",
+                            "reddit",
+                            "whatsapp",
+                            "telegram",
+                            "linkedin",
+                            "mail",
+                          ]}
+                          onClick={() => console.log("shared successfully!")}
+                        >
+                          <i
+                            style={{ cursor: "pointer" }}
+                            className="fa fa-share-alt text-white btn btn-outline-warning"
+                            aria-hidden="true"
+                          >
+                            &nbsp; Share
+                          </i>
+                        </RWebShare>
                       </p>
                       <p className="text-justify description">
                         {blog.description}
