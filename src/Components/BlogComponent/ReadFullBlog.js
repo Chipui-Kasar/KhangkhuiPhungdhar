@@ -9,8 +9,10 @@ import { RWebShare } from "react-web-share";
 
 function ReadFullBlog() {
   //   const [Blog, setBblog] = useState("");
-  //   console.log(props);
-  //   useEffect(() => {
+  //console.log(props);
+
+  // useEffect(() => {
+
   //     axios
   //       .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
   //       .then(response => {
@@ -20,7 +22,8 @@ function ReadFullBlog() {
   //       .catch(error => {
   //         console.error(error);
   //       });
-  //   }, []);
+  // }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -80,6 +83,11 @@ function ReadFullBlog() {
                 return null;
               }
             }).map(blog => {
+              //convert html string to Dom
+              const dom = new DOMParser().parseFromString(
+                blog.description,
+                "text/html"
+              );
               return (
                 <>
                   <div id={blog.id} className="container">
@@ -120,36 +128,12 @@ function ReadFullBlog() {
                           </i>
                         </RWebShare>
                       </p>
-                      <p className="text-justify description">
-                        {blog.description}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description2}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description3}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description4}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description5}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description6}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description7}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description8}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description9}
-                      </p>
-                      <p className="text-justify description">
-                        {blog.description10}
-                      </p>
+                      <p
+                        className="text-justify description"
+                        dangerouslySetInnerHTML={{
+                          __html: dom.body.innerHTML,
+                        }}
+                      ></p>
                     </div>
                   </div>
                 </>

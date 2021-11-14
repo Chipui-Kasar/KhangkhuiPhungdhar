@@ -162,18 +162,7 @@ export const Blog = [
     displaytext:
       "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗 ",
     description:
-      "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗. Tangkhul Ram wui ngachaili Reisangchonme na Leishimayolāk eina sem khami ramna❤️. Ngahong kashā, sāyur, vāyur, Hanthing hanrā Khavāt malei Teokha kahaolei🤷‍♂️. Tara̲ khavāt malei, Wonshimui, sākazāt  marāza̲  ngasak Vare na leishikhai nā haoda☝️❤️.",
-    description2:
-      "Kha, Ningkashi khami Malaikhok bichar kasāna  ramli   ākachang ngasā 😭. Khangazan khipali phensidoh! Khararthot/khanuithot?😇. Ākhoka sākhangai fa̲a̲ na sāra̲gui shirui kashong rikha kakahaothā🏞️. Yangvā Yarui wuivāng nganingkashap ākhoka mi Machung thu ram kateina chipat vaihao🙆‍♂️.",
-    description3:
-      "Ichā khalatda li ākhoka kasā eina vaihao, Oh! ningngaikhamā😌 Okathuiwui Lanna Naongarā li sakmeida khuihao  āwor Li khamalai  ram ngasā thuihaira😭, Misui Morei  pheikazatli zimik tunvai 🌤️ Dhamarin Khangazan Makaphā kasāli ākhoka ngasāda  Mina mingzaiya😡. Mili Katommi khangarok ningli  maleithu Ngakhun katāna āwui ringkaphā ngasāhao. Phaning kazakda ot sāsa oh!Khangkhui khanuithot! ānaolam wuivang majuk kazakda  wortam tamkhui lāksa.",
-    description4: "",
-    description5: "",
-    description6: "",
-    description7: "",
-    description8: "",
-    description9: "",
-    description10: "",
+      "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗. Tangkhul Ram wui ngachaili Reisangchonme na Leishimayolāk eina sem khami ramna❤️. Ngahong kashā, sāyur, vāyur, Hanthing hanrā Khavāt malei Teokha kahaolei🤷‍♂️. Tara̲ khavāt malei, Wonshimui, sākazāt  marāza̲  ngasak Vare na leishikhai nā haoda☝️❤️. <br/><br/>Kha, Ningkashi khami Malaikhok bichar kasāna  ramli   ākachang ngasā 😭. Khangazan khipali phensidoh! Khararthot/khanuithot?😇. Ākhoka sākhangai fa̲a̲ na sāra̲gui shirui kashong rikha kakahaothā🏞️. Yangvā Yarui wuivāng nganingkashap ākhoka mi Machung thu ram kateina chipat vaihao🙆‍♂️.  <br/><br/>Ichā khalatda li ākhoka kasā eina vaihao, Oh! ningngaikhamā😌 Okathuiwui Lanna Naongarā li sakmeida khuihao  āwor Li khamalai  ram ngasā thuihaira😭, Misui Morei  pheikazatli zimik tunvai 🌤️ Dhamarin Khangazan Makaphā kasāli ākhoka ngasāda  Mina mingzaiya😡. Mili Katommi khangarok ningli  maleithu Ngakhun katāna āwui ringkaphā ngasāhao. Phaning kazakda ot sāsa oh!Khangkhui khanuithot! ānaolam wuivang majuk kazakda  wortam tamkhui lāksa.",
     src: "//www.fromtpm.com/wp-content/uploads/2019/11/Youths-1.png",
     alt: "Yirkhamayei Mirin",
     author: "Aimson A. Chihui",
@@ -186,18 +175,7 @@ export const Blog = [
     displaytext:
       "Mikumo mirin machuk kazaklu, Mirin hunkha rāokathui hili, Khamathā āyeithei ākha ngasā khavai ngarānlu",
     description:
-      "Mikumo mirin machuk kazaklu, Mirin hunkha rāokathui hili, Khamathā āyeithei ākha ngasā khavai ngarānlu Mikumo wui mirin āman kasak khilikha chansam khavai maleimana; ",
-    description2:
-      "Ātam leilakha tamsha̲khuilu, ātamna mangarai Mikumo li, Ātam leilakha tamsha̲khuilu, Chāngkuirem ngashun ngayā pipam haikha ānaolam chāmtheira mazi paishina: ",
-    description3:
-      " Machuk kazaklu ātamna leilakha, Hihilo-hāhālo āchuk-ātha makazng ābung makhalei ākhong kathā ngasā haipai shina Ātam singtheida ot sālu, machangnarem hailu, Korkharam ātam maningluimana; Saikora her hailaga naoda wuivāng machuk usa. Mirin mangachangrang lakha ngacheikhui laksa lumreipum kahai ātam hili Yāngpangshap chishotda ot sāphok haosa ātam huirot haipaishina.",
-    description4: "",
-    description5: "",
-    description6: "",
-    description7: "",
-    description8: "",
-    description9: "",
-    description10: "",
+      "Mikumo mirin machuk kazaklu, Mirin hunkha rāokathui hili, Khamathā āyeithei ākha ngasā khavai ngarānlu Mikumo wui mirin āman kasak khilikha chansam khavai maleimana;<br/><br/> Ātam leilakha tamsha̲khuilu, ātamna mangarai Mikumo li, Ātam leilakha tamsha̲khuilu, Chāngkuirem ngashun ngayā pipam haikha ānaolam chāmtheira mazi paishina:<br/><br/> Machuk kazaklu ātamna leilakha, Hihilo-hāhālo āchuk-ātha makazng ābung makhalei ākhong kathā ngasā haipai shina Ātam singtheida ot sālu, machangnarem hailu, Korkharam ātam maningluimana; Saikora her hailaga naoda wuivāng machuk usa. Mirin mangachangrang lakha ngacheikhui laksa lumreipum kahai ātam hili Yāngpangshap chishotda ot sāphok haosa ātam huirot haipaishina.",
     src: "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2020-10/purposeoflife.jpg?itok=G_3RzDjy",
     alt: "MIKUMO MIRIN SHONGZA",
     author: "Aimson A. Chihui",

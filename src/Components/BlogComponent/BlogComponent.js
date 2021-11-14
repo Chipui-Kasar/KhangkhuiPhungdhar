@@ -36,6 +36,7 @@ function BlogComponent() {
         console.error(err);
       });
   }, [setData]);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -130,6 +131,14 @@ function BlogComponent() {
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
               {Blog ? (
                 Blog.map(blog => {
+                  //convert html string to Dom
+                  const dom = new DOMParser().parseFromString(
+                    blog.description,
+                    "text/html"
+                  );
+                  // const html = { __html: blog.description };
+
+                  //-----------------------------
                   return (
                     <>
                       <div id={blog.id}>
@@ -143,36 +152,13 @@ function BlogComponent() {
                               {blog.author}
                             </a>
                           </p>
-                          <p className="text-justify description">
-                            {blog.description}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description2}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description3}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description4}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description5}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description6}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description7}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description8}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description9}
-                          </p>
-                          <p className="text-justify description">
-                            {blog.description10}
-                          </p>
+
+                          <div
+                            className="text-justify description"
+                            dangerouslySetInnerHTML={{
+                              __html: dom.body.innerHTML,
+                            }}
+                          ></div>
                         </div>
                       </div>
                     </>
