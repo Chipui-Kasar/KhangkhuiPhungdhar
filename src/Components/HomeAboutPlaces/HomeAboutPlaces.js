@@ -76,8 +76,8 @@ function HomeAboutPlaces() {
             <p className="content">
               Khangkhui Phungdhar Harva Khangai Kaphung lies on East of Ukhrul
               town and about 20 km distance and is about 2000 meters above sea
-              level. One can view the beautiful sunrise from the top of the
-              mountain. From the hill top of Harva Khangai one can behold the
+              level. It is well known for its beautiful spot for both sunrise and sunset, as watching 
+              first rays of the sun is an experience that is quite something else. It is also one of the battle spot of World War II. From the hill top of Harva Khangai one can behold the
               scenic view of Ningthi River, Myanmar, Angoching Range, Ukhrul
               town, Khayang Phungtha water falls, Shirui mountain and beautiful
               view of the Imphal Valley. Harva Khangai Kaphung is a beautiful
@@ -114,18 +114,14 @@ function HomeAboutPlaces() {
             <h2 className="featurette-heading">Khorim (Khuirung)</h2>
             <p className="content">
               Khorim is also known as Khuirung in local dialect. It is located
-              on the northern side of Khangkhui Khunou. It is about 6Km from the
+              on the northern side of Khangkhui Phungdhar. It is about 6Km from the
               village. It is a great place to settle down and start a new life.
               Life is short, so enjoy while you're still young. There are lots
-              of cattle and wild animals on the mountain. Right before reaching
-              the mountain(foothill of the mountain) there is a small pond,
-              where, if someone happens to call the name of the pond, he/she
-              gets blind mind and changes his eyesight and sees different
-              things. Upon going forward towards Northern side there is a
-              beautiful mountain where most of the people loves to visit i,e.
-              Shirui Hills. The Water of Khangkhui Phungdhar started from the
+              of cattle and wild animals on the mountain. The Water of Khangkhui Phungdhar started from the
               narrow mountain of Khorim. So it is also considered as the ura of
-              Khangkhui
+              Khangkhui. Upon going forward towards Northern side, there is a
+              beautiful mountain where most of the people loves to visit i,e.
+              Shirui Hills. 
             </p>
           </div>
           <div className="col-lg-5 place-image " data-aos="flip-up">
