@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomeBanner.css";
 import { Link } from "react-router-dom";
 import khangkhuiHome from "../../images/Home/Carousel/khangkhui1.jpg";
 import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
 import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
-//import axios from "axios";
+import axios from "axios";
 
 function HomeBanner(props) {
+  const [verse, setVerse] = React.useState("");
+  useEffect(() => {
+    axios.get("http://quotes.rest/bible/vod.json").then(res => {
+      setVerse(res.data.contents);
+    });
+  }, []);
+
   return (
     <>
       <div className="news text-center">
@@ -65,11 +72,17 @@ function HomeBanner(props) {
                 <h1 className="carouseltitle text-success">
                   Welcome to Khangkhui Phungdhar official Website
                 </h1>
-                <p
+                {/* <p
                   className="pr-2 pl-2"
                   style={{ backgroundColor: "#00000085", width: "fit-content" }}
                 >
                   A beautiful village with lots of memories
+                </p> */}
+                <p
+                  className="pr-2 pl-2"
+                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
+                >
+                  You have visited our site {props.visit} times
                 </p>
                 <p>
                   <a
@@ -83,9 +96,21 @@ function HomeBanner(props) {
 
                 <p
                   className="pr-2 pl-2"
-                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
+                  style={{
+                    backgroundColor: "#00000085",
+                    width: "fit-content",
+                    display: "grid",
+                  }}
                 >
-                  You have visited our site {props.visit} times
+                  <label style={{ margin: 0 }}>
+                    {verse.book ? verse.book : ""}{" "}
+                    {verse.chapter ? verse.chapter : ""}:
+                    {verse.number ? verse.number : ""}
+                  </label>
+
+                  {verse.verse
+                    ? verse.verse
+                    : "A beautiful village with lots of memories"}
                 </p>
               </div>
             </div>
