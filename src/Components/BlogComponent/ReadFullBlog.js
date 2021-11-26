@@ -48,7 +48,6 @@ function ReadFullBlog() {
     return (
       <>
         <Helmet>
-          <base />
           <title>{item.title}</title>
           <meta name="description" content={item.displaytext} />
           <meta name="title" content={item.title} />
@@ -104,10 +103,9 @@ function ReadFullBlog() {
                         <RWebShare
                           data={{
                             text: blog.title,
-                            url: `https://khangkhuiphungdhar.netlify.app/read/${blog.title.replace(
-                              / /g,
-                              "-"
-                            )}`,
+                            url: `https://khangkhuiphungdhar.netlify.app/read/${blog.title
+                              .replace(/ /g, "-")
+                              .toLowerCase()}`,
                             title: "Share this content",
                           }}
                           sites={[

@@ -3,11 +3,12 @@ import { Helmet } from "react-helmet";
 import BlogComponent from "../../Components/BlogComponent/BlogComponent";
 import "./BlogPage.css";
 function BlogPage() {
+  var title = "Blog";
   return (
     <>
       <Helmet>
         <base />
-        <title>Blog</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="Keep Writing and Keep Reading || Write a blog and get paid instantly"
