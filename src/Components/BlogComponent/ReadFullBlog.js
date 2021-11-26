@@ -36,7 +36,6 @@ function ReadFullBlog() {
 
   useEffect(() => {
     history.replace(`/read/${newUrl}`);
-    console.log(newUrl);
   }, [newUrl, history]);
 
   const seo = Blog.filter(item => {
