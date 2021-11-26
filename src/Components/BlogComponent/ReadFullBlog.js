@@ -32,10 +32,11 @@ function ReadFullBlog() {
   };
   const history = useHistory();
   const id = useParams();
-  var newUrl = id.id.replace(/ /g, "-");
+  var newUrl = id.id.replace(/ /g, "-").toLowerCase();
 
   useEffect(() => {
     history.replace(`/read/${newUrl}`);
+    console.log(newUrl);
   }, [newUrl, history]);
 
   const seo = Blog.filter(item => {
@@ -77,7 +78,9 @@ function ReadFullBlog() {
         <div className="col-md-12 blog-main">
           {Blog ? (
             Blog.filter(clickedBlog => {
-              if (clickedBlog.title.replace(/ /g, "-") === newUrl) {
+              if (
+                clickedBlog.title.replace(/ /g, "-").toLowerCase() === newUrl
+              ) {
                 return clickedBlog;
               } else {
                 return null;

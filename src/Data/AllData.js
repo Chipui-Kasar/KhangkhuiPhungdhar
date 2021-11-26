@@ -163,7 +163,7 @@ export const Blog = [
       "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗 ",
     description:
       "Tangkhul āto li khalei Khangkhui Phungdhar kaho Ram chili Ili pharāsang🤗. Tangkhul Ram wui ngachaili Reisangchonme na Leishimayolāk eina sem khami ramna❤️. Ngahong kashā, sāyur, vāyur, Hanthing hanrā Khavāt malei Teokha kahaolei🤷‍♂️. Tara̲ khavāt malei, Wonshimui, sākazāt  marāza̲  ngasak Vare na leishikhai nā haoda☝️❤️. <br/><br/>Kha, Ningkashi khami Malaikhok bichar kasāna  ramli   ākachang ngasā 😭. Khangazan khipali phensidoh! Khararthot/khanuithot?😇. Ākhoka sākhangai fa̲a̲ na sāra̲gui shirui kashong rikha kakahaothā🏞️. Yangvā Yarui wuivāng nganingkashap ākhoka mi Machung thu ram kateina chipat vaihao🙆‍♂️.  <br/><br/>Ichā khalatda li ākhoka kasā eina vaihao, Oh! ningngaikhamā😌 Okathuiwui Lanna Naongarā li sakmeida khuihao  āwor Li khamalai  ram ngasā thuihaira😭, Misui Morei  pheikazatli zimik tunvai 🌤️ Dhamarin Khangazan Makaphā kasāli ākhoka ngasāda  Mina mingzaiya😡. Mili Katommi khangarok ningli  maleithu Ngakhun katāna āwui ringkaphā ngasāhao. Phaning kazakda ot sāsa oh!Khangkhui khanuithot! ānaolam wuivang majuk kazakda  wortam tamkhui lāksa.",
-    src: "//www.fromtpm.com/wp-content/uploads/2019/11/Youths-1.png",
+    src: "https://www.fromtpm.com/wp-content/uploads/2019/11/Youths-1.png",
     alt: "Yirkhamayei Mirin",
     author: "Aimson A. Chihui",
     socialsite: "https://www.facebook.com/profile.php?id=100006859965748",
