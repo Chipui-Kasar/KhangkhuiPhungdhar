@@ -38,40 +38,39 @@ function ReadFullBlog() {
     history.replace(`/read/${newUrl}`);
   }, [newUrl, history]);
 
-  const seo = Blog.filter(item => {
-    if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
-      return item;
-    } else {
-      return null;
-    }
-  }).map(item => {
-    return (
-      <>
-        <Helmet>
-          <title>{item.title}</title>
-          <meta name="description" content={item.displaytext} />
-          <meta name="title" content={item.title} />
-          <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
-
-          <meta property="og:title" content="Blog" />
-          <meta property="og:description" content={item.displaytext} />
-          <meta property="og:image" content={item.src} />
-          <meta
-            property="og:url"
-            content="//khangkhuiphungdhar.netlify.app/Blog"
-          />
-          <meta name="twitter:title" content={item.title} />
-          <meta name="twitter:description" content={item.displaytext} />
-          <meta name="twitter:image" content={item.src} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@chipui" />
-        </Helmet>
-      </>
-    );
-  });
   return (
     <>
-      {seo}
+      {Blog.filter(item => {
+        if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
+          return item;
+        } else {
+          return null;
+        }
+      }).map(item => {
+        return (
+          <>
+            <Helmet>
+              <title>{item.title}</title>
+              <meta name="description" content={item.displaytext} />
+              <meta name="title" content={item.title} />
+              <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+
+              <meta property="og:title" content="Blog" />
+              <meta property="og:description" content={item.displaytext} />
+              <meta property="og:image" content={item.src} />
+              <meta
+                property="og:url"
+                content="//khangkhuiphungdhar.netlify.app/Blog"
+              />
+              <meta name="twitter:title" content={item.title} />
+              <meta name="twitter:description" content={item.displaytext} />
+              <meta name="twitter:image" content={item.src} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:site" content="@chipui" />
+            </Helmet>
+          </>
+        );
+      })}
       <div className="read-container" style={{ padding: "1px" }}>
         <div className="col-md-12 blog-main">
           {Blog ? (
