@@ -40,7 +40,7 @@ function ReadFullBlog() {
   }, [newUrl, history]);
 
   const seo = Blog.filter(item => {
-    if (item.title.replace(/ /g, "-") === newUrl) {
+    if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
       return item;
     } else {
       return null;
