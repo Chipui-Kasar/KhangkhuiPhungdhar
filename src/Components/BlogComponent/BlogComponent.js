@@ -52,7 +52,7 @@ function BlogComponent() {
               Welcome to the Blog Page
             </div>
 
-            <p className="lead my-3">Submit a new blog and get ₹10 per post</p>
+            <p className="lead my-3">Submit a new blog and get rewarded</p>
             <p className="lead mb-0 count">
               <a
                 href="https://chipuikasarpage.netlify.app/contact"
@@ -84,6 +84,7 @@ function BlogComponent() {
         <div className="row">
           {Blog
             ? Blog.map(data => {
+                console.log(data);
                 return (
                   <div className="col-md-6">
                     <div className="card border rounded mb-4 shadow-sm">
