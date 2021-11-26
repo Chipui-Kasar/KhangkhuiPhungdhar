@@ -13,7 +13,6 @@ function BlogComponent() {
   const [toggle, settoggle] = useState(false);
 
   useEffect(() => {
-    
     // axios
     //   .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
     //   .then(response => {
