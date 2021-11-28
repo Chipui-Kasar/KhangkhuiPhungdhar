@@ -99,8 +99,8 @@ function ReadFullBlog() {
                 <>
                   <div id={blog.id} className="container">
                     <div className="blog-post mt-5">
-                      <h2 className="blog-post-title">
-                        <u>{blog.title}</u>
+                      <h2 className="blog-post-title readFullTitle">
+                        <label>{blog.title}</label>
                       </h2>
                       <p className="blog-post-meta">
                         {blog.date} by{" "}
