@@ -90,5 +90,10 @@
 .readFullTitle label {
   border: 1px solid rgb(165, 158, 158);
   border-radius: 5px;
+  text-transform: uppercase;
   padding: 5px;
+}
+.description ul,
+.description ol {
+  padding: 0;
 }

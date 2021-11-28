@@ -181,4 +181,29 @@ export const Blog = [
     author: "Aimson A. Chihui",
     socialsite: "https://www.facebook.com/profile.php?id=100006859965748",
   },
+  {
+    id: "3",
+    title: "BEWARE OF SCAMMERS",
+    date: "11-07-2021",
+    displaytext:
+      "Scammers are getting increasingly sophisticated in their attempts to get your money or personal details. Be alert and protect yourself from being scammed by following our tips.",
+    description:
+      "<b class=text-warning>PROTECT YOURSELF BE ALERT TO THE FACT THAT SCAMS EXIST..</b> <br/><br/><ol><li><b class=text-warning>BE ALERT TO THE FACT THAT SCAMS EXIST..</b> <br/> When dealing with uninvited contacts from people or businesses, whether it's over the phone, by mail, email, in person or on a social networking site, always consider the possibility that the approach may be a scam. Remember, if it looks too good to be true, it probably is.</li> <br/> <li><b class=text-warning>KNOW WHO YOU'RE DEALING WITH</b><br/>If you've only ever met someone online or are unsure of the legitimacy of a business, take some time to do a bit more research. Do a Google image search on photos or search the internet for others who may have had dealings with them. If a message or email comes from a friend and it seems unusual or out of character for them, contact your friend directly to check that it was really them that sent it. </li><br/> <li><b class=text-warning>DO NOT OPEN SUSPICIOUS TEXTS, POP-UP WINDOWS OR CLICK ON LINKS OR ATTACHMENTS IN EMAILS – DELETE THEM:</b><br/> If unsure, verify the identity of the contact through an independent source such as a phone book or online search. Don't use the contact details provided in the message sent to you.</li> <br/>  <li><b class=text-warning> DON'T RESPOND TO PHONE CALLS ABOUT YOUR COMPUTER ASKING FOR REMOTE ACCESS – HANG UP </b><br/> even if they mention a well-known company such as Telstra. Scammers will often ask you to turn on your computer to fix a problem or install a free upgrade, which is actually a virus which will give them your passwords and personal details.</li> <br/> <li><b class=text-warning>BEWARE OF ANY REQUESTS FOR YOUR DETAILS OR MONEY. </b><br/> Never send money or give credit card details, online account details or copies of personal documents to anyone you don’t know or trust. Don't agree to transfer money or goods for someone else: money laundering is a criminal offence.</li> <br/> <li><b class=text-warning> BE WARY OF UNUSUAL PAYMENT REQUESTS.</b><br/>Scammers will often ask you to use an unusual payment method, including preloaded debit cards, gift cards, iTunes cards or virtual currency such as Bitcoin. </li> <br/> <li><b class=text-warning>BE CAREFUL WHEN SHOPPING ONLINE. </b><br/> Beware of offers that seem too good to be true, and always use an online shopping service that you know and trust. Think twice before using virtual currencies (like Bitcoin) - they do not have the same protections as other transaction methods, which means you can’t get your money back once you send it. </li> <br/></ol>",
+    src: "https://thumbs.dreamstime.com/b/warning-scam-alert-yellow-black-sign-words-isolated-white-background-33771536.jpg",
+    alt: "Scammers",
+    author: "ScamWatch",
+    socialsite: "//www.scamwatch.gov.au/get-help/protect-yourself-from-scams",
+  },
+  {
+    id: "4",
+    title: "THINGS YOU CAN LEARN FROM YOU SERIES",
+    date: "11-19-2021",
+    displaytext: "Do not take cybersecurity as a joke.......",
+    description:
+      "<ol><li><b>DO NOT TAKE <label class=text-danger>CYBERSECURITY</label> AS A JOKE</b> <br/> One thing to learn from YOU is that there are lot of Joe's around. Do not take cybersecurity lightly and secure your computer and mobile as much as you can </li> <br/> <li><b>DO NOT TAG EVERY <label class=text-danger>LOCATION</label> </b><br/>Social media is a new trend, but one should be wise while sharing their locations on such mediums. For eg. if you are out of house, and someone wrong people learn about it, then it can be a danger.</li><br/> <li> <b>BE AWARE OF YOUR <label class=text-danger>SURROUNDINGS</label> </b><br/>Whenever you're out and alone, take a great look at what's happening around you. Enjoying a moment is not bad, but being total out of tune is not fine.</li> <br/> <li><b>UPDATE YOUR <label class=text-danger>PASSWORDS</label> IF YOU LOSE A DEVICE</b><br/>Technology can be tricky. So, if you ever lose your device, disable the device's access to the cloud or whatever back-up it is auto synced to and change all your passwords.</li> <br/> <li><b>BEWARE OF SOCIAL MEDIA <label class=text-danger>FAKE PROFILES</label></b><br/>Fake accounts abound on social media. If your partner's profile is full with nature photos, books and quotations, it's possible that he's attempting to conceal himself from the public</li></ol>",
+    src: "https://images.indianexpress.com/2021/10/cyber-security-1200.jpg",
+    alt: "cyber security",
+    author: "Anonymous",
+    socialsite: "//www.instagram.com/chipui_ks/",
+  },
 ];

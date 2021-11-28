@@ -83,7 +83,7 @@ function BlogComponent() {
         <h1>Recent Blogs</h1>
         <div className="row">
           {Blog
-            ? Blog.map(data => {
+            ? Blog.reverse().map(data => {
                 console.log(data);
                 return (
                   <div className="col-md-6">
@@ -131,7 +131,7 @@ function BlogComponent() {
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
               {Blog ? (
-                Blog.map(blog => {
+                Blog.reverse().map(blog => {
                   //convert html string to Dom
                   const dom = new DOMParser().parseFromString(
                     blog.description,

@@ -136,7 +136,11 @@ function ReadFullBlog() {
                           </i>
                         </RWebShare>
                       </p>
-
+                      <img
+                        src={blog.src}
+                        alt="blog"
+                        className="img-fluid mb-3"
+                      />
                       <p
                         className="text-justify description blog-post-title"
                         dangerouslySetInnerHTML={{
