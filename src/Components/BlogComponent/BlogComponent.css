@@ -81,3 +81,8 @@
   background-image: url("https://www.freevector.com/uploads/vector/preview/11016/fiber.jpg");
   background-attachment: fixed;
 }
+
+.fullblogContainer {
+  font-family: "M PLUS Rounded 1c", sans-serif !important;
+  font-style: italic;
+}

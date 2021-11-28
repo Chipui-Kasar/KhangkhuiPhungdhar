@@ -71,8 +71,15 @@ function ReadFullBlog() {
           </>
         );
       })}
-      <div className="read-container" style={{ padding: "1px" }}>
-        <div className="col-md-12 blog-main">
+      <div
+        className="fullblogContainer"
+        style={{
+          padding: "1px",
+          backgroundColor: "#000",
+          color: "#fff",
+        }}
+      >
+        <div className="col-md-12">
           {Blog ? (
             Blog.filter(clickedBlog => {
               if (
@@ -92,7 +99,9 @@ function ReadFullBlog() {
                 <>
                   <div id={blog.id} className="container">
                     <div className="blog-post mt-5">
-                      <h2 className="blog-post-title">{blog.title}</h2>
+                      <h2 className="blog-post-title">
+                        <u>{blog.title}</u>
+                      </h2>
                       <p className="blog-post-meta">
                         {blog.date} by{" "}
                         <a href={blog.socialsite} target="_child">
@@ -120,7 +129,7 @@ function ReadFullBlog() {
                         >
                           <i
                             style={{ cursor: "pointer" }}
-                            className="fa fa-share-alt text-white btn btn-outline-warning"
+                            className="fa fa-share-alt btn btn-outline-warning"
                             aria-hidden="true"
                           >
                             &nbsp; Share
@@ -129,7 +138,7 @@ function ReadFullBlog() {
                       </p>
 
                       <p
-                        className="text-justify description"
+                        className="text-justify description blog-post-title"
                         dangerouslySetInnerHTML={{
                           __html: dom.body.innerHTML,
                         }}
