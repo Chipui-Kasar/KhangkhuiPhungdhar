@@ -79,12 +79,6 @@ function HomeBanner(props) {
                     Learn More about Khangkhui
                   </a>
                 </p>
-                <p
-                  className="pr-2 pl-2"
-                  style={{ backgroundColor: "#00000085", width: "fit-content" }}
-                >
-                  You have visited our site {props.visit} times
-                </p>
               </div>
             </div>
           </div>

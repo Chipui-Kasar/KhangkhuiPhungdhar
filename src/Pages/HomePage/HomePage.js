@@ -8,7 +8,7 @@ import "./HomePage.css";
 import { Helmet } from "react-helmet";
 
 function HomePage(props) {
-  const visit = props.visits; //from App.js
+ 
   return (
     <div>
       <Helmet>
@@ -57,7 +57,7 @@ function HomePage(props) {
         <meta name="twitter:site" content="@chipui" />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
       </Helmet>
-      <HomeBanner visit={visit} />
+      <HomeBanner />
       <div className="container-fluid marketing">
         <HomeFounder />
         <HomeVA />
