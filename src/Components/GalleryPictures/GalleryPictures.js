@@ -72,7 +72,9 @@ function GalleryPictures() {
                       src={pic.src}
                       width="100%"
                       loading="lazy"
+                      effect="blur"
                       style={{
+                        backgroundColor: "#000",
                         objectFit: "cover",
                         minHeight: "250px",
                         maxHeight: "350px",
