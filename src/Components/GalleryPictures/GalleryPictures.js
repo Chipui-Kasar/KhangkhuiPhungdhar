@@ -3,6 +3,7 @@ import "./GalleryPictures.css";
 import "@fortawesome/fontawesome-free";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Pictures } from "../../Data/Pictures";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
