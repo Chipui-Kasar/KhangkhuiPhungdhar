@@ -58,10 +58,10 @@ function ReachUs() {
               About
             </h4>
             <p className="text-muted">
-              This webpage is about the History and the current ongoing of
-              Khangkhui Phungdhar. Not only that there lot more information
-              about Khangkhui Phungdhar. You can also watch some of the pics and
-              videos
+              This webpage is about the History and the currently ongoing of
+              Khangkhui Phungdhar. Not only that, there is a lot more
+              information about Khangkhui Phungdhar. You can also watch some of
+              the pics and videos
             </p>
           </div>
           <div className=" offset-md-1 py-4 pl-5">
