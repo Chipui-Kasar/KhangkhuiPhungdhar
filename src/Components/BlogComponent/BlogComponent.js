@@ -5,23 +5,23 @@ import "./BlogComponent.css";
 import axios from "axios";
 import moment from "moment";
 import { PropagateLoader } from "react-spinners";
-import { Blog } from "../../Data/AllData";
+//import { Blog } from "../../Data/AllData";
 
 function BlogComponent() {
   const [data, setData] = useState("");
-  // const [blog, setBblog] = useState("");
+  const [Blog, setBblog] = useState("");
   const [toggle, settoggle] = useState(false);
 
   useEffect(() => {
-    // axios
-    //   .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-    //   .then(response => {
-    //     setBblog(response.data.reverse());
-    //     //console.log(response.data);
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //   });
+    axios
+      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
+      .then(response => {
+        setBblog(response.data.reverse());
+        //console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
 
     //https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195
     //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
@@ -35,7 +35,7 @@ function BlogComponent() {
       .catch(err => {
         console.error(err);
       });
-  }, [setData]);
+  }, [setData, setBblog]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -83,7 +83,7 @@ function BlogComponent() {
         <h1>Recent Blogs</h1>
         <div className="row">
           {Blog
-            ? Blog.reverse().map(data => {
+            ? Blog.map(data => {
                 console.log(data);
                 return (
                   <div className="col-md-6">
@@ -131,7 +131,7 @@ function BlogComponent() {
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
               {Blog ? (
-                Blog.reverse().map(blog => {
+                Blog.slice(0, 1).map(blog => {
                   //convert html string to Dom
                   const dom = new DOMParser().parseFromString(
                     blog.description,

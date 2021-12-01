@@ -1,25 +1,23 @@
 import React from "react";
-// import { useState, useEffect } from "react";
-// import axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./HomeVA.css";
-import { VillageAuthority } from "../../AllData.json";
+//import { VillageAuthority } from "../../AllData.json";
 import icon from "../../images/icon.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function HomeVA() {
-  // const [data, setData] = useState("");
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p`)
-  //     .then(response => {
-  //       setData(response.data);
-  //       console.log(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //     });
-  // }, [setData]);
-  // console.log(data);
+  const [VillageAuthority, setData] = useState("");
+  useEffect(() => {
+    axios
+      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p`)
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, [setData]);
 
   return (
     <>
@@ -38,19 +36,19 @@ function HomeVA() {
                   <div className="image">
                     <LazyLoadImage
                       className="bd-placeholder-img rounded-circle"
-                      src={va.img ? va.img : icon}
+                      src={va.Image ? va.Image : icon}
                       loading="lazy"
                       width="140"
                       height="140"
-                      alt={`${va.name}`}
+                      alt={`${va.Name}`}
                     />
                   </div>
                   <div className="vaDetails">
-                    <h4>{va.title}</h4>
+                    <h4>{va.Title}</h4>
 
-                    <h6>Name: {va.name}</h6>
-                    <h6>DOB:{va.dob}</h6>
-                    <h6>Duration: {va.duration}</h6>
+                    <h6>Name: {va.Name}</h6>
+                    <h6>DOB:{va.DOB}</h6>
+                    <h6>Duration: {va.Duration}</h6>
                   </div>
                   <p>
                     <div
@@ -58,7 +56,7 @@ function HomeVA() {
                       role="button"
                       onClick={() => {
                         alert(
-                          `Sorry! You can't view the details of ${va.name}`
+                          `Sorry! You can't view the details of ${va.Name}`
                         );
                       }}
                     >
