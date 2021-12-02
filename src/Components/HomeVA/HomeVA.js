@@ -36,19 +36,19 @@ function HomeVA() {
                   <div className="image">
                     <LazyLoadImage
                       className="bd-placeholder-img rounded-circle"
-                      src={va.Image ? va.Image : icon}
+                      src={va.img ? va.img : icon}
                       loading="lazy"
                       width="140"
                       height="140"
-                      alt={`${va.Name}`}
+                      alt={`${va.name}`}
                     />
                   </div>
                   <div className="vaDetails">
-                    <h4>{va.Title}</h4>
+                    <h4>{va.title}</h4>
 
-                    <h6>Name: {va.Name}</h6>
-                    <h6>DOB:{va.DOB}</h6>
-                    <h6>Duration: {va.Duration}</h6>
+                    <h6>Name: {va.name}</h6>
+                    <h6>DOB:{va.dob}</h6>
+                    <h6>Duration: {va.duration}</h6>
                   </div>
                   <p>
                     <div
@@ -56,7 +56,7 @@ function HomeVA() {
                       role="button"
                       onClick={() => {
                         alert(
-                          `Sorry! You can't view the details of ${va.Name}`
+                          `Sorry! You can't view the details of ${va.name}`
                         );
                       }}
                     >
