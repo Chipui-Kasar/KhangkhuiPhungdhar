@@ -1,23 +1,23 @@
 import React from "react";
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import axios from "axios";
 import "./HomeVA.css";
-//import { VillageAuthority } from "../../AllData.json";
+import { VillageAuthority } from "../../AllData.json";
 import icon from "../../images/icon.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function HomeVA() {
-  const [VillageAuthority, setData] = useState("");
-  useEffect(() => {
-    axios
-      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p`)
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, [setData]);
+//   const [VillageAuthority, setData] = useState("");
+//   useEffect(() => {
+//     axios
+//       .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p`)
+//       .then(response => {
+//         setData(response.data);
+//       })
+//       .catch(error => {
+//         console.error(error);
+//       });
+//   }, [setData]);
 
   return (
     <>
