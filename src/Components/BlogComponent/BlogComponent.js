@@ -84,7 +84,7 @@ function BlogComponent() {
         <div className="row">
           {Blog
             ? Blog.map(data => {
-                console.log(data);
+               
                 return (
                   <div className="col-md-6">
                     <div className="card border rounded mb-4 shadow-sm">
