@@ -1,7 +1,7 @@
 export const Pictures = [
   {
     title: "Worsem Students",
-    src: require("../images/Gallery/worsem.jpg").default,
+    src: require("../images/Gallery/worsem.JPG").default,
     alt: "Worsem English School",
     source: "Worsem Student",
   },
