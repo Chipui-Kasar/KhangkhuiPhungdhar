@@ -48,7 +48,7 @@ function HomeVA() {
 
                     <h6>Name: {va.name}</h6>
                     <h6>DOB:{va.dob}</h6>
-                    <h6>Duration: {va.duration}</h6>
+                 
                   </div>
                   <p>
                     <div
