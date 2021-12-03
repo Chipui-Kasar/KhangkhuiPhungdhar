@@ -1,5 +1,11 @@
 export const Pictures = [
   {
+    title: "Worsem Students",
+    src: require("../images/Gallery/worsem.jpg").default,
+    alt: "Worsem English School",
+    source: "Worsem Student",
+  },
+  {
     title: "Leishinim & Khaying",
     src: require("../images/Gallery/cuties.jpg").default,
     alt: "Cuties",
