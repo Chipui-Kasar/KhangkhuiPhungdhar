@@ -1,6 +1,12 @@
 export const Pictures = [
   {
     title: "Worsem Students",
+    src: "https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FWhatsApp%20Image%202021-08-31%20at%2015.21.55.jpeg?alt=media&token=5347225b-e558-4a86-9635-b33cddc38877",
+    alt: "Worsem English School",
+    source: "Worsem Student",
+  },
+  {
+    title: "Worsem Students",
     src: require("../images/Gallery/worsem.JPG").default,
     alt: "Worsem English School",
     source: "Worsem Student",
