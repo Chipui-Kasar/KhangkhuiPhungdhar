@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "@fortawesome/fontawesome-free";
 import "./Admin.css";
 import { storage } from "./firebase";
 import { ref, uploadBytesResumable } from "@firebase/storage";
@@ -19,6 +20,7 @@ function Admin() {
     setStatus(true);
     //reset form after upload is complete
   };
+
   useEffect(() => {
     if (progress === 100 && status === true) {
       setTitle("");
@@ -26,9 +28,10 @@ function Admin() {
       setImage("");
       setProgress(0);
       setStatus(false);
+      setPreview("");
       alert("Upload Complete");
     }
-  }, [progress, status]);
+  }, [progress, status, title]);
 
   const uploadFiles = file => {
     //replace only file name
@@ -46,7 +49,6 @@ function Admin() {
       second: "numeric",
       hour12: false,
     });
-    console.log(time);
 
     const dateString = `${day}-${monthName}-${year}, ${time}`;
 
@@ -57,9 +59,8 @@ function Admin() {
     );
     uploadBytesResumable(storageRef, file).then(
       snapshot => {
-        const prog = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(prog);
-        setProgress(prog);
+        console.log(snapshot);
+        setProgress((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
       },
       error => console.log(error)
     );
@@ -70,7 +71,6 @@ function Admin() {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
-      console.log(reader.result);
       setPreview(reader.result);
     };
     reader.readAsDataURL(file);
@@ -81,6 +81,7 @@ function Admin() {
         <div className="row table-bordered">
           <div className="col-12">
             <div className="mt-4 mb-3">Upload Image</div>
+
             <div className="container">
               <form className="form" onSubmit={handleSubmit} method="POST">
                 <div className="form-group row">
@@ -152,8 +153,11 @@ function Admin() {
                     )}
                   </div>
                 </div>
-                {status ? ( //if status is true, show progress bar
-                  <div>{progress}% uploaded </div> //else show nothing
+                {status && progress !== 100 ? (
+                  <>
+                    <label>Upload is in progress please wait</label>
+                    <i className="fa fa-3x fa-spinner fa-spin ml-2 mb-3"></i>
+                  </>
                 ) : (
                   ""
                 )}

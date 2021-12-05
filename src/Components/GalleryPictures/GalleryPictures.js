@@ -202,7 +202,8 @@ function GalleryPictures() {
             })
         ) : (
           <p className="spinner">
-            <i className="fas fa-spinner fa-pulse fa-3x"></i>
+            {/* <i className="fas fa-spinner fa-pulse fa-3x"></i> */}
+            <i className="fas fa-3x fa-spinner fa-spin"></i>
           </p>
         )}
       </div>
