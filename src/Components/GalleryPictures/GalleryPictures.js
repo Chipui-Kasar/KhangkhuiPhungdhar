@@ -11,21 +11,11 @@ function GalleryPictures() {
   const [limit, setLimit] = useState(6);
   const [imagename, setImagename] = useState("");
 
-  const getLast = imagename => imagename[imagename.length - 1];
-  const last = getLast(imagename);
+  setTimeout(() => {
+    const getLast = imagename => imagename[imagename.length - 1];
+    const last = getLast(imagename);
 
-  const searchChange = event => {
-    setSearch(event.target.value);
-  };
-
-  const onLoadMore = () => {
-    setLimit(limit + 6);
-  };
-
-  useEffect(() => {
-    //disable button if no more pictures
-
-    if (imagename.indexOf(last) <= limit) {
+    if (limit >= imagename.indexOf(last)) {
       let text = document
         .getElementById("btntext")
         .innerHTML.replace("Load More Photos", "You've seen it all");
@@ -38,15 +28,32 @@ function GalleryPictures() {
       document.getElementById("btntext").innerHTML = text;
       document.getElementById("btntext").disabled = false;
     }
+  }, 3000);
 
+  const searchChange = event => {
+    setSearch(event.target.value);
+  };
+
+  const onLoadMore = () => {
+    setLimit(limit + 6);
+  };
+
+  useEffect(() => {
+    //disable button if no more pictures
     axios
       .get(
         "https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o"
       )
       .then(res => {
-        setImagename(res.data.items);
+        setImagename(
+          res.data.items.sort((a, b) =>
+            a.name.split("on").pop() < b.name.split("on").pop() ? 1 : -1
+          )
+        );
       });
-  }, [imagename, last, limit]);
+
+    //load more if there are more pictures
+  }, []);
 
   //---------------------------------------
 
@@ -128,9 +135,7 @@ function GalleryPictures() {
         )} */}
         {imagename ? (
           imagename
-            .sort((a, b) =>
-              a.name.split("on").pop() < b.name.split("on").pop() ? 1 : -1
-            )
+
             .filter(searchPic => {
               if (searchPic.name.toLowerCase().includes(search.toLowerCase())) {
                 return searchPic;
@@ -139,11 +144,11 @@ function GalleryPictures() {
               }
             })
             .slice(0, limit)
-            .map(name => {
+            .map((name, key) => {
               //sort by date
 
               return (
-                <div className="col-md-4">
+                <div className="col-md-4" key={key}>
                   <div className="card mb-4 shadow-sm scroller">
                     <LazyLoadImage
                       alt={name.name}

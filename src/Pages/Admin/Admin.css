@@ -1,0 +1,9 @@
+.previewTitle {
+  position: absolute;
+  background-color: antiquewhite;
+  padding: 0 10px;
+  border-radius: 5px;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}

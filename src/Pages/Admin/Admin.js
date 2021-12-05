@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Admin.css";
 import { storage } from "./firebase";
 import { ref, uploadBytesResumable } from "@firebase/storage";
 
@@ -8,6 +9,7 @@ function Admin() {
   const [image, setImage] = useState("");
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState(false);
+  const [preview, setPreview] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -62,7 +64,17 @@ function Admin() {
       error => console.log(error)
     );
   };
-
+  //preview selected image before uploading
+  const handleImageChange = e => {
+    setImage(e.target.value);
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      console.log(reader.result);
+      setPreview(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
   return (
     <div>
       <div className="container mt-5 mb-5">
@@ -109,8 +121,35 @@ function Admin() {
                       placeholder="Select Image"
                       required
                       value={image}
-                      onChange={e => setImage(e.target.value)}
+                      onChange={handleImageChange}
                     />
+                  </div>
+                  <div
+                    className="col-sm-12"
+                    style={{
+                      maxHeight: "500px",
+                      position: "relative",
+                      textAlign: "center",
+                    }}
+                  >
+                    {preview ? (
+                      <>
+                        <img
+                          src={preview}
+                          alt={title}
+                          className="img-thumbnail"
+                          style={{
+                            maxHeight: "500px",
+                            position: "relative",
+                            width: "80%",
+                            objectFit: "cover",
+                          }}
+                        />
+                        <label className="previewTitle">{title}</label>
+                      </>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
                 {status ? ( //if status is true, show progress bar
