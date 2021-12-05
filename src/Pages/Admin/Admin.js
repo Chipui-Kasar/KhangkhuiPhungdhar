@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-free";
 import "./Admin.css";
 import { storage } from "./firebase";
 import { ref, uploadBytesResumable } from "@firebase/storage";
-
+import Compressor from "compressorjs";
 function Admin() {
   const [title, setTitle] = useState("");
   // const [source, setSource] = useState("");
@@ -15,9 +15,34 @@ function Admin() {
   const handleSubmit = e => {
     e.preventDefault();
     var file = e.target.image.files[0];
+
     //upload title, source, and image to firebase
-    uploadFiles(file);
-    setStatus(true);
+
+    if (!file) {
+      return;
+    }
+
+    new Compressor(file, {
+      quality: 0.8,
+      minHeight: 500,
+      minWidth: 500,
+      maxHeight: 1000,
+      maxWidth: 1000,
+
+      // The compression process is asynchronous,
+      // which means you have to access the `result` in the `success` hook function.
+      success(result) {
+        // The third parameter is required for server
+
+        // Send the compressed image file to server with XMLHttpRequest.
+        uploadFiles(result);
+        setStatus(true);
+      },
+      error(err) {
+        console.log(err.message);
+      },
+    });
+
     //reset form after upload is complete
   };
 
