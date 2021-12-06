@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   /* background: #f1f1f1; */
   background: #ff2a2a;
+  cursor: pointer;
 }
 /* keep text at center */
 
@@ -48,9 +49,15 @@
   bottom: 5px;
   /* background: linear-gradient(315deg, #fff, #e4e3e8); */
   background-image: url("https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%206-Dec-2021%2C%2014%3A26%3A28?alt=media&token=937cb209-f0b0-4ecb-aa64-834920d30ace");
+  background-color: #ff2a2a;
+  transition: all 0.5s ease-in-out;
   background-size: contain;
   border-radius: 50%;
 }
+#secondary {
+  transition: all 2s ease-in-out;
+}
+
 .wishContainer .box .circle p {
   position: absolute;
   padding: 10px;
@@ -67,6 +74,7 @@
   box-sizing: border-box;
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
+
 .wishContainer i {
   position: absolute;
   /* background: #ff2a2a; */
@@ -114,7 +122,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     /* background: #f1f1f1; */
     background: #ff2a2a;
   }
@@ -132,6 +140,11 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  #secondary {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 0 0 100px 100px;
   }
   .wishContainer .box .circle p {
     font-size: calc(1.3em + 0.8vw);

@@ -10,15 +10,14 @@ function ChristmasWish() {
   //   setName(e.target.value);
   // };
   //play audio on page load
-
   const bubbles = () => {
     var count = 100;
     var section = document.querySelector("section");
     var i = 0;
     while (i < count) {
       var bubble = document.createElement("i");
-      var x = Math.floor(Math.random() * window.innerWidth);
-      var y = Math.floor(Math.random() * window.innerHeight);
+      var x = Math.random() * window.innerWidth;
+      var y = Math.random() * window.innerHeight;
       var size = Math.random() * 10;
       bubble.style.left = x + "px";
       bubble.style.top = y + "px";
@@ -31,11 +30,27 @@ function ChristmasWish() {
     }
   };
 
+  //show hide text on click
+  const showHide = () => {
+    document.getElementById("text").style.display = "block";
+    document.getElementById("secondary").style.display = "none";
+    //show background-image onClick
+  };
+
   useEffect(() => {
     bubbles();
     //setName("Merry Christmas & Happy New Year");
+    //clear interval
+    document.getElementById("secondary").style.display = "block";
+    document.getElementById("text").style.display = "none";
   }, []);
 
+  const play = () => {
+    var audio = document.getElementById("myAudio");
+    audio.play();
+  };
+
+  //splash screen before loading the page
   return (
     <div>
       {/* <Helmet>
@@ -94,22 +109,27 @@ function ChristmasWish() {
           onChange={nameChange}
         />
       </form> */}
-      <section className="wishContainer">
+
+      <section className="wishContainer" onClick={play}>
         <div className="box">
-          <div className="circle">
-            <p>
+          <div className="circle" id="background">
+            <p id="secondary" onClick={showHide}>
+              Click here to get a Wish
+            </p>
+            <p id="text">
               <span> Khangkhui Phungdhar </span>
               <br /> wishes you a
               <br />
               Merry Christmas
               <br />
-              & <br />
-              Happy New Year
+              & <br />a Happy New Year
             </p>
           </div>
-          <audio src={audio} autoPlay={true} controls>
+          {/* <audio src={audio} autoPlay={true} controls loop>
             Sorry your browser does not support the audio element.
-          </audio>
+          </audio> */}
+
+          <audio id="myAudio" src={audio} autoPlay loop></audio>
         </div>
       </section>
     </div>

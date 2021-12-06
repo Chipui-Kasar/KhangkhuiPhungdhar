@@ -20,6 +20,7 @@ function App() {
   //     setVisit(result.value);
   //   });
   // }, []);
+
   return (
     <>
       <Router>
@@ -46,7 +47,8 @@ function App() {
           </Route>
           <Route path="/wish" component={ChristmasWish} />
         </Switch>
-        <ReachUs />
+        {/* Show ReachUs Component if the component or page is ReadFullBlog and ChristmasWish */}
+        {window.location.pathname !== "/wish" ? <ReachUs /> : ""}
       </Router>
     </>
   );
