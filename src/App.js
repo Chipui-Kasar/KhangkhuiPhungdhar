@@ -46,7 +46,7 @@ function App() {
           </Route>
           <Route path="/wish" component={ChristmasWish} />
         </Switch>
-        {!(<ChristmasWish />) && !(<ReadFullBlog />) ? <ReachUs /> : ""}
+        <ReachUs />
       </Router>
     </>
   );
