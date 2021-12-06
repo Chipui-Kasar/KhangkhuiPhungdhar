@@ -38,13 +38,12 @@ function ChristmasWish() {
   return (
     <div>
       <Helmet>
-        <base />
         <title>Merry Christmas & Happy New Year</title>
-        <meta name="description" content="Merry Christmas & Happy New Year" />
         <meta
-          name="title"
-          content="Khangkhui Phungdhar wishes you a Merry Christmas and happy New Year "
+          name="description"
+          content="Khangkhui Phungdhar Wishes you a Merry Christmas & Happy New Year"
         />
+        <meta name="title" content="Merry Christmas and a Happy New Year" />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
 
         <meta property="og:title" content="Merry Christmas & Happy New Year" />
