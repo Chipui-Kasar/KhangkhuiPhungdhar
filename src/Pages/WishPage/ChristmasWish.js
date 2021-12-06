@@ -11,7 +11,7 @@ function ChristmasWish() {
   //play audio on page load
 
   const bubbles = () => {
-    var count = 200;
+    var count = 100;
     var section = document.querySelector("section");
     var i = 0;
     while (i < count) {
