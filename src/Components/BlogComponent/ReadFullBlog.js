@@ -56,7 +56,7 @@ function ReadFullBlog() {
                     href="//khangkhuiphungdhar.netlify.app"
                   />
 
-                  <meta property="og:title" content="read" />
+                  <meta property="og:title" content={item.title} />
                   <meta property="og:description" content={item.displaytext} />
                   <meta property="og:image" content={item.src} />
                   <meta

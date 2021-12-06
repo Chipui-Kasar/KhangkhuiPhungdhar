@@ -47,7 +47,7 @@ function ChristmasWish() {
         />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
 
-        <meta property="og:title" content="Wish" />
+        <meta property="og:title" content="Merry Christmas & Happy New Year" />
         <meta
           property="og:description"
           content="Khangkhui Phungdhar wishes you a Merry Christmas and happy New Year "
