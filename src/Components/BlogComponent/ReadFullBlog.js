@@ -56,12 +56,14 @@ function ReadFullBlog() {
                     href="//khangkhuiphungdhar.netlify.app"
                   />
 
-                  <meta property="og:title" content="Blog" />
+                  <meta property="og:title" content="read" />
                   <meta property="og:description" content={item.displaytext} />
                   <meta property="og:image" content={item.src} />
                   <meta
                     property="og:url"
-                    content="//khangkhuiphungdhar.netlify.app/Blog"
+                    content={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                      .replace(/ /g, "-")
+                      .toLowerCase()}`}
                   />
                   <meta name="twitter:title" content={item.title} />
                   <meta name="twitter:description" content={item.displaytext} />
