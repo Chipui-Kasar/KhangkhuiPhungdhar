@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
-//import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import "./ChristmasWish.css";
 import audio from "./wish.mp3";
 
 function ChristmasWish() {
-  //const [name, setName] = React.useState("");
-
-  // const nameChange = e => {
-  //   setName(e.target.value);
-  // };
-  //play audio on page load
   const bubbles = () => {
     var count = 100;
     var section = document.querySelector("section");
@@ -34,13 +28,11 @@ function ChristmasWish() {
   const showHide = () => {
     document.getElementById("text").style.display = "block";
     document.getElementById("secondary").style.display = "none";
-    //show background-image onClick
   };
 
   useEffect(() => {
     bubbles();
-    //setName("Merry Christmas & Happy New Year");
-    //clear interval
+
     document.getElementById("secondary").style.display = "block";
     document.getElementById("text").style.display = "none";
   }, []);
@@ -53,16 +45,22 @@ function ChristmasWish() {
   //splash screen before loading the page
   return (
     <div>
-      {/* <Helmet>
-        <title>{name}</title>
+      <Helmet>
+        <title>Merry Christmas and a Happy New Year</title>
         <meta
           name="description"
           content="Khangkhui Phungdhar Wishes you a Merry Christmas & Happy New Year"
         />
-        <meta name="title" content={name} />
+        <meta
+          name="title"
+          content="Khangkhui Phungdhar wishes you a Merry Christmas and Happy New Year"
+        />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
 
-        <meta property="og:title" content="Merry Christmas & Happy New Year" />
+        <meta
+          property="og:title"
+          content="Khangkhui Phungdhar wishes you a Merry Christmas & Happy New Year"
+        />
         <meta
           property="og:description"
           content="Khangkhui Phungdhar wishes you a Merry Christmas and happy New Year "
@@ -73,9 +71,12 @@ function ChristmasWish() {
         />
         <meta
           property="og:url"
-          content="//khangkhuiphungdhar.netlify.app/wish"
+          content="https://khangkhuiphungdhar.netlify.app/wish"
         />
-        <meta name="twitter:title" content="History of Khangkhui Phungdhar " />
+        <meta
+          name="twitter:title"
+          content="Merry Christmas and Happy New Year"
+        />
         <meta
           name="twitter:description"
           content="Khangkhui Phungdhar wishes you a Merry Christmas and Happy New Year"
@@ -86,7 +87,7 @@ function ChristmasWish() {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
-      </Helmet> */}
+      </Helmet>
 
       {/* <form className="form">
         <label
