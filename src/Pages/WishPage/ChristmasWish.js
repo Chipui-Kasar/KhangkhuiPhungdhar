@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+//import { Helmet } from "react-helmet";
 import "./ChristmasWish.css";
 import audio from "./wish.mp3";
 
 function ChristmasWish() {
-  const [name, setName] = React.useState("");
+  //const [name, setName] = React.useState("");
 
   // const nameChange = e => {
   //   setName(e.target.value);
@@ -33,12 +33,12 @@ function ChristmasWish() {
 
   useEffect(() => {
     bubbles();
-    setName("Merry Christmas & Happy New Year");
+    //setName("Merry Christmas & Happy New Year");
   }, []);
 
   return (
     <div>
-      <Helmet>
+      {/* <Helmet>
         <title>{name}</title>
         <meta
           name="description"
@@ -71,7 +71,8 @@ function ChristmasWish() {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
-      </Helmet>
+      </Helmet> */}
+
       {/* <form className="form">
         <label
           style={{
