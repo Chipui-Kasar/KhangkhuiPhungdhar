@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./ChristmasWish.css";
+import audio from "./wish.mp3";
 
 function ChristmasWish() {
   // const [name, setName] = React.useState("");
@@ -7,6 +8,7 @@ function ChristmasWish() {
   // const nameChange = e => {
   //   setName(e.target.value);
   // };
+  //play audio on page load
 
   const bubbles = () => {
     var count = 200;
@@ -68,11 +70,9 @@ function ChristmasWish() {
               Happy New Year
             </p>
           </div>
-          <audio
-            src="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/wish%2Fwish.mp3?alt=media&token=8b62735b-ae28-4bd3-b7c7-736dc068f547"
-            autoPlay
-            loop
-          ></audio>
+          <audio src={audio} autoPlay={true} controls>
+            Sorry your browser does not support the audio element.
+          </audio>
         </div>
       </section>
     </div>

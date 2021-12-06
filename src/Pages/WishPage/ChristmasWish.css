@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap");
-.form {
-  position: absolute;
-  top: 15%;
-  left: 40%;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-}
-.input {
-  color: #495057;
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  padding: 3px;
-}
+
 .wishContainer {
   display: flex;
   justify-content: center;
@@ -59,7 +47,7 @@
   right: 5px;
   bottom: 5px;
   /* background: linear-gradient(315deg, #fff, #e4e3e8); */
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/wish%2Fsanta.jpg?alt=media&token=72a529cd-70ff-48d1-add8-eba531dc3122");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%206-Dec-2021%2C%2014%3A26%3A28?alt=media&token=937cb209-f0b0-4ecb-aa64-834920d30ace");
   background-size: contain;
   border-radius: 50%;
 }
@@ -119,24 +107,9 @@
     width: 350px;
     height: 350px;
   }
-  .form {
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-  }
 }
 /* media query for phone size */
 @media screen and (max-width: 600px) {
-  body {
-    overflow: hidden;
-  }
-  .form {
-    position: absolute;
-    top: 15%;
-    left: 25%;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-  }
   .wishContainer {
     display: flex;
     justify-content: center;
