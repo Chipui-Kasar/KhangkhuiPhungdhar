@@ -16,8 +16,7 @@ function Admin() {
     e.preventDefault();
     var file = e.target.image.files[0];
 
-    //upload title, source, and image to firebase
-
+    //compressing image
     if (!file) {
       return;
     }

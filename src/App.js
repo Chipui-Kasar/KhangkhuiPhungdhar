@@ -11,6 +11,7 @@ import MYCPage from "./Pages/MYCPage/MYCPage";
 // import countapi from "countapi-js";
 import Admin from "./Pages/Admin/Admin";
 import ReadFullBlog from "./Components/BlogComponent/ReadFullBlog";
+import ChristmasWish from "./Pages/WishPage/ChristmasWish";
 
 function App() {
   // const [visit, setVisit] = useState();
@@ -37,16 +38,15 @@ function App() {
             <BlogPage />
           </Route>
           <Route path="/read/:id" component={ReadFullBlog} />
-
           <Route path="/ura">
             <MYCPage />
           </Route>
           <Route path="/adminkk">
             <Admin />
           </Route>
+          <Route path="/wish" component={ChristmasWish} />
         </Switch>
-
-        <ReachUs />
+        {!(<ChristmasWish />) && !(<ReadFullBlog />) ? <ReachUs /> : ""}
       </Router>
     </>
   );
