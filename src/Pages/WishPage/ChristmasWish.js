@@ -4,7 +4,7 @@ import "./ChristmasWish.css";
 import audio from "./wish.mp3";
 
 function ChristmasWish() {
-  // const [name, setName] = React.useState("");
+  const [name, setName] = React.useState("");
 
   // const nameChange = e => {
   //   setName(e.target.value);
@@ -33,17 +33,18 @@ function ChristmasWish() {
 
   useEffect(() => {
     bubbles();
+    setName("Merry Christmas & Happy New Year");
   }, []);
 
   return (
     <div>
       <Helmet>
-        <title>Merry Christmas & Happy New Year</title>
+        <title>{name}</title>
         <meta
           name="description"
           content="Khangkhui Phungdhar Wishes you a Merry Christmas & Happy New Year"
         />
-        <meta name="title" content="Merry Christmas and a Happy New Year" />
+        <meta name="title" content={name} />
         <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
 
         <meta property="og:title" content="Merry Christmas & Happy New Year" />
