@@ -11,11 +11,23 @@ function GalleryPictures() {
   const [limit, setLimit] = useState(6);
   const [imagename, setImagename] = useState("");
 
+  const searchChange = event => {
+    setSearch(event.target.value);
+  };
+
+  const onLoadMore = () => {
+    setLimit(limit + 6);
+  };
   setTimeout(() => {
     const getLast = imagename => imagename[imagename.length - 1];
     const last = getLast(imagename);
+    var searchIndex = imagename
+      ? imagename.filter(item =>
+          item.name.toLowerCase().includes(search.toLowerCase())
+        ).length
+      : "";
 
-    if (limit >= imagename.indexOf(last)) {
+    if (limit >= imagename.indexOf(last) || limit >= searchIndex) {
       let text = document
         .getElementById("btntext")
         .innerHTML.replace("Load More Photos", "You've seen it all");
@@ -29,15 +41,6 @@ function GalleryPictures() {
       document.getElementById("btntext").disabled = false;
     }
   }, 3000);
-
-  const searchChange = event => {
-    setSearch(event.target.value);
-  };
-
-  const onLoadMore = () => {
-    setLimit(limit + 6);
-  };
-
   useEffect(() => {
     //disable button if no more pictures
     axios
@@ -53,7 +56,7 @@ function GalleryPictures() {
       });
 
     //load more if there are more pictures
-  }, []);
+  }, [limit]);
 
   //---------------------------------------
 
@@ -135,7 +138,6 @@ function GalleryPictures() {
         )} */}
         {imagename ? (
           imagename
-
             .filter(searchPic => {
               if (searchPic.name.toLowerCase().includes(search.toLowerCase())) {
                 return searchPic;
