@@ -50,19 +50,13 @@ function WishPage() {
           name="description"
           content="Khangkhui Phungdhar Wishes you a Merry Christmas & Happy New Year"
         />
-        <meta
-          name="title"
-          content="Khangkhui Phungdhar wishes you a Merry Christmas and Happy New Year"
-        />
+        <meta name="title" content="Merry Christmas and Happy New Year" />
         <link
           rel="canonical"
           href="https://khangkhuiphungdhar.netlify.app/palm"
         />
 
-        <meta
-          property="og:title"
-          content="Khangkhui Phungdhar wishes you a Merry Christmas & Happy New Year"
-        />
+        <meta property="og:title" content="Merry Christmas & Happy New Year" />
         <meta
           property="og:description"
           content="Khangkhui Phungdhar wishes you a Merry Christmas and happy New Year "
