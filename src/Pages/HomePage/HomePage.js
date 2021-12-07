@@ -8,7 +8,6 @@ import "./HomePage.css";
 import { Helmet } from "react-helmet";
 
 function HomePage(props) {
- 
   return (
     <div>
       <Helmet>
@@ -55,7 +54,7 @@ function HomePage(props) {
         <meta name="twitter:image" content={previewImage} data-rh="true" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
-        <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+        <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />
       </Helmet>
       <HomeBanner />
       <div className="container-fluid marketing">

@@ -17,7 +17,10 @@ function BlogPage() {
           name="title"
           content="Keep Writing and Keep Reading || Write a blog and get paid instantly"
         />
-        <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+        <link
+          rel="canonical"
+          href="https://khangkhuiphungdhar.netlify.app/blog"
+        />
 
         <meta property="og:title" content="Blog" />
         <meta

@@ -53,7 +53,9 @@ function ReadFullBlog() {
                   <meta name="title" content={item.title} />
                   <link
                     rel="canonical"
-                    href="//khangkhuiphungdhar.netlify.app"
+                    href={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                      .replace(/ /g, "-")
+                      .toLowerCase()}`}
                   />
 
                   <meta property="og:title" content={item.title} />

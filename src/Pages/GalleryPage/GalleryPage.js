@@ -51,7 +51,10 @@ function GalleryPage() {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
-        <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />
+        <link
+          rel="canonical"
+          href="https://khangkhuiphungdhar.netlify.app/gallery"
+        />
       </Helmet>
       <GalleryBanner />
       <div className="album py-2">

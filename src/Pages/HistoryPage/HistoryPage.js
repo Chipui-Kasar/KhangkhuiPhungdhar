@@ -55,7 +55,10 @@ function HistoryPage() {
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@chipui" />
-          <link rel="canonical" href="//khangkhuiphungdhar.netlify.app" />
+          <link
+            rel="canonical"
+            href="https://khangkhuiphungdhar.netlify.app/history"
+          />
         </Helmet>
         <History />
       </div>
