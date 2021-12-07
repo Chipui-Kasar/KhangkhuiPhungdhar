@@ -48,7 +48,12 @@ function App() {
           <Route path="/palm" component={WishPage} />
         </Switch>
         {/* Show ReachUs Component if the component or page is ReadFullBlog and ChristmasWish */}
-        {window.location.pathname !== "/palm" ? <ReachUs /> : ""}
+        {window.location.pathname !== "/palm" &&
+        window.location.pathname !== "/adminkk" ? (
+          <ReachUs />
+        ) : (
+          ""
+        )}
       </Router>
     </>
   );

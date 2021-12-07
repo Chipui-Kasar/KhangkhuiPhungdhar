@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./HomeAboutPlaces.css";
 import khorim from "../../images/Home/khorim.jpeg";
 import harvaplace from "../../images/Home/harvaplace.jpeg";
-import khangkhui from "../../images/Home/khangkhui.jpeg";
+//import khangkhui from "../../images/Home/khangkhui.jpeg";
 
 import AOS from "aos";
 function HomeAboutPlaces() {
@@ -57,7 +57,7 @@ function HomeAboutPlaces() {
           </div>
           <div className="col-lg-5 place-image   " data-aos="flip-left">
             <img
-              src={khangkhui}
+              src="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FKHANGKHUI.jpeg%20on%205-Dec-2021,%2009:52:19?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e"
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
               alt="Khangkhui Phungdhar"
@@ -76,9 +76,11 @@ function HomeAboutPlaces() {
             <p className="content">
               Khangkhui Phungdhar Harva Khangai Kaphung lies on East of Ukhrul
               town and about 20 km distance and is about 2000 meters above sea
-              level. It is well known for its beautiful spot for both sunrise and sunset, as watching 
-              first rays of the sun is an experience that is quite something else. It is also one of the battle spot of World War II. From the hill top of Harva Khangai one can behold the
-              scenic view of Ningthi River, Myanmar, Angoching Range, Ukhrul
+              level. It is well known for its beautiful spot for both sunrise
+              and sunset, as watching first rays of the sun is an experience
+              that is quite something else. It is also one of the battle spot of
+              World War II. From the hill top of Harva Khangai one can behold
+              the scenic view of Ningthi River, Myanmar, Angoching Range, Ukhrul
               town, Khayang Phungtha water falls, Shirui mountain and beautiful
               view of the Imphal Valley. Harva Khangai Kaphung is a beautiful
               plateau which has great potential for tourist attraction. It could
@@ -114,14 +116,14 @@ function HomeAboutPlaces() {
             <h2 className="featurette-heading">Khorim (Khuirung)</h2>
             <p className="content">
               Khorim is also known as Khuirung in local dialect. It is located
-              on the northern side of Khangkhui Phungdhar. It is about 6Km from the
-              village. It is a great place to settle down and start a new life.
-              Life is short, so enjoy while you're still young. There are lots
-              of cattle and wild animals on the mountain. The Water of Khangkhui Phungdhar started from the
-              narrow mountain of Khorim. So it is also considered as the ura of
-              Khangkhui. Upon going forward towards Northern side, there is a
-              beautiful mountain where most of the people loves to visit i,e.
-              Shirui Hills. 
+              on the northern side of Khangkhui Phungdhar. It is about 6Km from
+              the village. It is a great place to settle down and start a new
+              life. Life is short, so enjoy while you're still young. There are
+              lots of cattle and wild animals on the mountain. The Water of
+              Khangkhui Phungdhar started from the narrow mountain of Khorim. So
+              it is also considered as the ura of Khangkhui. Upon going forward
+              towards Northern side, there is a beautiful mountain where most of
+              the people loves to visit i,e. Shirui Hills.
             </p>
           </div>
           <div className="col-lg-5 place-image " data-aos="flip-up">

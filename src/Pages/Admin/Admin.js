@@ -99,19 +99,26 @@ function Admin() {
     };
     reader.readAsDataURL(file);
   };
+  //get google browser login user name
+
   return (
     <div>
       <div className="container mt-5 mb-5">
         <div className="row table-bordered">
           <div className="col-12">
-            <div className="mt-4 mb-3">Upload Image</div>
+            <div className="mt-4 mb-3" style={{ fontSize: "calc(1em + 1vw)" }}>
+              Upload Image
+            </div>
 
             <div className="container">
               <form className="form" onSubmit={handleSubmit} method="POST">
                 <div className="form-group row">
                   <div
-                    className="text-success mb-2"
-                    style={{ fontStyle: "italic" }}
+                    className="text-success mb-2 "
+                    style={{
+                      fontStyle: "italic",
+                      fontSize: "calc(.7em + 1vw)",
+                    }}
                   >
                     Note: Please give appropriate "TITLE" for the Image
                   </div>
