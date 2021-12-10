@@ -169,13 +169,13 @@ function GalleryPictures() {
                       }}
                     />
                     <div className="card-body text-center">
-                      <p className="card-text">
+                      <h1 className="card-text">
                         {name.name
                           .toUpperCase()
                           .replace("FILE/", "")
                           //remove all image extension
                           .replace(/\.[^/.]+$/, "")}
-                      </p>
+                      </h1>
 
                       <div className="d-flex justify-content-center align-items-center">
                         <div className="btn-group">
@@ -205,7 +205,7 @@ function GalleryPictures() {
         ) : (
           <p className="spinner">
             {/* <i className="fas fa-spinner fa-pulse fa-3x"></i> */}
-            <i className="fas fa-3x fa-spinner fa-spin"></i>
+            <i className="fa fa-3x fa-spinner fa-spin"></i>
           </p>
         )}
       </div>

@@ -27,6 +27,7 @@ function WishPage() {
   //show hide text on click
   const showHide = () => {
     document.getElementById("text").style.display = "block";
+    //add background image
     document.getElementById("secondary").style.display = "none";
   };
 
@@ -63,7 +64,7 @@ function WishPage() {
         />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%206-Dec-2021%2C%2014%3A26%3A28?alt=media&token=937cb209-f0b0-4ecb-aa64-834920d30ace"
+          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%2010-Dec-2021%2C%2021%3A25%3A12?alt=media&token=bfeda4b2-ef38-4345-a5b8-c4b425c06b3a"
         />
         <meta
           property="og:url"
@@ -79,7 +80,7 @@ function WishPage() {
         />
         <meta
           name="twitter:image"
-          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%206-Dec-2021%2C%2014%3A26%3A28?alt=media&token=937cb209-f0b0-4ecb-aa64-834920d30ace"
+          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%2010-Dec-2021%2C%2021%3A25%3A12?alt=media&token=bfeda4b2-ef38-4345-a5b8-c4b425c06b3a"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
@@ -107,11 +108,13 @@ function WishPage() {
         />
       </form> */}
 
-      <section className="palmContainer" onClick={play}>
+      <section className="palmContainer">
         <div className="box">
-          <div className="circle" id="background">
+          <div className="circle" id="background" onClick={play}>
             <p id="secondary" onClick={showHide}>
               Click here to get a Wish
+              <br />
+              <span id="demo"></span>
             </p>
             <p id="text">
               <span> Khangkhui Phungdhar </span>

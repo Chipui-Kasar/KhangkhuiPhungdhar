@@ -3,6 +3,12 @@ import "./ReachUs.css";
 import developer from "../../images/developer.jpg";
 
 function ReachUs() {
+  //get current year
+  const date = new Date();
+  const year = date.getFullYear();
+
+  //check the device width (laptop or mobile)
+
   return (
     <div>
       <footer className="container-fluid">
@@ -43,7 +49,9 @@ function ReachUs() {
               onClick={() => alert("Do you really want to donate")}
             >
               <a
-                href="upi://pay?pa=chipuikasar@oksbi&amp;pn=Chipuimi Kasar &amp;cu=INR"
+                href={
+                  "upi://pay?pa=chipuikasar@oksbi&amp;pn=Chipuimi Kasar &amp;cu=INR"
+                }
                 className="upi-pay1"
               >
                 Donate
@@ -123,7 +131,7 @@ function ReachUs() {
 </div>
      */}
         <p className="text-white text-center">
-          Copyright &copy; All rights reserved @2021 &middot;
+          Copyright &copy; All rights reserved @{year} &middot;
         </p>
       </footer>
     </div>

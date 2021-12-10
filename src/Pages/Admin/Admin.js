@@ -55,6 +55,10 @@ function Admin() {
       setPreview("");
       alert("Upload Complete");
     }
+
+    //-------------------------
+
+    //-------------------------
   }, [progress, status, title]);
 
   const uploadFiles = file => {
@@ -64,6 +68,8 @@ function Admin() {
     //get today's date
     const date = new Date();
     const day = date.getDate();
+    //add 0 if day is less than 10
+    const newDay = day < 10 ? `0${day}` : day;
     const monthName = date.toLocaleString("default", { month: "short" });
     const year = date.getFullYear();
     //get current time
@@ -74,13 +80,14 @@ function Admin() {
       hour12: false,
     });
 
-    const dateString = `${day}-${monthName}-${year}, ${time}`;
+    const dateString = `${newDay}-${monthName}-${year}, ${time}`;
 
     if (!file) return;
     const storageRef = ref(
       storage,
       `/file/${title.toUpperCase()}${filePath} on ${dateString}`
     );
+
     uploadBytesResumable(storageRef, file).then(
       snapshot => {
         console.log(snapshot);
@@ -89,10 +96,14 @@ function Admin() {
       error => console.log(error)
     );
   };
+
   //preview selected image before uploading
   const handleImageChange = e => {
     setImage(e.target.value);
     const file = e.target.files[0];
+    if (!file) {
+      return;
+    }
     const reader = new FileReader();
     reader.onloadend = () => {
       setPreview(reader.result);
@@ -164,7 +175,7 @@ function Admin() {
                       textAlign: "center",
                     }}
                   >
-                    {preview ? (
+                    {preview && image ? (
                       <>
                         <img
                           src={preview}
