@@ -57,7 +57,7 @@ function HomeAboutPlaces() {
           </div>
           <div className="col-lg-5 place-image   " data-aos="flip-left">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FKHANGKHUI.jpeg%20on%205-Dec-2021,%2009:52:19?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e"
+              src="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FKHANGKHUI%20PHUNGDHAR.jpg%20on%2010-Dec-2021,%2021:12:14?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e"
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
               alt="Khangkhui Phungdhar"

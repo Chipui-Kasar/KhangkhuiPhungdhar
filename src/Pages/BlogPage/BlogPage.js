@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import BlogComponent from "../../Components/BlogComponent/BlogComponent";
+import ReachUs from "../../Components/ReachUs/ReachUs";
 import "./BlogPage.css";
 function BlogPage() {
   var title = "Blog";
@@ -44,6 +45,7 @@ function BlogPage() {
       <div className="container-fluid blog-container">
         <BlogComponent />
       </div>
+      <ReachUs />
     </>
   );
 }

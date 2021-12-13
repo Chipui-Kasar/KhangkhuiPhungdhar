@@ -210,7 +210,7 @@ function GalleryPictures() {
         )}
       </div>
 
-      <div className="text-center" id="loadmore">
+      <div className="text-center mb-5" id="loadmore">
         <button
           type="button"
           className="btn btn-outline-warning btn-lg"

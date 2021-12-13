@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import History from "../../Components/HistoryComponents/History";
+import ReachUs from "../../Components/ReachUs/ReachUs";
 import "./HistoryPage.css";
 function HistoryPage() {
   console.log("History");
@@ -61,6 +62,7 @@ function HistoryPage() {
           />
         </Helmet>
         <History />
+        <ReachUs />
       </div>
     </>
   );

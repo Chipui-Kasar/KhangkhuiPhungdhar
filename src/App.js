@@ -5,7 +5,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HistoryPage from "./Pages/HistoryPage/HistoryPage";
 import GalleryPage from "./Pages/GalleryPage/GalleryPage";
-import ReachUs from "./Components/ReachUs/ReachUs";
+//import ReachUs from "./Components/ReachUs/ReachUs";
 import BlogPage from "./Pages/BlogPage/BlogPage";
 import MYCPage from "./Pages/MYCPage/MYCPage";
 // import countapi from "countapi-js";
@@ -47,13 +47,6 @@ function App() {
           </Route>
           <Route path="/palm" component={WishPage} />
         </Switch>
-        {/* Show ReachUs Component if the component or page is ReadFullBlog and ChristmasWish */}
-        {window.location.pathname !== "/palm" &&
-        window.location.pathname !== "/adminkk" ? (
-          <ReachUs />
-        ) : (
-          ""
-        )}
       </Router>
     </>
   );

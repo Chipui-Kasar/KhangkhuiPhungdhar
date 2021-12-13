@@ -6,6 +6,7 @@ import HomeAboutPlaces from "../../Components/HomeAboutPlaces/HomeAboutPlaces";
 import previewImage from "../../images/Home/preview.jpg";
 import "./HomePage.css";
 import { Helmet } from "react-helmet";
+import ReachUs from "../../Components/ReachUs/ReachUs";
 
 function HomePage(props) {
   return (
@@ -62,6 +63,7 @@ function HomePage(props) {
         <HomeVA />
         <HomeAboutPlaces />
       </div>
+      <ReachUs />
     </div>
   );
 }
