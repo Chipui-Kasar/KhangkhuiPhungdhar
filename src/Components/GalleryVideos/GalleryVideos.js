@@ -71,6 +71,7 @@ import button from "../../images/button.png";
 
 function GalleryVideos() {
   const [video, setVideo] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
   // const [spinner, setSpinner] = useState(true);
   //AIzaSyCVGBklLLNd-0tTrFJQIxo4Uw6zro9dQ9k
   useEffect(() => {
@@ -105,15 +106,28 @@ function GalleryVideos() {
     alert("You'll be redirect to YouTube");
   };
 
+  const showVideos = () => {
+    setShowVideo(!showVideo);
+  };
+
   return (
     <>
-      <div className="row">
-        {video ? (
-          video.map((video, key) => {
-            return (
-              <div className="col-md-4" key={key}>
-                <div className="card mb-4 shadow-lg">
-                  {/* <iframe
+      {!showVideo && (
+        <button
+          className="btn btn-warning btn-block showVideo"
+          onClick={showVideos}
+        >
+          Click here to Show Videos
+        </button>
+      )}
+      {showVideo && (
+        <div className="row">
+          {video ? (
+            video.map((video, key) => {
+              return (
+                <div className="col-md-4" key={key}>
+                  <div className="card mb-4 shadow-lg">
+                    {/* <iframe
                     width="100%"
                     height="200"
                     src={`//www.youtube.com/embed/${video.videoId}`}
@@ -125,55 +139,58 @@ function GalleryVideos() {
                       borderRadius: "7px",
                     }}
                   ></iframe> */}
-                  <iframe
-                    width="100%"
-                    height="200px"
-                    id="videoframe"
-                    title="Khangkhui"
-                    src={`https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1`}
-                    srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{background:#000;height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style>
+                    <iframe
+                      width="100%"
+                      height="200px"
+                      id="videoframe"
+                      title="Khangkhui"
+                      src={`https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1`}
+                      srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{background:#000;height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style>
   <a href=https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&modestbranding=1&iv_load_policy=3&theme=light&playsinline=1>
   <img src=https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg>
   <img id='playbutton' src=${button} style='width: 66px; position: absolute; left: 41.5%;'></a>`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                    style={{
-                      border: "7px solid #424242",
-                      borderRadius: "7px",
-                    }}
-                  ></iframe>
-                  <div className="card-body">
-                    <p>
-                      <i className="fa fa-calendar"></i> : {video.publishedAt}
-                    </p>
-                    <p className="card-text font-weight-bold">
-                      <i className="fa fa-chain"></i> : {video.title}
-                    </p>
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                      style={{
+                        border: "7px solid #424242",
+                        borderRadius: "7px",
+                      }}
+                    ></iframe>
+                    <div className="card-body">
+                      <p>
+                        <i className="fa fa-calendar"></i> : {video.publishedAt}
+                      </p>
+                      <p className="card-text font-weight-bold">
+                        <i className="fa fa-chain"></i> : {video.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <p className="spinner">
-            <i className="fa fa-spinner fa-pulse fa-3x"></i>
-          </p>
-        )}
-      </div>
-
-      <div className="text-center">
-        <button className="btn btn-dark btn-lg" onClick={loadMore}>
-          <a
-            href="https://www.youtube.com/watch?v=Gxi5XZZF3no&list=PLaDHq514e-p0MYI-5qBwAPqMmf3ISUWT8&index=10&ab_channel=LookslikeYou"
-            target="_child"
-            style={{ textDecoration: "none" }}
-          >
-            Watch More Videos on YouTube <i className="fa fa-youtube-play"></i>
-          </a>
-        </button>
-      </div>
+              );
+            })
+          ) : (
+            <p className="spinner">
+              <i className="fa fa-spinner fa-pulse fa-3x"></i>
+            </p>
+          )}
+        </div>
+      )}
+      {showVideo && (
+        <div className="text-center">
+          <button className="btn btn-dark btn-lg" onClick={loadMore}>
+            <a
+              href="https://www.youtube.com/watch?v=Gxi5XZZF3no&list=PLaDHq514e-p0MYI-5qBwAPqMmf3ISUWT8&index=10&ab_channel=LookslikeYou"
+              target="_child"
+              style={{ textDecoration: "none" }}
+            >
+              Watch More Videos on YouTube{" "}
+              <i className="fa fa-youtube-play"></i>
+            </a>
+          </button>
+        </div>
+      )}
     </>
   );
 }

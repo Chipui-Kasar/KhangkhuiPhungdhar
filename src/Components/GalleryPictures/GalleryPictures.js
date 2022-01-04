@@ -50,7 +50,10 @@ function GalleryPictures() {
       .then(res => {
         setImagename(
           res.data.items.sort((a, b) =>
-            a.name.split("on").pop() < b.name.split("on").pop() ? 1 : -1
+            new Date(a.name.split("on").pop()) <
+            new Date(b.name.split("on").pop())
+              ? 1
+              : -1
           )
         );
       });
