@@ -38,10 +38,12 @@ function ReachUs() {
                 alt="Chipui Kasar"
               ></img>
               <h2 className="text-white">
-                <i className="fa fa-tools"></i> Developer
+                <i className="fa fa-cogs"></i> Developer
               </h2>
               <h6 className="text-white">
-                <i>Chipui Kasar</i>
+                <a href="//chipuikasarpage.netlify.app" target="_child">
+                  <i>Chipui Kasar</i>
+                </a>
               </h6>
             </div>
             <button
