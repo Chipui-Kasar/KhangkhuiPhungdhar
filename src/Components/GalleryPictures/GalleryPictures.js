@@ -94,9 +94,9 @@ function GalleryPictures() {
       </div>
       <div className="form-group text-center">
         {imagenames.map((imagename) => {
-            return(<button className="btn btn-sm border border-success mr-2" onClick={searchFilter} value={imagename}>{imagename}</button>) 
+            return(<button className="btn btn-sm border border-success mr-2"  style={{fontSize:"10px"}} onClick={searchFilter} value={imagename}>{imagename}</button>) 
         })}
-        <button className="btn btn-sm border border-danger" onClick={resetFilter}>Reset filter</button>
+        <button className="btn btn-sm border border-danger"  style={{fontSize:"10px"}} onClick={resetFilter}>Reset Filter</button>
       </div>
       
       <div className="row">
