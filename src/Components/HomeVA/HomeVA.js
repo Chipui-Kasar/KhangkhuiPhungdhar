@@ -45,9 +45,8 @@ function HomeVA() {
                   </div>
                   <div className="vaDetails">
                     <h4>{va.title}</h4>
-
                     <h6>Name: {va.name}</h6>
-                    <h6>DOB:{va.dob}</h6>
+                    <h6>DOB: {va.dob}</h6>
                  
                   </div>
                   <p>

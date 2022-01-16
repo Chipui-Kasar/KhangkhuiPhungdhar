@@ -8,12 +8,23 @@ import axios from "axios";
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
+  const [buttonFilter, setButtonFilter] = useState("");
   const [limit, setLimit] = useState(6);
   const [imagename, setImagename] = useState("");
 
+  //write names of images in the array
+  var imagenames = ["Khangkhui", "Harva Khangai", "Yarnao"]
   const searchChange = event => {
     setSearch(event.target.value);
+    
   };
+  const searchFilter=(image)=>{
+   setButtonFilter(image.target.value);
+  }
+  const resetFilter=()=>{
+    setButtonFilter("");
+    setSearch("")
+  }
 
   const onLoadMore = () => {
     setLimit(limit + 6);
@@ -23,8 +34,10 @@ function GalleryPictures() {
     const last = getLast(imagename);
     var searchIndex = imagename
       ? imagename.filter(item =>
-          item.name.toLowerCase().includes(search.toLowerCase())
+          item.name.toLowerCase().includes(search.toLowerCase()) &&
+          item.name.toLowerCase().includes(buttonFilter.toLowerCase())
         ).length
+
       : "";
 
     if (limit >= imagename.indexOf(last) || limit >= searchIndex) {
@@ -74,10 +87,18 @@ function GalleryPictures() {
           type="text"
           className="form-control border border-warning"
           value={search}
+          id="searchBox"
           aria-describedby="helpId"
           placeholder="Search by people or place Eg Khangkhui"
         />
       </div>
+      <div className="form-group text-center">
+        {imagenames.map((imagename) => {
+            return(<button className="btn btn-sm border border-success mr-2" onClick={searchFilter} value={imagename}>{imagename}</button>) 
+        })}
+        <button className="btn btn-sm border border-danger" onClick={resetFilter}>Reset filter</button>
+      </div>
+      
       <div className="row">
         {/* {Pictures ? (
           Pictures.filter(searchPic => {
@@ -142,7 +163,8 @@ function GalleryPictures() {
         {imagename ? (
           imagename
             .filter(searchPic => {
-              if (searchPic.name.toLowerCase().includes(search.toLowerCase())) {
+              if (searchPic.name.toLowerCase().includes(search.toLowerCase()) &&
+                  searchPic.name.toLowerCase().includes(buttonFilter.toLowerCase()) ) {
                 return searchPic;
               } else {
                 return null;

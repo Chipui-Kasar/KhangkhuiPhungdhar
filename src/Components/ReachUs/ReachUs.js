@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ReachUs.css";
 import developer from "../../images/developer.jpg";
 
 function ReachUs() {
+  const [showVersions, setshowVersion] = useState(false)
   //get current year
   const date = new Date();
   const year = date.getFullYear();
 
-  //check the device width (laptop or mobile)
+  //show the version details when clicked else hide it
+const showVersion = () => {
+  setshowVersion(!showVersions)
+};
+  
+
 
   return (
     <div>
@@ -73,6 +79,13 @@ function ReachUs() {
               information about Khangkhui Phungdhar. You can also watch some of
               the pics and videos
             </p>
+          <p onClick={showVersion} className="text-primary" style={{cursor:"pointer"}}>Website Versions</p>
+         {showVersions && <p className="text-muted" id="version">
+            <ul>
+              <li>First page was designed, developed and went live on July 2020 (v 1.0.0)</li>
+              <li>Fully redefined the page with ReactJs on August 2021 (v 2.0.0)</li>
+            </ul>
+          </p>}
           </div>
           <div className=" offset-md-1 py-4 pl-5">
             <h4 className="text-white ">Contact</h4>
