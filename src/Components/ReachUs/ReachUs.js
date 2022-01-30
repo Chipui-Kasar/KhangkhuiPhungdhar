@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import "./ReachUs.css";
 import developer from "../../images/developer.jpg";
+import { Link } from "react-router-dom";
 
 function ReachUs() {
-  const [showVersions, setshowVersion] = useState(false)
+  const [showVersions, setshowVersion] = useState(false);
   //get current year
   const date = new Date();
   const year = date.getFullYear();
-
   //show the version details when clicked else hide it
-const showVersion = () => {
-  setshowVersion(!showVersions)
-};
-  
+  const showVersion = () => {
+    setshowVersion(!showVersions);
+  };
 
+  const donateClick = () => {
+    let confirm = window.confirm(
+      "Are you sure you want to donate Chipui Kasar?"
+    );
+    if (confirm) {
+      window.location.href = "/donate";
+    } else {
+      return;
+    }
+  };
 
   return (
     <div>
@@ -52,18 +61,8 @@ const showVersion = () => {
                 </a>
               </h6>
             </div>
-            <button
-              className="btn btn-md border donate"
-              onClick={() => alert("Do you really want to donate")}
-            >
-              <a
-                href={
-                  "upi://pay?pa=chipuikasar@oksbi&amp;pn=Chipuimi Kasar &amp;cu=INR"
-                }
-                className="upi-pay1"
-              >
-                Donate
-              </a>
+            <button className="btn btn-md border donate" onClick={donateClick}>
+              <Link>Donate</Link>
             </button>
           </div>
         </div>
@@ -79,13 +78,27 @@ const showVersion = () => {
               information about Khangkhui Phungdhar. You can also watch some of
               the pics and videos
             </p>
-          <p onClick={showVersion} className="text-primary" style={{cursor:"pointer"}}>Website Versions</p>
-         {showVersions && <p className="text-muted" id="version">
-            <ul>
-              <li>First page was designed, developed and went live on July 2020 (v 1.0.0)</li>
-              <li>Fully redefined the page with ReactJs on August 2021 (v 2.0.0)</li>
-            </ul>
-          </p>}
+            <p
+              onClick={showVersion}
+              className="text-primary"
+              style={{ cursor: "pointer" }}
+            >
+              Website Versions
+            </p>
+            {showVersions && (
+              <p className="text-muted" id="version">
+                <ul>
+                  <li>
+                    First page was designed, developed and went live on July
+                    2020 (v 1.0.0)
+                  </li>
+                  <li>
+                    Fully redefined the page with ReactJs on August 2021 (v
+                    2.0.0)
+                  </li>
+                </ul>
+              </p>
+            )}
           </div>
           <div className=" offset-md-1 py-4 pl-5">
             <h4 className="text-white ">Contact</h4>

@@ -12,6 +12,7 @@ import MYCPage from "./Pages/MYCPage/MYCPage";
 import Admin from "./Pages/Admin/Admin";
 import ReadFullBlog from "./Components/BlogComponent/ReadFullBlog";
 import WishPage from "./Pages/WishingPage/WishPage";
+import Donate from "./Components/ReachUs/Donate/Donate";
 
 function App() {
   // const [visit, setVisit] = useState();
@@ -46,6 +47,7 @@ function App() {
             <Admin />
           </Route>
           <Route path="/palm" component={WishPage} />
+          <Route path="/donate" component={Donate} />
         </Switch>
       </Router>
     </>

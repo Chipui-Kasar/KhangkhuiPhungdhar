@@ -18,11 +18,11 @@ function HomeBanner(props) {
             <ul>
               {/* Visit counts */}
               <li>
-                People have visited
+                People have visited{" "}
                 <img
                   src="https://www.counter12.com/img-C778Dy435yw4x0D0-3.gif"
                   alt="conter12"
-                />
+                />{" "}
                 times
               </li>
               <li>** Welcome to Khangkhui Phungdhar official website **</li>
