@@ -178,6 +178,7 @@ function ReadFullBlog() {
           </div>
         </div>
       </div>
+      <GoogleAds />
     </>
   );
 }
