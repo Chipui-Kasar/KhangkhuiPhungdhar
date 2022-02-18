@@ -68,6 +68,7 @@ import React, { useEffect, useState } from "react";
 // import Videos from "../../AllData.json";
 import "./GalleryVideos.css";
 import button from "../../images/button.png";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 
 function GalleryVideos() {
   const [video, setVideo] = useState("");
@@ -112,6 +113,7 @@ function GalleryVideos() {
 
   return (
     <>
+      <GoogleAds />
       {!showVideo && (
         <button
           className="btn btn-warning btn-block showVideo"

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "./WishPage.css";
 import audio from "./wish.mp3";
+import GoogleAds from "../GoogleAds/GoogleAds";
 
 function WishPage() {
   const bubbles = () => {
@@ -45,6 +46,7 @@ function WishPage() {
   //splash screen before loading the page
   return (
     <div>
+      <GoogleAds />
       <Helmet>
         <title>Merry Christmas and a Happy New Year</title>
         <meta

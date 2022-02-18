@@ -1,10 +1,12 @@
 import React from "react";
 import "./Donate.css";
 import qrCode from "../../../images/qrcode.png";
+import GoogleAds from "../../../Pages/GoogleAds/GoogleAds";
 
 function Donate() {
   return (
     <div className="donate-container">
+      <GoogleAds />
       {/* create a donate page with upi payment, qr code, account number, and a button */}
       <div className="header">
         <label className="headerTitle">Donate Page</label>

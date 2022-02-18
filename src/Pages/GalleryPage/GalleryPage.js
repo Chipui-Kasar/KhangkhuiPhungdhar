@@ -3,10 +3,12 @@ import { Helmet } from "react-helmet";
 import GalleryBanner from "../../Components/GalleryBanner/GalleryBanner";
 import GalleryPictures from "../../Components/GalleryPictures/GalleryPictures";
 import GalleryVideos from "../../Components/GalleryVideos/GalleryVideos";
+import GoogleAds from "../GoogleAds/GoogleAds";
 
 function GalleryPage() {
   return (
     <>
+      <GoogleAds />
       <Helmet>
         <base />
         <title>Khangkhui Phungdar Gallery</title>

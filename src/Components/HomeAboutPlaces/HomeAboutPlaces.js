@@ -5,6 +5,7 @@ import harvaplace from "../../images/Home/harvaplace.jpeg";
 //import khangkhui from "../../images/Home/khangkhui.jpeg";
 
 import AOS from "aos";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 function HomeAboutPlaces() {
   useEffect(() => {
     AOS.init({
@@ -30,6 +31,7 @@ function HomeAboutPlaces() {
 
   return (
     <>
+      <GoogleAds />
       <hr className="featurette-divider" id="aboutkhangkhui" />
 
       <div className="container">

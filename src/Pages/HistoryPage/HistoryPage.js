@@ -2,12 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import History from "../../Components/HistoryComponents/History";
 import ReachUs from "../../Components/ReachUs/ReachUs";
+import GoogleAds from "../GoogleAds/GoogleAds";
 import "./HistoryPage.css";
 function HistoryPage() {
   console.log("History");
   return (
     <>
       <div className="historyContainer">
+        <GoogleAds />
         <Helmet>
           <base />
           <title>History of Khangkhui Phungdhar</title>

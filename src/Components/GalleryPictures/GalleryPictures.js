@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 //import { Pictures } from "../../Data/Pictures";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import axios from "axios";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
@@ -16,12 +17,12 @@ function GalleryPictures() {
   var imagenames = ["Khangkhui", "Harva Khangai", "Yarnao"]
   const searchChange = event => {
     setSearch(event.target.value);
-    
+
   };
-  const searchFilter=(image)=>{
-   setButtonFilter(image.target.value);
+  const searchFilter = (image) => {
+    setButtonFilter(image.target.value);
   }
-  const resetFilter=()=>{
+  const resetFilter = () => {
     setButtonFilter("");
     setSearch("")
   }
@@ -34,9 +35,9 @@ function GalleryPictures() {
     const last = getLast(imagename);
     var searchIndex = imagename
       ? imagename.filter(item =>
-          item.name.toLowerCase().includes(search.toLowerCase()) &&
-          item.name.toLowerCase().includes(buttonFilter.toLowerCase())
-        ).length
+        item.name.toLowerCase().includes(search.toLowerCase()) &&
+        item.name.toLowerCase().includes(buttonFilter.toLowerCase())
+      ).length
 
       : "";
 
@@ -64,7 +65,7 @@ function GalleryPictures() {
         setImagename(
           res.data.items.sort((a, b) =>
             new Date(a.name.split("on").pop()) <
-            new Date(b.name.split("on").pop())
+              new Date(b.name.split("on").pop())
               ? 1
               : -1
           )
@@ -79,6 +80,7 @@ function GalleryPictures() {
   //---------------------------------------
   return (
     <>
+      <GoogleAds />
       <hr className="featurette-divider" id="pictures" />
       <h1 className="text-center title">PHOTOS OF KHANGKHUI PHUNGDHAR</h1>
       <div className="form-group">
@@ -94,11 +96,11 @@ function GalleryPictures() {
       </div>
       <div className="form-group text-center">
         {imagenames.map((imagename) => {
-            return(<button className="btn btn-sm border border-success mr-2"  style={{fontSize:"10px"}} onClick={searchFilter} value={imagename}>{imagename}</button>) 
+          return (<button className="btn btn-sm border border-success mr-2" style={{ fontSize: "10px" }} onClick={searchFilter} value={imagename}>{imagename}</button>)
         })}
-        <button className="btn btn-sm border border-danger"  style={{fontSize:"10px"}} onClick={resetFilter}>Reset Filter</button>
+        <button className="btn btn-sm border border-danger" style={{ fontSize: "10px" }} onClick={resetFilter}>Reset Filter</button>
       </div>
-      
+
       <div className="row">
         {/* {Pictures ? (
           Pictures.filter(searchPic => {
@@ -164,7 +166,7 @@ function GalleryPictures() {
           imagename
             .filter(searchPic => {
               if (searchPic.name.toLowerCase().includes(search.toLowerCase()) &&
-                  searchPic.name.toLowerCase().includes(buttonFilter.toLowerCase()) ) {
+                searchPic.name.toLowerCase().includes(buttonFilter.toLowerCase())) {
                 return searchPic;
               } else {
                 return null;

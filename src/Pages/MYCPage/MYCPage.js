@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./MYCPage.css";
 import { Helmet } from "react-helmet";
 import Ura from "../../AllData.json";
+import GoogleAds from "../GoogleAds/GoogleAds";
 
 function MYCPage() {
   useEffect(() => {
@@ -120,6 +121,7 @@ function MYCPage() {
 
   return (
     <div className="MYCcontainer">
+      <GoogleAds />
       <Helmet>
         <base />
         <title>Ura Yarnao</title>

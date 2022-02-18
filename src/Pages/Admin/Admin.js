@@ -4,6 +4,7 @@ import "./Admin.css";
 import { storage } from "./firebase";
 import { ref, uploadBytesResumable } from "@firebase/storage";
 import Compressor from "compressorjs";
+import GoogleAds from "../GoogleAds/GoogleAds";
 function Admin() {
   const [title, setTitle] = useState("");
   // const [source, setSource] = useState("");
@@ -114,6 +115,7 @@ function Admin() {
 
   return (
     <div>
+      <GoogleAds />
       <div className="container mt-5 mb-5">
         <div className="row table-bordered">
           <div className="col-12">

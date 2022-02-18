@@ -6,6 +6,7 @@ import { PropagateLoader } from "react-spinners";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { RWebShare } from "react-web-share";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 
 function ReadFullBlog() {
   const [Blog, setBblog] = useState("");
@@ -37,45 +38,46 @@ function ReadFullBlog() {
 
   return (
     <>
+      <GoogleAds />
       {Blog
         ? Blog.filter(item => {
-            if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
-              return item;
-            } else {
-              return null;
-            }
-          }).map(item => {
-            return (
-              <>
-                <Helmet>
-                  <title>{item.title}</title>
-                  <meta name="description" content={item.displaytext} />
-                  <meta name="title" content={item.title} />
-                  <link
-                    rel="canonical"
-                    href={`//khangkhuiphungdhar.netlify.app/read/${item.title
-                      .replace(/ /g, "-")
-                      .toLowerCase()}`}
-                  />
+          if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
+            return item;
+          } else {
+            return null;
+          }
+        }).map(item => {
+          return (
+            <>
+              <Helmet>
+                <title>{item.title}</title>
+                <meta name="description" content={item.displaytext} />
+                <meta name="title" content={item.title} />
+                <link
+                  rel="canonical"
+                  href={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                    .replace(/ /g, "-")
+                    .toLowerCase()}`}
+                />
 
-                  <meta property="og:title" content={item.title} />
-                  <meta property="og:description" content={item.displaytext} />
-                  <meta property="og:image" content={item.src} />
-                  <meta
-                    property="og:url"
-                    content={`//khangkhuiphungdhar.netlify.app/read/${item.title
-                      .replace(/ /g, "-")
-                      .toLowerCase()}`}
-                  />
-                  <meta name="twitter:title" content={item.title} />
-                  <meta name="twitter:description" content={item.displaytext} />
-                  <meta name="twitter:image" content={item.src} />
-                  <meta name="twitter:card" content="summary_large_image" />
-                  <meta name="twitter:site" content="@chipui" />
-                </Helmet>
-              </>
-            );
-          })
+                <meta property="og:title" content={item.title} />
+                <meta property="og:description" content={item.displaytext} />
+                <meta property="og:image" content={item.src} />
+                <meta
+                  property="og:url"
+                  content={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                    .replace(/ /g, "-")
+                    .toLowerCase()}`}
+                />
+                <meta name="twitter:title" content={item.title} />
+                <meta name="twitter:description" content={item.displaytext} />
+                <meta name="twitter:image" content={item.src} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@chipui" />
+              </Helmet>
+            </>
+          );
+        })
         : ""}
       <div
         className="fullblogContainer"

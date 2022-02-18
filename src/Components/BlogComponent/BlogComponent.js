@@ -5,6 +5,7 @@ import "./BlogComponent.css";
 import axios from "axios";
 import moment from "moment";
 import { PropagateLoader } from "react-spinners";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 //import { Blog } from "../../Data/AllData";
 
 function BlogComponent() {
@@ -45,6 +46,7 @@ function BlogComponent() {
   };
   return (
     <>
+    <GoogleAds/>
       <div className="container blog-container">
         <div className="p-4 p-md-5">
           <div className=" px-0">

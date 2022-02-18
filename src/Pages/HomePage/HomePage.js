@@ -7,11 +7,15 @@ import previewImage from "../../images/Home/preview.jpg";
 import "./HomePage.css";
 import { Helmet } from "react-helmet";
 import ReachUs from "../../Components/ReachUs/ReachUs";
+import GoogleAds from "../GoogleAds/GoogleAds";
+
 
 function HomePage(props) {
   return (
     <div>
+      <GoogleAds />
       <Helmet>
+
         <base />
         <title>Khangkhui Phungdhar Official Site</title>
         <meta
@@ -57,6 +61,7 @@ function HomePage(props) {
         <meta name="twitter:site" content="@chipui" />
         <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />
       </Helmet>
+
       <HomeBanner />
       <div className="container-fluid marketing">
         <HomeFounder />

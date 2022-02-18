@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ReachUs.css";
 import developer from "../../images/developer.jpg";
 import { Link } from "react-router-dom";
+import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 
 function ReachUs() {
   const [showVersions, setshowVersion] = useState(false);
@@ -26,6 +27,7 @@ function ReachUs() {
 
   return (
     <div>
+      <GoogleAds />
       <footer className="container-fluid">
         <h2 className="text-white pl-5">Reach Us</h2>
         <div className="row">

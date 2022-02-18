@@ -2,11 +2,13 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import BlogComponent from "../../Components/BlogComponent/BlogComponent";
 import ReachUs from "../../Components/ReachUs/ReachUs";
+import GoogleAds from "../GoogleAds/GoogleAds";
 import "./BlogPage.css";
 function BlogPage() {
   var title = "Blog";
   return (
     <>
+      <GoogleAds />
       <Helmet>
         <base />
         <title>{title}</title>
