@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import HomePage from "./Pages/HomePage/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -13,6 +13,7 @@ import Admin from "./Pages/Admin/Admin";
 import ReadFullBlog from "./Components/BlogComponent/ReadFullBlog";
 import WishPage from "./Pages/WishingPage/WishPage";
 import Donate from "./Components/ReachUs/Donate/Donate";
+import GoogleAds from "./Pages/GoogleAds/GoogleAds";
 
 function App() {
   // const [visit, setVisit] = useState();
@@ -21,6 +22,9 @@ function App() {
   //     setVisit(result.value);
   //   });
   // }, []);
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
 
   return (
     <>

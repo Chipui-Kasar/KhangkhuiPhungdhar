@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ReachUs.css";
 import developer from "../../images/developer.jpg";
 import { Link } from "react-router-dom";
@@ -13,6 +13,9 @@ function ReachUs() {
   const showVersion = () => {
     setshowVersion(!showVersions);
   };
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
 
   const donateClick = () => {
     let confirm = window.confirm(
@@ -27,7 +30,6 @@ function ReachUs() {
 
   return (
     <div>
-      <GoogleAds />
       <footer className="container-fluid">
         <h2 className="text-white pl-5">Reach Us</h2>
         <div className="row">

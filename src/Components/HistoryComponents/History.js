@@ -1,12 +1,12 @@
 import React from "react";
 import "./History.css";
 import button from "../../images/button.png";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 
 function History() {
   return (
     <div>
-      <GoogleAds />
+
       <section className="mt-4 text-center">
         <div>
           <h1 className="title">History of Khangkhui Khunou Kasar Shang</h1>

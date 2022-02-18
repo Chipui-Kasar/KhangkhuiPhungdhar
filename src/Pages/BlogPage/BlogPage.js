@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import BlogComponent from "../../Components/BlogComponent/BlogComponent";
 import ReachUs from "../../Components/ReachUs/ReachUs";
 import GoogleAds from "../GoogleAds/GoogleAds";
 import "./BlogPage.css";
 function BlogPage() {
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   var title = "Blog";
   return (
     <>
-      <GoogleAds />
       <Helmet>
         <base />
         <title>{title}</title>
+        <GoogleAds />
         <meta
           name="description"
           content="Keep Writing and Keep Reading || Write a blog and get paid instantly"

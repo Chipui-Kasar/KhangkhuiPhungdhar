@@ -34,11 +34,12 @@ function ReadFullBlog() {
 
   useEffect(() => {
     history.replace(`/read/${newUrl}`);
+    <GoogleAds />
   }, [newUrl, history]);
 
   return (
     <>
-      <GoogleAds />
+
       {Blog
         ? Blog.filter(item => {
           if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {

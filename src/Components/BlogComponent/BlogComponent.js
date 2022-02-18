@@ -44,9 +44,12 @@ function BlogComponent() {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   return (
     <>
-    <GoogleAds/>
+
       <div className="container blog-container">
         <div className="p-4 p-md-5">
           <div className=" px-0">
@@ -86,45 +89,45 @@ function BlogComponent() {
         <div className="row">
           {Blog
             ? Blog.map(data => {
-               
-                return (
-                  <div className="col-md-6">
-                    <div className="card border rounded mb-4 shadow-sm">
-                      <img
-                        src={data.src}
-                        alt={data.alt}
-                        loading="lazy"
-                        height="225"
-                        className="image-right"
-                      />
 
-                      <div>
-                        <p className="card-text">
-                          <div className="p-3">
-                            <h4 className="mb-0">{data.title}</h4>
-                            <div className="mb-1 text-success">
-                              By : {data.author}
-                            </div>
-                            <div className="mb-1 text-muted">
-                              Posted : {data.date}
-                            </div>
-                            <p className="card-text text-truncate mb-auto text-white ">
-                              {data.displaytext}
-                            </p>
-                            <Link
-                              onClick={scrollToTop}
-                              to={`/read/${data.title}`}
-                              className="stretched-link"
-                            >
-                              Continue reading
-                            </Link>
+              return (
+                <div className="col-md-6">
+                  <div className="card border rounded mb-4 shadow-sm">
+                    <img
+                      src={data.src}
+                      alt={data.alt}
+                      loading="lazy"
+                      height="225"
+                      className="image-right"
+                    />
+
+                    <div>
+                      <p className="card-text">
+                        <div className="p-3">
+                          <h4 className="mb-0">{data.title}</h4>
+                          <div className="mb-1 text-success">
+                            By : {data.author}
                           </div>
-                        </p>
-                      </div>
+                          <div className="mb-1 text-muted">
+                            Posted : {data.date}
+                          </div>
+                          <p className="card-text text-truncate mb-auto text-white ">
+                            {data.displaytext}
+                          </p>
+                          <Link
+                            onClick={scrollToTop}
+                            to={`/read/${data.title}`}
+                            className="stretched-link"
+                          >
+                            Continue reading
+                          </Link>
+                        </div>
+                      </p>
                     </div>
                   </div>
-                );
-              })
+                </div>
+              );
+            })
             : "Loading........."}
         </div>
 
@@ -244,32 +247,32 @@ function BlogComponent() {
               <hr style={{ border: "1px solid #fff" }} />
               {data
                 ? data.map((news, key) => {
-                    return (
-                      <div className="blog-post" key={key}>
-                        <h2 className="blog-post-title text-white">
-                          {news.title}
-                        </h2>
-                        <p className="blog-post-meta">
-                          {moment(news.publishedAt).calendar()} by{" "}
-                          <b>{news.source.name}</b>
-                        </p>
-                        <img width="40%" src={news.image} alt={news.title} />
-                        <p className="description">{news.description}</p>
-                        <p className="description">{news.content}</p>
+                  return (
+                    <div className="blog-post" key={key}>
+                      <h2 className="blog-post-title text-white">
+                        {news.title}
+                      </h2>
+                      <p className="blog-post-meta">
+                        {moment(news.publishedAt).calendar()} by{" "}
+                        <b>{news.source.name}</b>
+                      </p>
+                      <img width="40%" src={news.image} alt={news.title} />
+                      <p className="description">{news.description}</p>
+                      <p className="description">{news.content}</p>
 
-                        <button
-                          onClick={() => settoggle(!toggle)}
-                          className="btn btn-primary"
-                        >
-                          <a href={news.url} target="_child" rel="noreferrer">
-                            Read full article
-                          </a>
-                        </button>
-                        <hr style={{ border: "1px solid #fff" }} />
-                        <hr style={{ border: "1px solid #fff" }} />
-                      </div>
-                    );
-                  })
+                      <button
+                        onClick={() => settoggle(!toggle)}
+                        className="btn btn-primary"
+                      >
+                        <a href={news.url} target="_child" rel="noreferrer">
+                          Read full article
+                        </a>
+                      </button>
+                      <hr style={{ border: "1px solid #fff" }} />
+                      <hr style={{ border: "1px solid #fff" }} />
+                    </div>
+                  );
+                })
                 : "Loading......"}
 
               <div className="blog-post">

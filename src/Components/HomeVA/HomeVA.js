@@ -5,7 +5,7 @@ import "./HomeVA.css";
 import { VillageAuthority } from "../../AllData.json";
 import icon from "../../images/icon.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 
 function HomeVA() {
   //   const [VillageAuthority, setData] = useState("");
@@ -22,7 +22,7 @@ function HomeVA() {
 
   return (
     <>
-      <GoogleAds />
+
       <h2 className="pb-5 text-center">
         <i>Current Village Authority (Hangva̲)</i>
       </h2>

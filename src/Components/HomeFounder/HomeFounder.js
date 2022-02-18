@@ -1,11 +1,10 @@
 import React from "react";
 import kingsmen from "../../AllData.json";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
 import "./HomeFounder.css";
 function HomeFounder() {
   return (
     <>
-      <GoogleAds />
+
       <div className="row">
         {kingsmen.FounderKings.map((king, key) => {
           return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import GalleryBanner from "../../Components/GalleryBanner/GalleryBanner";
 import GalleryPictures from "../../Components/GalleryPictures/GalleryPictures";
@@ -6,9 +6,12 @@ import GalleryVideos from "../../Components/GalleryVideos/GalleryVideos";
 import GoogleAds from "../GoogleAds/GoogleAds";
 
 function GalleryPage() {
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   return (
     <>
-      <GoogleAds />
+
       <Helmet>
         <base />
         <title>Khangkhui Phungdar Gallery</title>
@@ -57,6 +60,7 @@ function GalleryPage() {
           rel="canonical"
           href="https://khangkhuiphungdhar.netlify.app/gallery"
         />
+        <GoogleAds />
       </Helmet>
       <GalleryBanner />
       <div className="album py-2">

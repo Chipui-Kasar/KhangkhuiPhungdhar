@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeBanner from "../../Components/HomeBanner/HomeBanner";
 import HomeFounder from "../../Components/HomeFounder/HomeFounder";
 import HomeVA from "../../Components/HomeVA/HomeVA";
@@ -10,12 +10,14 @@ import ReachUs from "../../Components/ReachUs/ReachUs";
 import GoogleAds from "../GoogleAds/GoogleAds";
 
 
-function HomePage(props) {
+function HomePage() {
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   return (
     <div>
-      <GoogleAds />
-      <Helmet>
 
+      <Helmet>
         <base />
         <title>Khangkhui Phungdhar Official Site</title>
         <meta
@@ -60,6 +62,7 @@ function HomePage(props) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
         <link rel="canonical" href="https://khangkhuiphungdhar.netlify.app" />
+        <GoogleAds />
       </Helmet>
 
       <HomeBanner />

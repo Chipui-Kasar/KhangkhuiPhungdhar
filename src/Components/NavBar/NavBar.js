@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import { NavLink, Link } from "react-router-dom";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 
 function NavBar() {
   const scrollToTop = () => {
@@ -12,7 +12,7 @@ function NavBar() {
   };
   return (
     <>
-      <GoogleAds />
+
       <nav className="navbar navbar-expand-md navbar-dark sticky-top">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/" className="navbar-brand ">

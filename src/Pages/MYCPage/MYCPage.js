@@ -118,6 +118,9 @@ function MYCPage() {
       init(1);
     };
   }, []);
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
 
   return (
     <div className="MYCcontainer">

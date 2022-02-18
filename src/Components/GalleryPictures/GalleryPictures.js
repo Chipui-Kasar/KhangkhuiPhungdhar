@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 //import { Pictures } from "../../Data/Pictures";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import axios from "axios";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
@@ -80,7 +80,7 @@ function GalleryPictures() {
   //---------------------------------------
   return (
     <>
-      <GoogleAds />
+
       <hr className="featurette-divider" id="pictures" />
       <h1 className="text-center title">PHOTOS OF KHANGKHUI PHUNGDHAR</h1>
       <div className="form-group">

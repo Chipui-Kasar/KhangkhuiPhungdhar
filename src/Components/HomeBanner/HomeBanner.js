@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import khangkhuiHome from "../../images/Home/Carousel/khangkhui1.jpg";
 import harvakhangai from "../../images/Home/Carousel/harva.jpeg";
 import nightViewHarva from "../../images/Home/Carousel/nightViewHarva.jpg";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 
 function HomeBanner(props) {
   return (
     <>
-      <GoogleAds />
+
       <div className="news text-center">
         <div className="col-md-3 col-12 pl-1 pt-1" id="leftnews">
           News & Updates

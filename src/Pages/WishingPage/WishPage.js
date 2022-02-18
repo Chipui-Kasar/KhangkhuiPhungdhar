@@ -42,7 +42,9 @@ function WishPage() {
     var audio = document.getElementById("myAudio");
     audio.play();
   };
-
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   //splash screen before loading the page
   return (
     <div>

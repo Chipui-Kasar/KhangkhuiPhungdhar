@@ -1,10 +1,10 @@
 import React from "react";
-import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+
 import "./GalleryBanner.css";
 function GalleryBanner() {
   return (
     <>
-      <GoogleAds />
+
       <div className="container-fluid gallerycontainer">
         <section className="jumbotron text-center">
           <div className="container">

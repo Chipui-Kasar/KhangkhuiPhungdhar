@@ -112,7 +112,9 @@ function Admin() {
     reader.readAsDataURL(file);
   };
   //get google browser login user name
-
+  useEffect(() => {
+    <GoogleAds />
+  }, []);
   return (
     <div>
       <GoogleAds />
