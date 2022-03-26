@@ -1,35 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./History.css";
 import button from "../../images/button.png";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { EditorState } from "draft-js";
-import { convertToHTML } from "draft-convert";
-import sheetdb from "sheetdb-node";
 
 function History() {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const onEditorStateChange = (editorState) => {
-    setEditorState(editorState);
-  };
-  useEffect(() => {
-    var config = {
-      address: "7ehz82f9q7n6p",
-    };
-
-    // Create new client
-    var client = sheetdb(config);
-    client.create({ name: "William", age: 25 }, "Blog").then(
-      function (data) {
-        console.log(data);
-      },
-      function (err) {
-        console.log(err);
-      }
-    );
-    const html = convertToHTML(editorState.getCurrentContent());
-    console.log(html);
-  }, [editorState]);
   return (
     <div>
       <section className="mt-4 text-center">
@@ -69,13 +42,6 @@ function History() {
         </div>
         <div className="col-md-3"></div>
       </div>
-      <Editor
-        editorState={editorState}
-        toolbarClassName="toolbarClassName"
-        wrapperClassName="wrapperClassName"
-        editorClassName="editorClassName"
-        onEditorStateChange={onEditorStateChange}
-      />
       ;
     </div>
   );
