@@ -234,7 +234,6 @@ function Admin() {
 
   return (
     <div>
-      <GoogleAds />
       <div className="container mt-5 mb-5">
         <div className="row table-bordered">
           <div className="col-12">
@@ -434,7 +433,7 @@ function Admin() {
       </div>
 
       {showBlog === true && (
-        <section style={{ backgroundColor: "" }}>
+        <section style={{ fontSize: "16px" }}>
           <div className="container">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col-xl-9">
@@ -448,7 +447,7 @@ function Admin() {
                       <div className="col-md-9 pe-5">
                         <input
                           type="text"
-                          className="form-control form-control-lg"
+                          className="form-control"
                           value={blogID}
                           disabled
                         />
@@ -463,7 +462,7 @@ function Admin() {
                         <input
                           type="text"
                           id="blogTitle"
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Blog Title"
                           onChange={(e) => setBlogTitle(e.target.value)}
                         />
@@ -479,7 +478,7 @@ function Admin() {
                           type="text"
                           value={todayDate}
                           id="blogDate"
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Posted Date"
                           disabled
                         />
@@ -493,7 +492,7 @@ function Admin() {
                         <input
                           type="text"
                           id="blogDisplayText"
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Display Text"
                           onChange={(e) =>
                             setBlogDisplayContent(e.target.value)
@@ -525,7 +524,7 @@ function Admin() {
                           type="text"
                           id="imageUrl"
                           value={blogImageUrl}
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Paste Image url (Https://.....)"
                           onChange={(e) => setBlogImageUrl(e.target.value)}
                         />
@@ -541,7 +540,7 @@ function Admin() {
                           type="text"
                           id="imageAlt"
                           value={blogAltImage}
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Eg: Khangkhui Picture"
                           onChange={(e) => setBlogAltImage(e.target.value)}
                         />
@@ -556,7 +555,7 @@ function Admin() {
                           type="text"
                           id="author"
                           value={blogAuthor}
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="Eg: John Smith"
                           onChange={(e) => setBlogAuthor(e.target.value)}
                         />
@@ -571,7 +570,7 @@ function Admin() {
                           type="text"
                           id="socialSite"
                           value={blogSocialLink}
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="https://wwww.instagram.com/khangkhui"
                           onChange={(e) => setBlogSocialLink(e.target.value)}
                         />
@@ -579,7 +578,7 @@ function Admin() {
                           type="text"
                           id="dummy"
                           style={{ display: "none" }}
-                          className="form-control form-control-lg"
+                          className="form-control"
                           placeholder="https://wwww.instagram.com/khangkhui"
                           onChange={(e) => setBlogSocialLink(e.target.value)}
                         />
