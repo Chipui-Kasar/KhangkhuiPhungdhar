@@ -16,11 +16,11 @@ function BlogComponent() {
   useEffect(() => {
     axios
       .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-      .then(response => {
+      .then((response) => {
         setBblog(response.data.reverse());
         //console.log(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
 
@@ -30,10 +30,10 @@ function BlogComponent() {
       .get(
         `https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in`
       )
-      .then(res => {
+      .then((res) => {
         setData(res.data.articles);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
       });
   }, [setData, setBblog]);
@@ -45,11 +45,10 @@ function BlogComponent() {
     });
   };
   useEffect(() => {
-    <GoogleAds />
+    <GoogleAds />;
   }, []);
   return (
     <>
-
       <div className="container blog-container">
         <div className="p-4 p-md-5">
           <div className=" px-0">
@@ -88,46 +87,45 @@ function BlogComponent() {
         <h1>Recent Blogs</h1>
         <div className="row">
           {Blog
-            ? Blog.map(data => {
+            ? Blog.map((data) => {
+                return (
+                  <div className="col-md-6">
+                    <div className="card border rounded mb-4 shadow-sm">
+                      <img
+                        src={data.src}
+                        alt={data.alt}
+                        loading="lazy"
+                        height="225"
+                        className="image-right"
+                      />
 
-              return (
-                <div className="col-md-6">
-                  <div className="card border rounded mb-4 shadow-sm">
-                    <img
-                      src={data.src}
-                      alt={data.alt}
-                      loading="lazy"
-                      height="225"
-                      className="image-right"
-                    />
-
-                    <div>
-                      <p className="card-text">
-                        <div className="p-3">
-                          <h4 className="mb-0">{data.title}</h4>
-                          <div className="mb-1 text-success">
-                            By : {data.author}
+                      <div>
+                        <p className="card-text">
+                          <div className="p-3">
+                            <h4 className="mb-0">{data.title}</h4>
+                            <div className="mb-1 text-success">
+                              By : {data.author}
+                            </div>
+                            <div className="mb-1 text-muted">
+                              Posted : {moment(data.date).format("DD MMM YYYY")}
+                            </div>
+                            <p className="card-text text-truncate mb-auto text-white ">
+                              {data.displaytext}
+                            </p>
+                            <Link
+                              onClick={scrollToTop}
+                              to={`/read/${data.title}`}
+                              className="stretched-link"
+                            >
+                              Continue reading
+                            </Link>
                           </div>
-                          <div className="mb-1 text-muted">
-                            Posted : {data.date}
-                          </div>
-                          <p className="card-text text-truncate mb-auto text-white ">
-                            {data.displaytext}
-                          </p>
-                          <Link
-                            onClick={scrollToTop}
-                            to={`/read/${data.title}`}
-                            className="stretched-link"
-                          >
-                            Continue reading
-                          </Link>
-                        </div>
-                      </p>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })
+                );
+              })
             : "Loading........."}
         </div>
 
@@ -136,7 +134,7 @@ function BlogComponent() {
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
               {Blog ? (
-                Blog.slice(0, 1).map(blog => {
+                Blog.slice(0, 1).map((blog) => {
                   //convert html string to Dom
                   const dom = new DOMParser().parseFromString(
                     blog.description,
@@ -153,7 +151,7 @@ function BlogComponent() {
                         <div className="blog-post mt-5">
                           <h2 className="blog-post-title">{blog.title}</h2>
                           <p className="blog-post-meta">
-                            {blog.date} by{" "}
+                            {moment(blog.date).format("DD MMM YYYY")} by{" "}
                             <a href={blog.socialsite} target="_child">
                               {blog.author}
                             </a>
@@ -247,32 +245,32 @@ function BlogComponent() {
               <hr style={{ border: "1px solid #fff" }} />
               {data
                 ? data.map((news, key) => {
-                  return (
-                    <div className="blog-post" key={key}>
-                      <h2 className="blog-post-title text-white">
-                        {news.title}
-                      </h2>
-                      <p className="blog-post-meta">
-                        {moment(news.publishedAt).calendar()} by{" "}
-                        <b>{news.source.name}</b>
-                      </p>
-                      <img width="40%" src={news.image} alt={news.title} />
-                      <p className="description">{news.description}</p>
-                      <p className="description">{news.content}</p>
+                    return (
+                      <div className="blog-post" key={key}>
+                        <h2 className="blog-post-title text-white">
+                          {news.title}
+                        </h2>
+                        <p className="blog-post-meta">
+                          {moment(news.publishedAt).calendar()} by{" "}
+                          <b>{news.source.name}</b>
+                        </p>
+                        <img width="40%" src={news.image} alt={news.title} />
+                        <p className="description">{news.description}</p>
+                        <p className="description">{news.content}</p>
 
-                      <button
-                        onClick={() => settoggle(!toggle)}
-                        className="btn btn-primary"
-                      >
-                        <a href={news.url} target="_child" rel="noreferrer">
-                          Read full article
-                        </a>
-                      </button>
-                      <hr style={{ border: "1px solid #fff" }} />
-                      <hr style={{ border: "1px solid #fff" }} />
-                    </div>
-                  );
-                })
+                        <button
+                          onClick={() => settoggle(!toggle)}
+                          className="btn btn-primary"
+                        >
+                          <a href={news.url} target="_child" rel="noreferrer">
+                            Read full article
+                          </a>
+                        </button>
+                        <hr style={{ border: "1px solid #fff" }} />
+                        <hr style={{ border: "1px solid #fff" }} />
+                      </div>
+                    );
+                  })
                 : "Loading......"}
 
               <div className="blog-post">

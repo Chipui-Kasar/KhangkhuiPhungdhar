@@ -6,10 +6,9 @@ import { ref, uploadBytesResumable } from "@firebase/storage";
 import Compressor from "compressorjs";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { EditorState } from "draft-js";
-import { convertToHTML } from "draft-convert";
+import { convertToRaw, EditorState } from "draft-js";
 import sheetdb from "sheetdb-node";
-
+import draftToHtml from "draftjs-to-html";
 import GoogleAds from "../GoogleAds/GoogleAds";
 function Admin() {
   const [title, setTitle] = useState("");
@@ -147,7 +146,7 @@ function Admin() {
   const todayDate = `${newDay}-${monthName}-${year}`;
 
   const submitBlog = () => {
-    const html = convertToHTML(editorState.getCurrentContent());
+    const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));
     var config = {
       address: "7ehz82f9q7n6p",
     };
@@ -231,6 +230,7 @@ function Admin() {
       alert("Invalid Credentials");
     }
   };
+  const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));
 
   return (
     <div>
@@ -514,6 +514,7 @@ function Admin() {
                         />
                       </div>
                     </div>
+                    <div>{html}</div>
 
                     <div className="row align-items-center py-3">
                       <div className="col-md-3 ps-5">

@@ -13,11 +13,11 @@ function ReadFullBlog() {
   useEffect(() => {
     axios
       .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-      .then(response => {
+      .then((response) => {
         setBblog(response.data);
         //console.log(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);
@@ -34,51 +34,50 @@ function ReadFullBlog() {
 
   useEffect(() => {
     history.replace(`/read/${newUrl}`);
-    <GoogleAds />
+    <GoogleAds />;
   }, [newUrl, history]);
 
   return (
     <>
-
       {Blog
-        ? Blog.filter(item => {
-          if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
-            return item;
-          } else {
-            return null;
-          }
-        }).map(item => {
-          return (
-            <>
-              <Helmet>
-                <title>{item.title}</title>
-                <meta name="description" content={item.displaytext} />
-                <meta name="title" content={item.title} />
-                <link
-                  rel="canonical"
-                  href={`//khangkhuiphungdhar.netlify.app/read/${item.title
-                    .replace(/ /g, "-")
-                    .toLowerCase()}`}
-                />
+        ? Blog.filter((item) => {
+            if (item.title.replace(/ /g, "-").toLowerCase() === newUrl) {
+              return item;
+            } else {
+              return null;
+            }
+          }).map((item, key) => {
+            return (
+              <>
+                <Helmet key={key}>
+                  <title>{item.title}</title>
+                  <meta name="description" content={item.displaytext} />
+                  <meta name="title" content={item.title} />
+                  <link
+                    rel="canonical"
+                    href={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                      .replace(/ /g, "-")
+                      .toLowerCase()}`}
+                  />
 
-                <meta property="og:title" content={item.title} />
-                <meta property="og:description" content={item.displaytext} />
-                <meta property="og:image" content={item.src} />
-                <meta
-                  property="og:url"
-                  content={`//khangkhuiphungdhar.netlify.app/read/${item.title
-                    .replace(/ /g, "-")
-                    .toLowerCase()}`}
-                />
-                <meta name="twitter:title" content={item.title} />
-                <meta name="twitter:description" content={item.displaytext} />
-                <meta name="twitter:image" content={item.src} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@chipui" />
-              </Helmet>
-            </>
-          );
-        })
+                  <meta property="og:title" content={item.title} />
+                  <meta property="og:description" content={item.displaytext} />
+                  <meta property="og:image" content={item.src} />
+                  <meta
+                    property="og:url"
+                    content={`//khangkhuiphungdhar.netlify.app/read/${item.title
+                      .replace(/ /g, "-")
+                      .toLowerCase()}`}
+                  />
+                  <meta name="twitter:title" content={item.title} />
+                  <meta name="twitter:description" content={item.displaytext} />
+                  <meta name="twitter:image" content={item.src} />
+                  <meta name="twitter:card" content="summary_large_image" />
+                  <meta name="twitter:site" content="@chipui" />
+                </Helmet>
+              </>
+            );
+          })
         : ""}
       <div
         className="fullblogContainer"
@@ -90,7 +89,7 @@ function ReadFullBlog() {
       >
         <div className="col-md-12">
           {Blog ? (
-            Blog.filter(clickedBlog => {
+            Blog.filter((clickedBlog) => {
               if (
                 clickedBlog.title.replace(/ /g, "-").toLowerCase() === newUrl
               ) {
@@ -98,7 +97,7 @@ function ReadFullBlog() {
               } else {
                 return null;
               }
-            }).map(blog => {
+            }).map((blog, key) => {
               //convert html string to Dom
               const dom = new DOMParser().parseFromString(
                 blog.description,
@@ -106,7 +105,7 @@ function ReadFullBlog() {
               );
               return (
                 <>
-                  <div id={blog.id} className="container">
+                  <div id={blog.id} key={key} className="container">
                     <div className="blog-post mt-5 mb-0">
                       <h2 className="blog-post-title readFullTitle">
                         <label>{blog.title}</label>
