@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "./WishPage.css";
-import audio from "./wish.mp3";
+// import audio from "./wish.mp3";
 
 function WishPage() {
   // const bubbles = () => {
@@ -111,7 +111,7 @@ function WishPage() {
             Sorry your browser does not support the audio element.
           </audio> */}
 
-          <audio id="myAudio" src={audio} autoPlay loop></audio>
+          {/* <audio id="myAudio" src={audio} autoPlay loop></audio> */}
         </div>
       </section>
     </div>
