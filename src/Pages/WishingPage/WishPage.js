@@ -2,28 +2,27 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "./WishPage.css";
 import audio from "./wish.mp3";
-import GoogleAds from "../GoogleAds/GoogleAds";
 
 function WishPage() {
-  const bubbles = () => {
-    var count = 100;
-    var section = document.querySelector("section");
-    var i = 0;
-    while (i < count) {
-      var bubble = document.createElement("i");
-      var x = Math.random() * window.innerWidth;
-      var y = Math.random() * window.innerHeight;
-      var size = Math.random() * 10;
-      bubble.style.left = x + "px";
-      bubble.style.top = y + "px";
-      bubble.style.width = 1 + size + "px";
-      bubble.style.height = 1 + size + "px";
-      bubble.style.animationDuration = 0.8 + size + "s";
-      bubble.style.animationDelay = -size + "s";
-      section.appendChild(bubble);
-      i++;
-    }
-  };
+  // const bubbles = () => {
+  //   var count = 100;
+  //   var section = document.querySelector("section");
+  //   var i = 0;
+  //   while (i < count) {
+  //     var bubble = document.createElement("i");
+  //     var x = Math.random() * window.innerWidth;
+  //     var y = Math.random() * window.innerHeight;
+  //     var size = Math.random() * 10;
+  //     bubble.style.left = x + "px";
+  //     bubble.style.top = y + "px";
+  //     bubble.style.width = 1 + size + "px";
+  //     bubble.style.height = 1 + size + "px";
+  //     bubble.style.animationDuration = 0.8 + size + "s";
+  //     bubble.style.animationDelay = -size + "s";
+  //     section.appendChild(bubble);
+  //     i++;
+  //   }
+  // };
 
   //show hide text on click
   const showHide = () => {
@@ -33,22 +32,19 @@ function WishPage() {
   };
 
   useEffect(() => {
-    bubbles();
+    // bubbles();
     document.getElementById("secondary").style.display = "block";
     document.getElementById("text").style.display = "none";
   }, []);
 
   const play = () => {
-    var audio = document.getElementById("myAudio");
-    audio.play();
+    // var audio = document.getElementById("myAudio");
+    // audio.play();
   };
-  useEffect(() => {
-    <GoogleAds />
-  }, []);
+
   //splash screen before loading the page
   return (
     <div>
-      <GoogleAds />
       <Helmet>
         <title>Merry Christmas and a Happy New Year</title>
         <meta
@@ -58,7 +54,7 @@ function WishPage() {
         <meta name="title" content="Merry Christmas and Happy New Year" />
         <link
           rel="canonical"
-          href="https://khangkhuiphungdhar.netlify.app/palm"
+          href="https://khangkhuiphungdhar.netlify.app/wish"
         />
 
         <meta property="og:title" content="Merry Christmas & Happy New Year" />
@@ -72,7 +68,7 @@ function WishPage() {
         />
         <meta
           property="og:url"
-          content="https://khangkhuiphungdhar.netlify.app/palm"
+          content="https://khangkhuiphungdhar.netlify.app/wish"
         />
         <meta
           name="twitter:title"
@@ -116,17 +112,12 @@ function WishPage() {
         <div className="box">
           <div className="circle" id="background" onClick={play}>
             <p id="secondary" onClick={showHide}>
-              Click here to get a Wish
-              <br />
+              * <br />
               <span id="demo"></span>
             </p>
             <p id="text">
-              <span> Khangkhui Phungdhar </span>
-              <br /> wishes you a
+              <span> Have a Great Day </span>
               <br />
-              Merry Christmas
-              <br />
-              & <br />a Happy New Year
             </p>
           </div>
           {/* <audio src={audio} autoPlay={true} controls loop>

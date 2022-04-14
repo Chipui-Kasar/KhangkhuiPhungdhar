@@ -6,7 +6,8 @@
   align-items: center;
   height: 90vh;
   /* background: #f1f1f1; */
-  background: #ff2a2a;
+  /* background: #ff2a2a; */
+  background: url("https://thumbs.dreamstime.com/b/easter-sunday-concept-empty-tomb-stone-cross-meadow-sunrise-background-high-resolution-easter-sunday-concept-empty-tomb-180153375.jpg");
   cursor: pointer;
 }
 /* keep text at center */
@@ -48,10 +49,10 @@
   right: 5px;
   bottom: 5px;
   /* background: linear-gradient(315deg, #fff, #e4e3e8); */
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%2010-Dec-2021%2C%2021%3A25%3A12?alt=media&token=bfeda4b2-ef38-4345-a5b8-c4b425c06b3a");
-  background-color: #ff2a2a;
-
-  background-size: contain;
+  background-image: url("https://circleofcricket.com/post_image/post_image_5b25ef4.jpg");
+  background-color: #cfcfcf;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
 }
 
@@ -68,7 +69,7 @@
   font-style: italic;
   font-size: 2.8vw;
   /* color: #ff2a2a; */
-  color: #06c706;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 0;
   /* add text shadow */
@@ -124,9 +125,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
     /* background: #f1f1f1; */
-    background: #ff2a2a;
+    background: url("https://thumbs.dreamstime.com/b/easter-sunday-concept-empty-tomb-stone-cross-meadow-sunrise-background-high-resolution-easter-sunday-concept-empty-tomb-180153375.jpg");
+    background-size: cover;
   }
   .palmContainer .box {
     position: absolute;
@@ -145,7 +146,7 @@
   }
   #secondary {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.507);
+    /* background-color: rgba(0, 0, 0, 0.507); */
     border-radius: 0 0 100px 100px;
   }
   .palmContainer .box .circle p {

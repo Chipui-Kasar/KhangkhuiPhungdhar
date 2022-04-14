@@ -23,7 +23,7 @@ function App() {
   //   });
   // }, []);
   useEffect(() => {
-    <GoogleAds />
+    <GoogleAds />;
   }, []);
 
   return (
@@ -50,7 +50,7 @@ function App() {
           <Route path="/adminkk">
             <Admin />
           </Route>
-          <Route path="/palm" component={WishPage} />
+          <Route path="/wish" component={WishPage} />
           <Route path="/donate" component={Donate} />
         </Switch>
       </Router>
