@@ -42,46 +42,33 @@ function WishPage() {
     // audio.play();
   };
 
-  //splash screen before loading the page
+  //meta data for SEO
+  let title = "Happy Easter";
+  let description = "‘He Is Not Here, for He Has Risen’";
+  let metadataImage =
+    "https://www.godisreal.today/wp-content/uploads/2017/04/resurrection-jesus-christ-image-1.jpg";
+
   return (
     <div>
       <Helmet>
-        <title>Merry Christmas and a Happy New Year</title>
-        <meta
-          name="description"
-          content="Khangkhui Phungdhar Wishes you a Merry Christmas & Happy New Year"
-        />
-        <meta name="title" content="Merry Christmas and Happy New Year" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="title" content={title} />
         <link
           rel="canonical"
           href="https://khangkhuiphungdhar.netlify.app/wish"
         />
 
-        <meta property="og:title" content="Merry Christmas & Happy New Year" />
-        <meta
-          property="og:description"
-          content="Khangkhui Phungdhar wishes you a Merry Christmas and happy New Year "
-        />
-        <meta
-          property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%2010-Dec-2021%2C%2021%3A25%3A12?alt=media&token=bfeda4b2-ef38-4345-a5b8-c4b425c06b3a"
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={metadataImage} />
         <meta
           property="og:url"
           content="https://khangkhuiphungdhar.netlify.app/wish"
         />
-        <meta
-          name="twitter:title"
-          content="Merry Christmas and Happy New Year"
-        />
-        <meta
-          name="twitter:description"
-          content="Khangkhui Phungdhar wishes you a Merry Christmas and Happy New Year"
-        />
-        <meta
-          name="twitter:image"
-          content="https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2FSANTA%20CLAUS.jpg%20on%2010-Dec-2021%2C%2021%3A25%3A12?alt=media&token=bfeda4b2-ef38-4345-a5b8-c4b425c06b3a"
-        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={metadataImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@chipui" />
       </Helmet>
