@@ -9,6 +9,10 @@
   /* background: #ff2a2a; */
   background: url("https://thumbs.dreamstime.com/b/easter-sunday-concept-empty-tomb-stone-cross-meadow-sunrise-background-high-resolution-easter-sunday-concept-empty-tomb-180153375.jpg");
   cursor: pointer;
+  z-index: 1;
+}
+.palmContainer h1 {
+  visibility: hidden;
 }
 /* keep text at center */
 
@@ -128,6 +132,7 @@
     /* background: #f1f1f1; */
     background: url("https://thumbs.dreamstime.com/b/easter-sunday-concept-empty-tomb-stone-cross-meadow-sunrise-background-high-resolution-easter-sunday-concept-empty-tomb-180153375.jpg");
     background-size: cover;
+    z-index: 1;
   }
   .palmContainer .box {
     position: absolute;

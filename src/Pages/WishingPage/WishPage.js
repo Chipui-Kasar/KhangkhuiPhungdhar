@@ -98,11 +98,9 @@ function WishPage() {
           onChange={nameChange}
         />
       </form> */}
-      <h1 style={{ display: "none" }}>
-        Khangkhui Phungdhar wishes you {title}
-      </h1>
 
       <section className="palmContainer">
+        <h1>Khangkhui Phungdhar wishes you {title}</h1>
         <div className="box">
           <div className="circle" id="background" onClick={play}>
             <p id="secondary" onClick={showHide}>
@@ -125,4 +123,4 @@ function WishPage() {
   );
 }
 
-export default WishPage;
+export default React.memo(WishPage);
