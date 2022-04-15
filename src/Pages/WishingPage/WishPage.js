@@ -44,7 +44,8 @@ function WishPage() {
 
   //meta data for SEO
   let title = "Happy Easter";
-  let description = "‘He Is Not Here, for He Has Risen’";
+  let description =
+    "‘He Is Not Here, for He Has Risen’. Easter, also called Pascha or Resurrection Sunday, is a Christian festival and cultural holiday commemorating the resurrection of Jesus from the dead, described in the New Testament as having occurred on the third day of his burial following his crucifixion by the Romans at Calvary c. 30 AD.";
   let metadataImage =
     "https://www.godisreal.today/wp-content/uploads/2017/04/resurrection-jesus-christ-image-1.jpg";
 
@@ -58,7 +59,10 @@ function WishPage() {
           rel="canonical"
           href="https://khangkhuiphungdhar.netlify.app/wish"
         />
-
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={metadataImage} />
@@ -94,6 +98,9 @@ function WishPage() {
           onChange={nameChange}
         />
       </form> */}
+      <h1 style={{ display: "none" }}>
+        Khangkhui Phungdhar wishes you {title}
+      </h1>
 
       <section className="palmContainer">
         <div className="box">
