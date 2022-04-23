@@ -41,10 +41,10 @@ function Admin() {
     }
     new Compressor(file, {
       quality: 0.8,
-      minHeight: 500,
-      minWidth: 500,
-      maxHeight: 1000,
-      maxWidth: 1000,
+      minHeight: 600,
+      minWidth: 600,
+      maxHeight: 1800,
+      maxWidth: 1800,
 
       // The compression process is asynchronous,
       // which means you have to access the `result` in the `success` hook function.
@@ -108,7 +108,6 @@ function Admin() {
 
     uploadBytesResumable(storageRef, file).then(
       (snapshot) => {
-        console.log(snapshot);
         setProgress((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
       },
       (error) => console.log(error)
