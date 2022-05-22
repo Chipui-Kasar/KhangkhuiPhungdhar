@@ -14,7 +14,7 @@ function ReachUs() {
     setshowVersion(!showVersions);
   };
   useEffect(() => {
-    <GoogleAds />
+    <GoogleAds />;
   }, []);
 
   const donateClick = () => {
@@ -97,8 +97,7 @@ function ReachUs() {
                     2020 (v 1.0.0)
                   </li>
                   <li>
-                    Fully redefined the page with ReactJs on August 2021 (v
-                    2.0.0)
+                    Redefined the page with ReactJs on August 2021 (v 2.0.0)
                   </li>
                 </ul>
               </p>

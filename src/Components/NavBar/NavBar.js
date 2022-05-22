@@ -2,7 +2,6 @@ import React from "react";
 import "./NavBar.css";
 import { NavLink, Link } from "react-router-dom";
 
-
 function NavBar() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -10,9 +9,9 @@ function NavBar() {
       behavior: "smooth",
     });
   };
+
   return (
     <>
-
       <nav className="navbar navbar-expand-md navbar-dark sticky-top">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/" className="navbar-brand ">

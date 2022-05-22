@@ -1,0 +1,30 @@
+.login {
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+.login .formControl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .formControl input {
+  height: 30px;
+  margin: 10px;
+}
+.login .formControl button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login .formControl span {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+  text-transform: capitalize;
+}

@@ -25,6 +25,7 @@ function App() {
   useEffect(() => {
     <GoogleAds />;
   }, []);
+  //on componentdidupdate, check the url again
 
   return (
     <>
@@ -47,7 +48,8 @@ function App() {
           <Route path="/ura">
             <MYCPage />
           </Route>
-          <Route path="/adminkk">
+
+          <Route path="/admin">
             <Admin />
           </Route>
           <Route path="/wish" component={WishPage} />
