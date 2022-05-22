@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { AuthContext } from "./AuthContext";
 
-const Login = (props) => {
+const Login = () => {
   const [error, setError] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [displayName, setDisplayName] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  const { dispatch } = useContext(AuthContext);
 
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        dispatch({ type: "LOGIN", payload: user });
         setDisplayName(
           user.displayName !== null ? user.displayName : user.email
         );
-        //if logged in set login status to true
-        props.setLoginStatus(true);
-        // ...
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -30,6 +31,16 @@ const Login = (props) => {
         // ..
       });
   };
+  useEffect(() => {
+    if (auth.currentUser) {
+      const user = auth.currentUser;
+      dispatch({ type: "LOGIN", payload: user });
+    }
+    return () => {
+      auth.signOut();
+    };
+  }, [dispatch]);
+
   return (
     <div className="login">
       {displayName}

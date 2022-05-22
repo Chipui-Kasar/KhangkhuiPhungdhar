@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./Admin.css";
 import AdminNavBar from "./AdminNavBar";
@@ -6,13 +6,17 @@ import AdminBlog from "./AdminPages/AdminBlog";
 import AdminGallery from "./AdminPages/AdminGallery";
 import AdminHistory from "./AdminPages/AdminHistory";
 import AdminHome from "./AdminPages/AdminHome";
+import { AuthContext } from "./AdminPages/Login/AuthContext";
 import Login from "./AdminPages/Login/Login";
 
 const AdminRouter = () => {
-  const [loginStatus, setLoginStatus] = React.useState(false);
+  const { isAuthenticated } = useContext(AuthContext);
+  useEffect(() => {
+    localStorage.setItem("isAuthenticated", isAuthenticated);
+  }, [isAuthenticated]);
 
   const RequireAuth = ({ children }) => {
-    return loginStatus ? children : <Login setLoginStatus={setLoginStatus} />;
+    return isAuthenticated ? children : <Login />;
   };
   return (
     <>
