@@ -22,8 +22,22 @@ const GalleryCrudOperation = () => {
 
   //get all the images from the database and perform CRUD operations
   useEffect(() => {
-    loadData();
-  });
+    const fetchData = async () => {
+      let list = [];
+      try {
+        const querySnapshot = await getDocs(collection(db, "Gallery"));
+        querySnapshot.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setPageCount(Math.ceil(list.length / perPage));
+        setData(list);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [perPage]);
+
   //get all the images from the database
   const loadData = () => {
     const fetchData = async () => {
@@ -90,7 +104,7 @@ const GalleryCrudOperation = () => {
             <th scope="col">Title</th>
             <th scope="col">Uploader</th>
             <th scope="col">Image</th>
-            <th scope="col">TimeStamp</th>
+            <th scope="col">Date</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
