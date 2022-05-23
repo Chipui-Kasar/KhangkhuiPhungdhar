@@ -6,6 +6,9 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToRaw, EditorState } from "draft-js";
 import sheetdb from "sheetdb-node";
 import draftToHtml from "draftjs-to-html";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../../../Pages/Admin/firebase";
+import AdminBlogCrudOperation from "./AdminBlogCrudOperation";
 
 function AdminBlogComponent() {
   //-------------Blog useState------------------
@@ -35,9 +38,9 @@ function AdminBlogComponent() {
   const day = date.getDate();
   //format date to 13-jan-2020
   const newDay = day < 10 ? `0${day}` : day;
-  const monthName = date.toLocaleString("default", { month: "short" });
+  const monthName = date.toLocaleString("default", { month: "numeric" });
   const year = date.getFullYear();
-  const todayDate = `${newDay}-${monthName}-${year}`;
+  const todayDate = `${newDay}/${monthName}/${year}`;
 
   const submitBlog = () => {
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));
@@ -57,6 +60,18 @@ function AdminBlogComponent() {
       var showModal = document.getElementById("loadingModal");
       showModal.style.display = "block";
       document.getElementById("rte-contentBox").style.visibility = "hidden";
+      addDoc(collection(db, "Blog"), {
+        id: blogID,
+        title: blogTitle,
+        date: todayDate,
+        displaytext: blogDisplayContent,
+        description: html,
+        src: blogImageUrl,
+        alt: blogAltImage,
+        author: blogAuthor,
+        socialsite: blogSocialLink,
+        timeStamp: serverTimestamp(),
+      });
       client
         .create(
           {
@@ -95,6 +110,7 @@ function AdminBlogComponent() {
             setEditorState(EditorState.createEmpty());
             setShowBlog(false);
           },
+
           function (err) {
             console.log(err);
           }
@@ -106,25 +122,6 @@ function AdminBlogComponent() {
     const id = Math.random().toString(36).substr(2, 9);
     setBlogID(id);
   };
-  const logIn = () => {
-    //close modal pop up if the credentials are correct
-    if (
-      document.getElementById("userID").value === "admin" &&
-      document.getElementById("password").value === "admin"
-    ) {
-      //add class name to modal container
-      document
-        .getElementsByClassName("modal-backdrop")[0]
-        .classList.replace("show", "hide");
-      document
-        .getElementById("modalContainer")
-        .classList.replace("show", "hide");
-      setShowBlog(true);
-    } else {
-      alert("Invalid Credentials");
-    }
-  };
-  const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));
 
   return (
     <>
@@ -134,79 +131,12 @@ function AdminBlogComponent() {
           <button
             type="button"
             className="btn btn-primary"
-            data-toggle="modal"
-            data-target="#modalContainer"
+            onClick={() => setShowBlog(!showBlog)}
           >
             Submit a new Blog
           </button>
         </div>
       )}
-
-      <div
-        className="modal fade"
-        id="modalContainer"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Sign in to post new Blog
-              </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-group">
-                      <label htmlFor="userID">User ID</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="userID"
-                        aria-describedby="emailHelp"
-                        placeholder="User ID"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="password">Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        placeholder="Password"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary" onClick={logIn}>
-                Log in
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* loading modal */}
       <div id="loadingModal" className="loadingModal">
@@ -298,7 +228,6 @@ function AdminBlogComponent() {
                         />
                       </div>
                     </div>
-                    <div>{html}</div>
 
                     <div className="row align-items-center py-3">
                       <div className="col-md-3 ps-5">
@@ -385,6 +314,7 @@ function AdminBlogComponent() {
           </div>
         </section>
       )}
+      <AdminBlogCrudOperation />
     </>
   );
 }

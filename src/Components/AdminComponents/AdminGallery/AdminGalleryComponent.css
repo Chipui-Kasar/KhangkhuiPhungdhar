@@ -62,6 +62,7 @@ table {
   display: flex;
   list-style: none;
   outline: none;
+  justify-content: center;
 }
 
 .pagination > .active > a {

@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spinners": "^0.11.0",
+    "react-toastify": "^9.0.1",
     "react-web-share": "^1.1.0",
     "sheetdb-node": "^0.0.12",
     "web-vitals": "^1.0.1",

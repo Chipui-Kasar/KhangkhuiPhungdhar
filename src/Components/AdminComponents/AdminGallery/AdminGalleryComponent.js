@@ -7,6 +7,9 @@ import Compressor from "compressorjs";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { AuthContext } from "../../../Pages/Admin/AdminPages/Login/AuthContext";
 import GalleryCrudOperation from "./GalleryCrudOperation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function AdminGalleryComponent() {
   const [title, setTitle] = useState("");
   const [uploaderName, setUploaderName] = useState("");
@@ -75,7 +78,15 @@ function AdminGalleryComponent() {
       setProgress(0);
       setStatus(false);
       setPreview("");
-      alert("Upload Complete");
+      toast.success("Added Successfully", {
+        position: "top-right",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
     //-------------------------
     //-------------------------
@@ -136,6 +147,7 @@ function AdminGalleryComponent() {
   };
   return (
     <>
+      <ToastContainer />
       {!showUpload && (
         <button
           className="btn btn-outline-success"
