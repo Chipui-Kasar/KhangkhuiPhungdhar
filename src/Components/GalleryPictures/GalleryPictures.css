@@ -110,5 +110,10 @@
 }
 
 .scroller {
-  box-shadow: 0 0 20px #ccc !important;
+  box-shadow: 0 0 10px #ccc !important;
+  transition: all 0.3s ease-in-out;
+}
+.scroller:hover {
+  box-shadow: 0 0 30px #ccc !important;
+  transition: all 0.3s ease-in-out;
 }

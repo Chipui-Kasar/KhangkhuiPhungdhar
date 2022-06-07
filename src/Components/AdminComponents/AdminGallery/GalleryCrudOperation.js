@@ -69,7 +69,7 @@ const GalleryCrudOperation = () => {
   });
   let newsortedData = searchFilter.slice(offset, offset + perPage);
 
-  const handleCrudOperation = async (id, url, action) => {
+  const handleCrudOperation = async (id, imgTitle, imgSource, url, action) => {
     //show alert message do you really want to delete?
     if (action === "delete") {
       const desertRef = ref(storage, `${url}`);
@@ -97,10 +97,12 @@ const GalleryCrudOperation = () => {
         return;
       }
     } else {
-      let title = prompt("Enter new title");
-      if (title !== null) {
+      let title = prompt("Enter new title", imgTitle);
+      let source = prompt("Enter new source", imgSource);
+      if (title !== null && source !== null) {
         await updateDoc(doc(db, "Gallery", id), {
           title: title,
+          source: source,
         });
         toast.success("Updated Successfully", {
           position: "top-right",
@@ -154,6 +156,7 @@ const GalleryCrudOperation = () => {
             <th>Action</th>
             <th scope="col">Title</th>
             <th scope="col">Uploader</th>
+            <th scope="col">Source</th>
             <th scope="col">Image</th>
             <th scope="col">Date</th>
             <th scope="col">Action</th>
@@ -169,7 +172,13 @@ const GalleryCrudOperation = () => {
                     <button
                       className="btn"
                       onClick={() =>
-                        handleCrudOperation(item.id, item.imageURL, "edit")
+                        handleCrudOperation(
+                          item.id,
+                          item.title,
+                          item.source,
+                          item.imageURL,
+                          "edit"
+                        )
                       }
                     >
                       <i
@@ -180,6 +189,7 @@ const GalleryCrudOperation = () => {
                   </td>
                   <td>{item.title}</td>
                   <td>{item.uploader}</td>
+                  <td>{item.source}</td>
                   <td>
                     <img
                       src={item.imageURL}
@@ -197,7 +207,13 @@ const GalleryCrudOperation = () => {
                     <button
                       className="btn btn-outline-danger"
                       onClick={() =>
-                        handleCrudOperation(item.id, item.imageURL, "delete")
+                        handleCrudOperation(
+                          item.id,
+                          item.title,
+                          item.source,
+                          item.imageURL,
+                          "delete"
+                        )
                       }
                       disabled={disableDelete}
                     >

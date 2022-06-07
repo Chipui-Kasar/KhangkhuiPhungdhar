@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 function AdminGalleryComponent() {
   const [title, setTitle] = useState("");
   const [uploaderName, setUploaderName] = useState("");
-  // const [source, setSource] = useState("");
+  const [source, setSource] = useState("");
   const [image, setImage] = useState("");
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState(false);
@@ -40,6 +40,7 @@ function AdminGalleryComponent() {
       email: email,
       imageURL: imageURL,
       timeStamp: serverTimestamp(),
+      source: source,
     });
   };
 
@@ -73,7 +74,7 @@ function AdminGalleryComponent() {
   useEffect(() => {
     if (progress === 100 && status === true) {
       setTitle("");
-      // setSource("");
+      setSource("");
       setImage("");
       setProgress(0);
       setStatus(false);
@@ -200,6 +201,17 @@ function AdminGalleryComponent() {
                         placeholder="Uploader's name"
                         value={uploaderName}
                         onChange={(e) => setUploaderName(e.target.value)}
+                      />
+                    </div>
+                    <div className="col-sm-12 form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="source"
+                        id="source"
+                        placeholder="Source"
+                        value={source}
+                        onChange={(e) => setSource(e.target.value)}
                       />
                     </div>
                     <div className="col-sm-12">

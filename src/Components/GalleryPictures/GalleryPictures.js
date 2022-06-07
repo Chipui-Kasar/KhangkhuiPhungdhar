@@ -4,13 +4,14 @@ import "@fortawesome/fontawesome-free";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 //import { Pictures } from "../../Data/Pictures";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import axios from "axios";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../Pages/Admin/firebase";
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
   const [buttonFilter, setButtonFilter] = useState("");
   const [limit, setLimit] = useState(6);
-  const [imagename, setImagename] = useState("");
+  const [imageData, setImageData] = useState("");
 
   //write names of images in the array
   var imagenames = ["Khangkhui", "Harva Khangai", "Yarnao"];
@@ -28,18 +29,20 @@ function GalleryPictures() {
   const onLoadMore = () => {
     setLimit(limit + 6);
   };
+
   setTimeout(() => {
-    const getLast = (imagename) => imagename[imagename.length - 1];
-    const last = getLast(imagename);
-    var searchIndex = imagename
-      ? imagename.filter(
+    const getLast = (imageData) => imageData[imageData.length - 1];
+    const last = getLast(imageData);
+    var searchIndex = imageData
+      ? imageData.filter(
           (item) =>
-            item.name.toLowerCase().includes(search.toLowerCase()) &&
-            item.name.toLowerCase().includes(buttonFilter.toLowerCase())
+            item.title.toLowerCase().includes(search.toLowerCase()) ||
+            (item.source.toLowerCase().includes(search.toLowerCase()) &&
+              item.title.toLowerCase().includes(buttonFilter.toLowerCase()))
         ).length
       : "";
 
-    if (limit >= imagename.indexOf(last) || limit >= searchIndex) {
+    if (limit >= imageData.indexOf(last) || limit >= searchIndex) {
       let text = document
         .getElementById("btntext")
         .innerHTML.replace("Load More Photos", "You've seen it all");
@@ -55,26 +58,52 @@ function GalleryPictures() {
   }, 3000);
   useEffect(() => {
     //disable button if no more pictures
-    axios
-      .get(
-        "https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o"
-      )
-      .then((res) => {
-        setImagename(
-          res.data.items.sort((a, b) =>
-            new Date(a.name.split("on").pop()) <
-            new Date(b.name.split("on").pop())
-              ? 1
-              : -1
-          )
-        );
-      });
+    // axios
+    //   .get(
+    //     "https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o"
+    //   )
+    //   .then((res) => {
+    //     setImagename(
+    //       res.data.items.sort((a, b) =>
+    //         new Date(a.name.split("on").pop()) <
+    //         new Date(b.name.split("on").pop())
+    //           ? 1
+    //           : -1
+    //       )
+    //     );
+    //   });
+
+    const fetchData = async () => {
+      let list = [];
+      try {
+        const querySnapshot = await getDocs(collection(db, "Gallery"));
+        querySnapshot.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setImageData(list);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
 
     //load more if there are more pictures
   }, [limit]);
-
   //---------------------------------------
-
+  const downloadImage = (url, title) => {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = "blob";
+    xhr.onload = (event) => {
+      const blob = xhr.response;
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = title;
+      link.click();
+    };
+    xhr.open("GET", url);
+    xhr.send();
+  };
+  console.log(imageData);
   //---------------------------------------
   return (
     <>
@@ -92,16 +121,16 @@ function GalleryPictures() {
         />
       </div>
       <div className="form-group text-center">
-        {imagenames.map((imagename, key) => {
+        {imagenames.map((imageData, key) => {
           return (
             <button
               key={key}
               className="btn btn-sm border border-success mr-2"
               style={{ fontSize: "10px" }}
               onClick={searchFilter}
-              value={imagename}
+              value={imageData}
             >
-              {imagename}
+              {imageData}
             </button>
           );
         })}
@@ -115,74 +144,20 @@ function GalleryPictures() {
       </div>
 
       <div className="row">
-        {/* {Pictures ? (
-          Pictures.filter(searchPic => {
-            if (
-              searchPic.title.toLowerCase().includes(search.toLowerCase()) ||
-              searchPic.alt.toLowerCase().includes(search.toLowerCase()) ||
-              searchPic.source.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return searchPic;
-            } else {
-              return null;
-            }
-          })
-            .slice(0, limit)
-            .map((pic, key) => {
-              return (
-                <div className="col-md-4" key={key}>
-                  <div className="card mb-4 shadow-sm scroller">
-                    <LazyLoadImage
-                      alt={pic.alt}
-                      src={pic.src}
-                      width="100%"
-                      loading="lazy"
-                      effect="blur"
-                      style={{
-                        backgroundColor: "#000",
-                        objectFit: "cover",
-                        minHeight: "250px",
-                        maxHeight: "350px",
-                      }}
-                    />
-                    <div className="card-body text-center">
-                      <p className="card-text">{pic.title}</p>
-                      <p className="source">Source: {pic.source}</p>
-                      <div className="d-flex justify-content-center align-items-center">
-                        <div className="btn-group">
-                          <a
-                            href={pic.src}
-                            download
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary "
-                            >
-                              Download Image
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
+        {imageData ? (
+          imageData
+            .sort((a, b) => {
+              return b.timeStamp - a.timeStamp;
             })
-        ) : (
-          <p className="spinner">
-            <i className="fas fa-spinner fa-pulse fa-3x"></i>
-          </p>
-        )} */}
-        {imagename ? (
-          imagename
             .filter((searchPic) => {
               if (
-                searchPic.name.toLowerCase().includes(search.toLowerCase()) &&
-                searchPic.name
+                searchPic.title.toLowerCase().includes(search.toLowerCase()) ||
+                (searchPic.source
                   .toLowerCase()
-                  .includes(buttonFilter.toLowerCase())
+                  .includes(search.toLowerCase()) &&
+                  searchPic.title
+                    .toLowerCase()
+                    .includes(buttonFilter.toLowerCase()))
               ) {
                 return searchPic;
               } else {
@@ -197,11 +172,12 @@ function GalleryPictures() {
                 <div className="col-md-4" key={key}>
                   <div className="card mb-4 shadow-sm scroller">
                     <LazyLoadImage
-                      alt={name.name}
-                      src={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
-                        "file/",
-                        ""
-                      )}?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e`}
+                      alt={name.title}
+                      // src={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
+                      //   "file/",
+                      //   ""
+                      // )}?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e`}
+                      src={name.imageURL}
                       width="100%"
                       loading="lazy"
                       effect="blur"
@@ -213,22 +189,29 @@ function GalleryPictures() {
                       }}
                     />
                     <div className="card-body text-center">
-                      <h1 className="card-text">
-                        {name.name
-                          .toUpperCase()
-                          .replace("FILE/", "")
-                          //remove all image extension
-                          .replace(/\.[^/.]+$/, "")}
-                      </h1>
+                      <h1 className="card-text">{name.title.toUpperCase()}</h1>
 
                       <div className="d-flex justify-content-center align-items-center">
                         <div className="btn-group">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              downloadImage(name.imageURL, name.title)
+                            }
+                            className="btn btn-sm btn-outline-secondary mr-2"
+                          >
+                            <i className="fa fa-download"></i>
+                          </button>
+                        </div>
+                        <div className="btn-group">
                           <a
-                            href={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
-                              "file/",
-                              ""
-                            )}?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e`}
+                            // href={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
+                            //   "file/",
+                            //   ""
+                            // )}?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e`}
+                            href={name.imageURL}
                             download
+                            data-interception="off"
                             rel="noopener noreferrer"
                             target="_blank"
                           >
@@ -236,10 +219,15 @@ function GalleryPictures() {
                               type="button"
                               className="btn btn-sm btn-outline-secondary "
                             >
-                              Download Image
+                              View
                             </button>
                           </a>
                         </div>
+                      </div>
+                      <div style={{ position: "absolute", right: "10px" }}>
+                        <label class="blockquote-footer mb-0">
+                          <cite title="Source Title">{name.source}</cite>
+                        </label>
                       </div>
                     </div>
                   </div>
