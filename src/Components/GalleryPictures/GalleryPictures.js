@@ -90,20 +90,19 @@ function GalleryPictures() {
     //load more if there are more pictures
   }, [limit]);
   //---------------------------------------
-  const downloadImage = (url, title) => {
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = "blob";
-    xhr.onload = (event) => {
-      const blob = xhr.response;
-      const link = document.createElement("a");
-      link.href = window.URL.createObjectURL(blob);
-      link.download = title;
-      link.click();
-    };
-    xhr.open("GET", url);
-    xhr.send();
-  };
-  console.log(imageData);
+  // const downloadImage = (url, title) => {
+  //   const xhr = new XMLHttpRequest();
+  //   xhr.responseType = "blob";
+  //   xhr.onload = (event) => {
+  //     const blob = xhr.response;
+  //     const link = document.createElement("a");
+  //     link.href = window.URL.createObjectURL(blob);
+  //     link.download = title;
+  //     link.click();
+  //   };
+  //   xhr.open("GET", url);
+  //   xhr.send();
+  // };
   //---------------------------------------
   return (
     <>
@@ -169,7 +168,7 @@ function GalleryPictures() {
               //sort by date
 
               return (
-                <div className="col-md-4" key={key}>
+                <div className="col-md-4" key={key} id={"#" + name.title}>
                   <div className="card mb-4 shadow-sm scroller">
                     <LazyLoadImage
                       alt={name.title}
@@ -192,7 +191,7 @@ function GalleryPictures() {
                       <h1 className="card-text">{name.title.toUpperCase()}</h1>
 
                       <div className="d-flex justify-content-center align-items-center">
-                        <div className="btn-group">
+                        {/* <div className="btn-group">
                           <button
                             type="button"
                             onClick={() =>
@@ -202,7 +201,7 @@ function GalleryPictures() {
                           >
                             <i className="fa fa-download"></i>
                           </button>
-                        </div>
+                        </div> */}
                         <div className="btn-group">
                           <a
                             // href={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
@@ -225,7 +224,7 @@ function GalleryPictures() {
                         </div>
                       </div>
                       <div style={{ position: "absolute", right: "10px" }}>
-                        <label class="blockquote-footer mb-0">
+                        <label className="blockquote-footer mb-0">
                           <cite title="Source Title">{name.source}</cite>
                         </label>
                       </div>
