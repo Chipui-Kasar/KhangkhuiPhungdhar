@@ -6,6 +6,8 @@ import axios from "axios";
 import moment from "moment";
 import { PropagateLoader } from "react-spinners";
 import GoogleAds from "../../Pages/GoogleAds/GoogleAds";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../Pages/Admin/firebase";
 //import { Blog } from "../../Data/AllData";
 
 function BlogComponent() {
@@ -14,15 +16,28 @@ function BlogComponent() {
   const [toggle, settoggle] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
-      .then((response) => {
-        setBblog(response.data.reverse());
-        //console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const fetchData = async () => {
+      let list = [];
+      try {
+        const querySnapshot = await getDocs(collection(db, "Blog"));
+        querySnapshot.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setBblog(list);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+    // axios
+    //   .get(`https://sheetdb.io/api/v1/7ehz82f9q7n6p?sheet=Blog`)
+    //   .then((response) => {
+    //     setBblog(response.data.reverse());
+    //     //console.log(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
 
     //https://newsapi.org/v2/top-headlines?country=in&apiKey=81849c4a33644af7934e6530eedb7195
     //https://gnews.io/api/v4/top-headlines?&token=84ff7f5fda04d367a4b3872c6a60f7b3&lang=en&country=in,us
@@ -55,7 +70,6 @@ function BlogComponent() {
             <div className="display-4 font-italic">
               Welcome to the Blog Page
             </div>
-
             <p className="lead my-3">Submit a new blog and get rewarded</p>
             <p className="lead mb-0 count">
               <a
@@ -87,7 +101,10 @@ function BlogComponent() {
         <h1>Recent Blogs</h1>
         <div className="row">
           {Blog
-            ? Blog.map((data) => {
+            ? Blog.sort((a, b) => {
+                return b.timeStamp - a.timeStamp;
+              }).map((data) => {
+                console.log(data);
                 return (
                   <div className="col-md-6">
                     <div className="card border rounded mb-4 shadow-sm">
@@ -134,40 +151,44 @@ function BlogComponent() {
             <div className="col-md-8 blog-main">
               <h1 className="pb-4 mb-4 font-italic">Blogs</h1>
               {Blog ? (
-                Blog.slice(0, 1).map((blog) => {
-                  //convert html string to Dom
-                  const dom = new DOMParser().parseFromString(
-                    blog.description,
-                    "text/html"
-                  );
-                  // const html = { __html: blog.description };
-
-                  //-----------------------------
-                  return (
-                    <>
-                      <div id={blog.id}>
-                        <hr style={{ border: "1px solid #fff" }} />
-                        <hr style={{ border: "1px solid #fff" }} />
-                        <div className="blog-post mt-5">
-                          <h2 className="blog-post-title">{blog.title}</h2>
-                          <p className="blog-post-meta">
-                            {moment(blog.date).format("DD MMM YYYY")} by{" "}
-                            <a href={blog.socialsite} target="_child">
-                              {blog.author}
-                            </a>
-                          </p>
-
-                          <div
-                            className="text-justify description"
-                            dangerouslySetInnerHTML={{
-                              __html: dom.body.innerHTML,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                    </>
-                  );
+                Blog.sort((a, b) => {
+                  return b.timeStamp - a.timeStamp;
                 })
+                  .slice(0, 1)
+                  .map((blog) => {
+                    //convert html string to Dom
+                    const dom = new DOMParser().parseFromString(
+                      blog.description,
+                      "text/html"
+                    );
+                    // const html = { __html: blog.description };
+
+                    //-----------------------------
+                    return (
+                      <>
+                        <div id={blog.id}>
+                          <hr style={{ border: "1px solid #fff" }} />
+                          <hr style={{ border: "1px solid #fff" }} />
+                          <div className="blog-post mt-5">
+                            <h2 className="blog-post-title">{blog.title}</h2>
+                            <p className="blog-post-meta">
+                              {moment(blog.date).format("DD MMM YYYY")} by{" "}
+                              <a href={blog.socialsite} target="_child">
+                                {blog.author}
+                              </a>
+                            </p>
+
+                            <div
+                              className="text-justify description"
+                              dangerouslySetInnerHTML={{
+                                __html: dom.body.innerHTML,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })
               ) : (
                 <div className="text-center">
                   <PropagateLoader color="white" />

@@ -39,8 +39,9 @@ function AdminBlogComponent() {
   //format date to 13-jan-2020
   const newDay = day < 10 ? `0${day}` : day;
   const monthName = date.toLocaleString("default", { month: "numeric" });
+  const month = monthName < 10 ? `0${monthName}` : monthName;
   const year = date.getFullYear();
-  const todayDate = `${newDay}/${monthName}/${year}`;
+  const todayDate = `${month}/${newDay}/${year}`;
 
   const submitBlog = () => {
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));

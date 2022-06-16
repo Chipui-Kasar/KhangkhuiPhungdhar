@@ -49,7 +49,7 @@ function ReachUs() {
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
             <div>
               <img
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", backgroundColor: "#fff" }}
                 className="bd-placeholder-img rounded-circle"
                 width="170"
                 height="170"

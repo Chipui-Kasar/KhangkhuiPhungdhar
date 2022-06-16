@@ -1,5 +1,6 @@
 footer {
   background-image: url("../../images/footer.jpg");
+  background-color: rgb(0, 0, 0);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
