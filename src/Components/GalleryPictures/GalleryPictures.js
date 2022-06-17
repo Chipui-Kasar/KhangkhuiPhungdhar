@@ -6,6 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../Pages/Admin/firebase";
+import { Link } from "react-router-dom";
 
 function GalleryPictures() {
   const [search, setSearch] = useState("");
@@ -81,12 +82,13 @@ function GalleryPictures() {
           list.push({ id: doc.id, ...doc.data() });
         });
         setImageData(list);
+
+        //get by dynamic id
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-
     //load more if there are more pictures
   }, [limit]);
   //---------------------------------------
@@ -203,16 +205,15 @@ function GalleryPictures() {
                           </button>
                         </div> */}
                         <div className="btn-group">
-                          <a
+                          <Link
+                            to={`/khipiko/${name.title}?id=${name.id}`}
                             // href={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
                             //   "file/",
                             //   ""
                             // )}?alt=media&token=d5aac0ce-0878-41c7-a800-3b09d4aeef5e`}
-                            href={name.imageURL}
-                            download
-                            data-interception="off"
-                            rel="noopener noreferrer"
-                            target="_blank"
+                            // href={name.imageURL}
+                            // target="_blank"
+                            id={"#" + name.id}
                           >
                             <button
                               type="button"
@@ -220,7 +221,7 @@ function GalleryPictures() {
                             >
                               View
                             </button>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div style={{ position: "absolute", right: "10px" }}>

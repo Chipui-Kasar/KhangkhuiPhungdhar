@@ -1,12 +1,12 @@
 import { createContext, useEffect, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
 
-const initialState = {
+const INITIALSTATE = {
   isAuthenticated: JSON.parse(localStorage.getItem("isAuthenticated")) || false,
 };
-export const AuthContext = createContext(initialState);
+export const AuthContext = createContext(INITIALSTATE);
 export const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AuthReducer, initialState);
+  const [state, dispatch] = useReducer(AuthReducer, INITIALSTATE);
   useEffect(() => {
     localStorage.setItem(
       "isAuthenticated",

@@ -14,6 +14,7 @@ import ReadFullBlog from "./Components/BlogComponent/ReadFullBlog";
 import WishPage from "./Pages/WishingPage/WishPage";
 import Donate from "./Components/ReachUs/Donate/Donate";
 import GoogleAds from "./Pages/GoogleAds/GoogleAds";
+import ImageView from "./Components/GalleryPictures/ImageView";
 
 function App() {
   // const [visit, setVisit] = useState();
@@ -35,9 +36,8 @@ function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          <Route path="/gallery">
-            <GalleryPage />
-          </Route>
+          <Route path="/gallery" component={GalleryPage}></Route>
+          <Route path="/khipiko/*" component={ImageView} />
           <Route path="/history">
             <HistoryPage />
           </Route>
