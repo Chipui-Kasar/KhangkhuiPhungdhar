@@ -142,7 +142,7 @@ function ImageView() {
                 .slice(0, 4)
                 .map((item, key) => {
                   return (
-                    <div className="col-md-3" key={key}>
+                    <div className="col-3" key={key}>
                       <div className="card mt-3 mb-5">
                         <Link to={`/khipiko/${item.title}?id=${item.id}`}>
                           <LazyLoadImage
