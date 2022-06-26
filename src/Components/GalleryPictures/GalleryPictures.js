@@ -7,11 +7,14 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../Pages/Admin/firebase";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function GalleryPictures() {
+  const searchParam = useLocation().search;
+  const name = new URLSearchParams(searchParam).get("page");
   const [search, setSearch] = useState("");
   const [buttonFilter, setButtonFilter] = useState("");
-  const [limit, setLimit] = useState(6);
+  const [limit, setLimit] = useState(name !== null ? name : 6);
   const [imageData, setImageData] = useState("");
 
   //write names of images in the array
@@ -35,12 +38,15 @@ function GalleryPictures() {
     const getLast = (imageData) => imageData[imageData.length - 1];
     const last = getLast(imageData);
     var searchIndex = imageData
-      ? imageData.filter(
-          (item) =>
-            item.title.toLowerCase().includes(search.toLowerCase()) ||
-            (item.source.toLowerCase().includes(search.toLowerCase()) &&
-              item.title.toLowerCase().includes(buttonFilter.toLowerCase()))
-        ).length
+      ? imageData
+          .filter(
+            (item) =>
+              item.title.toLowerCase().includes(search.toLowerCase()) ||
+              item.source.toLowerCase().includes(search.toLowerCase())
+          )
+          .filter((item) =>
+            item.title.toLowerCase().includes(buttonFilter.toLowerCase())
+          ).length
       : "";
 
     if (limit >= imageData.indexOf(last) || limit >= searchIndex) {
@@ -127,7 +133,10 @@ function GalleryPictures() {
             <button
               key={key}
               className="btn btn-sm border border-success mr-2"
-              style={{ fontSize: "10px" }}
+              style={{
+                fontSize: "10px",
+                background: imageData === buttonFilter ? "#00a0ff99" : "",
+              }}
               onClick={searchFilter}
               value={imageData}
             >
@@ -153,24 +162,22 @@ function GalleryPictures() {
             .filter((searchPic) => {
               if (
                 searchPic.title.toLowerCase().includes(search.toLowerCase()) ||
-                (searchPic.source
-                  .toLowerCase()
-                  .includes(search.toLowerCase()) &&
-                  searchPic.title
-                    .toLowerCase()
-                    .includes(buttonFilter.toLowerCase()))
+                searchPic.source.toLowerCase().includes(search.toLowerCase())
               ) {
                 return searchPic;
               } else {
                 return null;
               }
             })
+            .filter((tag) =>
+              tag.title.toLowerCase().includes(buttonFilter.toLowerCase())
+            )
             .slice(0, limit)
             .map((name, key) => {
               //sort by date
 
               return (
-                <div className="col-md-4" key={key} id={"#" + name.title}>
+                <div className="col-md-4" key={key} id={"#" + name.id}>
                   <div className="card mb-4 shadow-sm scroller">
                     <LazyLoadImage
                       alt={name.title}
@@ -206,7 +213,7 @@ function GalleryPictures() {
                         </div> */}
                         <div className="btn-group">
                           <Link
-                            to={`/khipiko/${name.title}?id=${name.id}`}
+                            to={`/khipiko/${name.title}?id=${name.id}&page=${limit}`}
                             // href={`https://firebasestorage.googleapis.com/v0/b/khangkhuiphungdhar.appspot.com/o/file%2F${name.name.replace(
                             //   "file/",
                             //   ""

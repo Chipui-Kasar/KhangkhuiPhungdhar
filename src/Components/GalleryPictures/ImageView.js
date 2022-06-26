@@ -5,6 +5,7 @@ import moment from "moment";
 import {
   Link,
   useHistory,
+  useLocation,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { db } from "../../Pages/Admin/firebase";
@@ -35,11 +36,13 @@ function ImageView() {
       // cleanup
     };
   }, [history, newUrl]);
+  const searchParam = useLocation().search;
+  const imageId = new URLSearchParams(searchParam).get("id");
 
   return (
     <>
       {image
-        .filter((id) => id.id === history.location.search.split("=")[1])
+        .filter((id) => id.id === imageId)
         .map((item, key) => {
           return (
             <Helmet key={key}>
@@ -87,7 +90,7 @@ function ImageView() {
         <div className="row">
           <div className="col-md-8">
             {image
-              .filter((id) => id.id === history.location.search.split("=")[1])
+              .filter((id) => id.id === imageId)
               .map((res, key) => {
                 return (
                   <div className="card mt-3 mb-5" key={key}>
